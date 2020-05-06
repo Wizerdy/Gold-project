@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Turret : Structure
+public class Tower : Structure
 {
 
 }
