@@ -14,14 +14,23 @@ public abstract class Unit : MonoBehaviour
     [Header("Stats")]
     public int maxHealth;
     public int damage;
+    public float attackSpeed;
     public Color color;
 
+    [HideInInspector] public bool canAttack;
     protected int curHealth;
 
     public Unit(Type type) { this.type = type; }
 
-    private void Start()
+    protected virtual void Start()
     {
         curHealth = maxHealth;
+    }
+
+    protected IEnumerator AtkCountdown(float time)
+    {
+        canAttack = false;
+        yield return new WaitForSeconds(time);
+        canAttack = true;
     }
 }

@@ -42,6 +42,8 @@ public class GameManager : MonoBehaviour
     public void InstantiateUnit(GameObject unit, Unit.Side side)
     {
         GameObject insta = Instantiate(unit, (side == Unit.Side.ALLY ? allyParent : enemyParent) );
+        insta.layer = (side == Unit.Side.ALLY ? allyParent : enemyParent).gameObject.layer;
+        insta.transform.localEulerAngles = new Vector3(insta.transform.rotation.x, insta.transform.rotation.y + 180 * (side == Unit.Side.ALLY ? 0 : 1), insta.transform.rotation.z);
         insta.GetComponent<Unit>().side = side;
 
         if(insta.GetComponent<Unit>().type == Unit.Type.PAWN)
