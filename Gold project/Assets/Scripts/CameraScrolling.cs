@@ -35,8 +35,8 @@ public class CameraScrolling : MonoBehaviour
     {
         Plane.SetNormalAndPosition(transform.up, transform.position);
 
-        var Delta1 = Vector3.zero;
-        var Delta2 = Vector3.zero;
+        Vector3 Delta1 = Vector3.zero;
+        Vector3 Delta2 = Vector3.zero;
 
         Delta1 = PlanePositionDelta(Input.GetTouch(0));
 
@@ -56,9 +56,9 @@ public class CameraScrolling : MonoBehaviour
 
 
         //delta
-        var rayBefore = gameCamera.ScreenPointToRay(touch.position - touch.deltaPosition);
-        var rayNow = gameCamera.ScreenPointToRay(touch.position);
-        if (Plane.Raycast(rayBefore, out var enterBefore) && Plane.Raycast(rayNow, out var enterNow))
+        Ray rayBefore = gameCamera.ScreenPointToRay(touch.position - touch.deltaPosition);
+        Ray rayNow = gameCamera.ScreenPointToRay(touch.position);
+        if (Plane.Raycast(rayBefore, out float enterBefore) && Plane.Raycast(rayNow, out float enterNow))
         {
             ReplaceCameraInBounds();
             return new Vector3(rayBefore.GetPoint(enterBefore).x - rayNow.GetPoint(enterNow).x, 0, 0);
