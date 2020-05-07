@@ -98,15 +98,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   side: 0
-  maxHealth: 10
+  maxHealth: 4
   damage: 2
+  attackSpeed: 1
   color: {r: 0, g: 0, b: 0, a: 0}
+  attackRange: {fileID: 5278358871612878103}
+  canAttack: 0
   speed: 3
   target: {fileID: 0}
-  attackRange: {fileID: 5278358871612878103}
-  unitLayer:
-    serializedVersion: 2
-    m_Bits: 256
 --- !u!61 &634356893387697209
 BoxCollider2D:
   m_ObjectHideFlags: 0

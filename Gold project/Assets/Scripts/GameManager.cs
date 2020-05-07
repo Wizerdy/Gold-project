@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     public Transform allyParent;
     public Transform enemyParent;
 
+    [Header("Layers")]
+    public LayerMask unitLayer;
+
     [HideInInspector] public Dictionary<string, GameObject> units;
 
     private void Awake()
