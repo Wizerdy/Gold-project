@@ -37,6 +37,12 @@ public abstract class Unit : MonoBehaviour
         attackFilter.useLayerMask = true;
     }
 
+    protected void LateUpdate()
+    {
+        if (curHealth <= 0)
+            Destroy(gameObject);
+    }
+
     protected IEnumerator AtkCountdown(float time)
     {
         canAttack = false;
@@ -59,17 +65,11 @@ public abstract class Unit : MonoBehaviour
     protected virtual void Attack(GameObject target)
     {
         StartCoroutine(AtkCountdown(attackSpeed));
-        target.GetComponent<Unit>().LoseHealth(damage);
     }
 
-    protected virtual void LoseHealth(int amount)
+    public virtual void LoseHealth(int amount)
     {
         curHealth -= amount;
     }
 
-    protected void LateUpdate()
-    {
-        if (curHealth <= 0)
-            Destroy(gameObject);
-    }
 }

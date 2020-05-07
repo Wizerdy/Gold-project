@@ -346,6 +346,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   allyParent: {fileID: 633965090}
   enemyParent: {fileID: 1974850393}
+  unitLayer:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!4 &757456566
 Transform:
   m_ObjectHideFlags: 0

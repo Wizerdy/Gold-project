@@ -40,7 +40,7 @@ public abstract class Pawn : Unit
     protected override void Attack(GameObject target)
     {
         base.Attack(target);
-        Debug.Log("Attack monkey !");
+        target.GetComponent<Unit>().LoseHealth(damage);
     }
 
 }
