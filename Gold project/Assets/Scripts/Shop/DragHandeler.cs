@@ -119,7 +119,8 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
         Instantiate(mergedColor, bernard.transform.parent).GetComponent<DragHandeler>().barren = false;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
-        Instantiate(michel, startParent);
+        michel = Instantiate(michel, startParent);
+        michel.GetComponent<DragHandeler>().barren = false;
         Destroy(bernard);
         Destroy(this.gameObject);
     }
