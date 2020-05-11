@@ -9,7 +9,11 @@ public enum Colors
     YELLOW,
     RED,
     BLUE,
-    WHITE
+    WHITE,
+    GREEN,
+    ORANGE,
+    PURPLE,
+    BLACK
 }
 
 public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
@@ -51,6 +55,11 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void Merge(GameObject bernard)
     {
+        Debug.Log(bernard);
+        if (bernard == null)
+        {
+            return;
+        }
         Colors bernardColor = bernard.GetComponent<DragHandeler>().colorState;
         GameObject mergedColor = null;
         switch(colorState)
@@ -66,7 +75,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 }
                 else if (bernardColor == Colors.WHITE)
                 {
-                    
+                    mergedColor = ShopManager.instance.superColors[4];
                 }
                 break;
             case Colors.RED:
@@ -82,7 +91,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 }
                 else if (bernardColor == Colors.WHITE)
                 {
-
+                    mergedColor = ShopManager.instance.superColors[5];
                 }
                 break;
             case Colors.BLUE:
@@ -98,13 +107,16 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 }
                 else if (bernardColor == Colors.WHITE)
                 {
-
+                    mergedColor = ShopManager.instance.superColors[3];
                 }
                 break;
-            default:
-                mergedColor = ShopManager.instance.superColors[0];
-                break;
         }
+
+        if (mergedColor == null)
+        {
+            return;
+        }
+
         Instantiate(mergedColor, bernard.transform.parent).GetComponent<DragHandeler>().barren = false;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
         Instantiate(michel, startParent);
