@@ -13,14 +13,14 @@ public abstract class Unit : MonoBehaviour
 
     [Header("Stats")]
     public int maxHealth;
-    public int damage;
+    public Vector2Int damage;
     public float attackSpeed;
     public Color color;
     [SerializeField] private Collider2D attackRange = null;
 
     [HideInInspector] public bool canAttack;
     protected int curHealth;
-    protected List<Collider2D> hit;
+    public List<Collider2D> hit;
     protected int hitIndex;
     protected ContactFilter2D attackFilter;
 
@@ -39,8 +39,11 @@ public abstract class Unit : MonoBehaviour
 
     protected void LateUpdate()
     {
-        if (curHealth <= 0)
+        if (maxHealth > 0 && curHealth <= 0)
+        {
+            GameManager.instance.SpawnSplash(transform.position);
             Destroy(gameObject);
+        }
     }
 
     protected IEnumerator AtkCountdown(float time)
@@ -72,4 +75,13 @@ public abstract class Unit : MonoBehaviour
         curHealth -= amount;
     }
 
+    public int DealDamage()
+    {
+        return Random.Range(damage.x, damage.y);
+    }
+
+    protected virtual void OnDestroy()
+    {
+        
+    }
 }

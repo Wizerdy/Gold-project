@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     [Header("Layers")]
     public LayerMask unitLayer;
 
+    [Header("GameObject")]
+    public GameObject splash;
+
     [HideInInspector] public Dictionary<string, GameObject> units;
 
     private void Awake()
@@ -51,5 +54,10 @@ public class GameManager : MonoBehaviour
 
         if(insta.GetComponent<Unit>().type == Unit.Type.PAWN)
             insta.GetComponent<Pawn>().target = (side == Unit.Side.ALLY ? enemyParent : allyParent);
+    }
+
+    public void SpawnSplash(Vector2 pos)
+    {
+        Instantiate(splash, pos, Quaternion.identity);
     }
 }
