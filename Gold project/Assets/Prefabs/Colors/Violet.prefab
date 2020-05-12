@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 5490570054155987687}
   - component: {fileID: 4848498078908524069}
   m_Layer: 5
-  m_Name: Violet(Clone)
+  m_Name: Violet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorState: 6
+  barren: 0
   michel: {fileID: 6063918825073830978}
 --- !u!223 &5490570054155987687
 Canvas:

@@ -13,16 +13,24 @@ public enum Colors
     GREEN,
     ORANGE,
     PURPLE,
-    BLACK
+    BLACK,
+}
+
+public enum Type
+{
+    FACTORY,
+    TURRET,
+    PUMP
 }
 
 public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public static GameObject itemBeingDragged;
     public Colors colorState;
+    public Type structType;
     Vector3 startPosition;
     Transform startParent;
-    bool barren = true;
+    public bool barren = false;
     public GameObject michel;
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -47,9 +55,9 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         {
             transform.position = startPosition;
         }
-        else if (barren != false) {
+        else if (barren != true) {
             Instantiate(michel, startParent);
-            barren = false;
+            barren = true;
         }
     }
 
@@ -61,53 +69,144 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             return;
         }
         Colors bernardColor = bernard.GetComponent<DragHandeler>().colorState;
+        int term = (bernard.GetComponent<DragHandeler>().structType == Type.TURRET ? 7 : 0);
         GameObject mergedColor = null;
         switch(colorState)
         {
             case Colors.YELLOW:
-                if (bernardColor == Colors.RED)
+                switch(bernardColor)
                 {
-                    mergedColor = ShopManager.instance.superColors[0];
-                } else if (bernardColor == Colors.BLUE)
-                {
-                    mergedColor = ShopManager.instance.superColors[1];
-
-                }
-                else if (bernardColor == Colors.WHITE)
-                {
-                    mergedColor = ShopManager.instance.superColors[4];
+                    case Colors.RED:
+                        mergedColor = ShopManager.instance.superColors[0 + term];
+                        break;
+                    case Colors.BLUE:
+                        mergedColor = ShopManager.instance.superColors[1 + term];
+                        break;
+                    case Colors.ORANGE:
+                    case Colors.PURPLE:
+                    case Colors.GREEN:
+                        mergedColor = ShopManager.instance.superColors[6 + term];
+                        break;
+                    case Colors.WHITE:
+                        mergedColor = ShopManager.instance.superColors[4 + term];
+                        break;
                 }
                 break;
             case Colors.RED:
-                if (bernardColor == Colors.YELLOW)
+                switch (bernardColor)
                 {
-                    mergedColor = ShopManager.instance.superColors[0];
-
-                }
-                else if (bernardColor == Colors.BLUE)
-                {
-                    mergedColor = ShopManager.instance.superColors[2];
-
-                }
-                else if (bernardColor == Colors.WHITE)
-                {
-                    mergedColor = ShopManager.instance.superColors[5];
+                    case Colors.YELLOW:
+                        mergedColor = ShopManager.instance.superColors[0 + term];
+                        break;
+                    case Colors.BLUE:
+                        mergedColor = ShopManager.instance.superColors[2 + term];
+                        break;
+                    case Colors.ORANGE:
+                    case Colors.PURPLE:
+                    case Colors.GREEN:
+                        mergedColor = ShopManager.instance.superColors[6 + term];
+                        break;
+                    case Colors.WHITE:
+                        mergedColor = ShopManager.instance.superColors[5 + term];
+                        break;
                 }
                 break;
             case Colors.BLUE:
-                if (bernardColor == Colors.RED)
+                switch (bernardColor)
                 {
-                    mergedColor = ShopManager.instance.superColors[2];
-
+                    case Colors.RED:
+                        mergedColor = ShopManager.instance.superColors[2 + term];
+                        break;
+                    case Colors.YELLOW:
+                        mergedColor = ShopManager.instance.superColors[1 + term];
+                        break;
+                    case Colors.ORANGE:
+                    case Colors.PURPLE:
+                    case Colors.GREEN:
+                        mergedColor = ShopManager.instance.superColors[6 + term];
+                        break;
+                    case Colors.WHITE:
+                        mergedColor = ShopManager.instance.superColors[3 + term];
+                        break;
                 }
-                else if (bernardColor == Colors.YELLOW)
+                break;
+            case Colors.ORANGE:
+                switch (bernardColor)
                 {
-                    mergedColor = ShopManager.instance.superColors[1];
-
+                    case Colors.RED:
+                    case Colors.BLUE:
+                    case Colors.YELLOW:
+                    case Colors.PURPLE:
+                    case Colors.GREEN:
+                        mergedColor = ShopManager.instance.superColors[6 + term];
+                        break;
+                    case Colors.WHITE:
+                        mergedColor = ShopManager.instance.superColors[0 + term];
+                        break;
                 }
-                else if (bernardColor == Colors.WHITE)
+                break;
+            case Colors.PURPLE:
+                switch (bernardColor)
                 {
-                    mergedColor = ShopManager.instance.superColors[3];
+                    case Colors.RED:
+                    case Colors.BLUE:
+                    case Colors.YELLOW:
+                    case Colors.ORANGE:
+                    case Colors.GREEN:
+                        mergedColor = ShopManager.instance.superColors[6 + term];
+                        break;
+                    case Colors.WHITE:
+                        mergedColor = ShopManager.instance.superColors[2 + term];
+                        break;
+                }
+                break;
+            case Colors.GREEN:
+                switch (bernardColor)
+                {
+                    case Colors.RED:
+                    case Colors.BLUE:
+                    case Colors.YELLOW:
+                    case Colors.PURPLE:
+                    case Colors.ORANGE:
+                        mergedColor = ShopManager.instance.superColors[6 + term];
+                        break;
+                    case Colors.WHITE:
+                        mergedColor = ShopManager.instance.superColors[1 + term];
+                        break;
+                }
+                break;
+            case Colors.BLACK:
+                switch (bernardColor)
+                {
+                    case Colors.WHITE:
+                        mergedColor = ShopManager.instance.superColors[6 + term];
+                        break;
+                }
+                break;
+            case Colors.WHITE:
+                switch (bernardColor)
+                {
+                    case Colors.RED:
+                        mergedColor = ShopManager.instance.superColors[5 + term];
+                        break;
+                    case Colors.BLUE:
+                        mergedColor = ShopManager.instance.superColors[3 + term];
+                        break;
+                    case Colors.YELLOW:
+                        mergedColor = ShopManager.instance.superColors[4 + term];
+                        break;
+                    case Colors.PURPLE:
+                        mergedColor = ShopManager.instance.superColors[2 + term];
+                        break;
+                    case Colors.GREEN:
+                        mergedColor = ShopManager.instance.superColors[1 + term];
+                        break;
+                    case Colors.ORANGE:
+                        mergedColor = ShopManager.instance.superColors[0 + term];
+                        break;
+                    case Colors.BLACK:
+                        mergedColor = ShopManager.instance.superColors[6 + term];
+                        break;
                 }
                 break;
         }
@@ -117,10 +216,13 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             return;
         }
 
-        Instantiate(mergedColor, bernard.transform.parent).GetComponent<DragHandeler>().barren = false;
+        Instantiate(mergedColor, bernard.transform.parent).GetComponent<DragHandeler>().barren = true;
         GetComponent<CanvasGroup>().blocksRaycasts = true;
-        michel = Instantiate(michel, startParent);
-        michel.GetComponent<DragHandeler>().barren = false;
+        if (barren == false)
+        {
+            michel = Instantiate(michel, startParent);
+            michel.GetComponent<DragHandeler>().barren = false;
+        }
         Destroy(bernard);
         Destroy(this.gameObject);
     }

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6747243450912468530}
   - component: {fileID: 1706763760493466145}
   m_Layer: 5
-  m_Name: Orange(Clone)
+  m_Name: Orange
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorState: 5
+  barren: 0
   michel: {fileID: 3899408688908747806}
 --- !u!223 &6747243450912468530
 Canvas:

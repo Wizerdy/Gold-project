@@ -103,6 +103,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   colorState: 7
+  barren: 0
   michel: {fileID: 566348324082799459}
 --- !u!223 &-3675132771084881229
 Canvas:

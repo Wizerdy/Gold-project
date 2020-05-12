@@ -22,7 +22,7 @@ public class Slot : MonoBehaviour, IDropHandler
         {
             DragHandeler.itemBeingDragged.transform.SetParent(transform);
         }
-        else
+        else if (item.GetComponent<DragHandeler>().barren == true)
         {
             DragHandeler.itemBeingDragged.GetComponent<DragHandeler>().Merge(item);
         }
