@@ -10,21 +10,38 @@ public class EffectZone : MonoBehaviour
 
     public List<Pawn> affected;
 
+    public List<Collider2D> hit;
+    protected ContactFilter2D attackFilter;
 
     private void Start()
     {
-        StartCoroutine("Live", behaviour.lifetime);
         zone = GetComponent<Collider2D>();
+
+        float sizeX = (behaviour.size.x > 0 ? behaviour.size.x : transform.localScale.x);
+        float sizeY = (behaviour.size.y > 0 ? behaviour.size.y : transform.localScale.y);
+        transform.localScale = new Vector2(sizeX, sizeY);
+
+        hit = new List<Collider2D>();
+        attackFilter = new ContactFilter2D();
+        attackFilter.layerMask = GameManager.instance.unitLayer;
+        attackFilter.useLayerMask = true;
+
+        if (zone.OverlapCollider(attackFilter, hit) > 0)
+            for (int i = 0; i < hit.Count; i++)
+                if (hit[i].GetComponent<Unit>().side != behaviour.side && hit[i].GetComponent<Unit>().type == Unit.Type.PAWN)
+                {
+                    Attack(hit[i].GetComponent<Pawn>());
+                }
+
+        if (behaviour.lifetime > 0)
+            StartCoroutine("Live", behaviour.lifetime);
+        else
+            Destroy(gameObject);
     }
 
     private void Update()
     {
-        //if(zone.OverlapCollider(attackFilter, hit) > 0)
-        //    for (int i = 0; i < hit.Count; i++)
-        //        if(hit[i].GetComponent<Unit>().side != behaviour.side && hit[i].GetComponent<Unit>().type == Unit.Type.PAWN)
-        //        {
-        //            Attack(hit[i].GetComponent<Pawn>());
-        //        }
+
     }
 
     IEnumerator Live(float time)
@@ -33,47 +50,67 @@ public class EffectZone : MonoBehaviour
         Destroy(gameObject);
     }
 
-    //private void Attack(Pawn unit)
-    //{
-    //    unit.LoseHealth(behaviour.damage);
-        
-    //    if(behaviour.slow > 0)
-    //    {
-    //        unit.StartCoroutine(unit.Slow(behaviour.damageSpeed, behaviour.slow));
-    //    }
-    //}
+    private void Attack(Pawn unit)
+    {
+        affected.Add(unit);
 
-    private void OnCollisionEnter2D(Collision2D collision)
+        unit.LoseHealth(behaviour.damage);
+        
+        if(behaviour.slow > 0)
+            if(behaviour.slowTime > 0)
+                unit.AddSlow(behaviour.slow, behaviour.slowTime);
+            else
+                unit.AddSlow(behaviour.slow);
+
+        if (behaviour.poison)
+            unit.StartCoroutine(unit.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
+
+        if (behaviour.stunt)
+            unit.StartCoroutine(unit.Stunt(behaviour.stuntDuration));
+
+        if (behaviour.burn)
+            unit.StartCoroutine(unit.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         GameObject go = collision.gameObject;
-        if((go.layer & GameManager.instance.unitLayer) >= 1 && go.GetComponent<Unit>().side != behaviour.side && go.GetComponent<Unit>().type == Unit.Type.PAWN)
+
+        if(GameManager.instance.unitLayer == (GameManager.instance.unitLayer | (1 << go.layer)) &&
+            go.GetComponent<Unit>().side != behaviour.side &&
+            go.GetComponent<Unit>().type == Unit.Type.PAWN &&
+            SearchAffected(go.GetComponent<Pawn>()) == -1)
         {
             Pawn pawn = go.GetComponent<Pawn>();
             affected.Add(pawn);
 
 
-            if (behaviour.damage > 0 && behaviour.damageSpeed > 0)
-                DOT(pawn);
+            if (behaviour.burn)
+                pawn.StartCoroutine(pawn.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
 
             if (behaviour.slow > 0)
                 pawn.AddSlow(behaviour.slow);
-
-            //if (behaviour.burn)
-                //pawn.Burn();
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
         GameObject go = collision.gameObject;
+        if (go.GetComponent<Pawn>() != null ? SearchAffected(go.GetComponent<Pawn>()) >= 0 : false)
+        {
+            int index = SearchAffected(go.GetComponent<Pawn>());
+            affected[index].RemSlow(behaviour.slow);
+            affected.RemoveAt(index);
+        }
     }
 
-    IEnumerator DOT(Pawn pawn)
+    private int SearchAffected(Pawn pawn)
     {
-        while(true)
+        for (int i = 0; i < affected.Count; i++)
         {
-            pawn.LoseHealth(behaviour.damage);
-            yield return new WaitForSeconds(behaviour.damageSpeed);
+            if (pawn == affected[i])
+                return i;
         }
+        return -1;
     }
 }

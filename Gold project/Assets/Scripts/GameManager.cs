@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour
 
     [Header("GameObject")]
     public GameObject splash;
+    public GameObject explosion;
 
     [HideInInspector] public Dictionary<string, GameObject> units;
 

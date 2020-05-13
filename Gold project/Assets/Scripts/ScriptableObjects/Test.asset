@@ -12,11 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea43c3998c2a96e42ac79be7334b69d3, type: 3}
   m_Name: Test
   m_EditorClassIdentifier: 
-  lifetime: 5
   side: 2
-  damage: 1
-  damageSpeed: 1
-  slow: 0
+  damage: 10
   stunt: 0
-  burn: 0
+  stuntDuration: 2
+  dot: 1
+  damageSpeed: 2
+  lifetime: 9.07
+  dotDuration: 0
   poison: 0
+  slow: 0
+  slowTime: 3
+  burn: 0

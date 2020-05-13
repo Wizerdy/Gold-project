@@ -19,10 +19,11 @@ public abstract class Unit : MonoBehaviour
     [SerializeField] private Collider2D attackRange = null;
 
     [HideInInspector] public bool canAttack;
-    protected int curHealth;
+    [SerializeField] protected int curHealth;
     public List<Collider2D> hit;
     protected int hitIndex;
     protected ContactFilter2D attackFilter;
+    protected bool stunt;
 
     public Unit(Type type) { this.type = type; }
 
@@ -30,6 +31,7 @@ public abstract class Unit : MonoBehaviour
     {
         curHealth = maxHealth;
         canAttack = true;
+        stunt = false;
 
         hit = new List<Collider2D>();
         attackFilter = new ContactFilter2D();
@@ -41,9 +43,14 @@ public abstract class Unit : MonoBehaviour
     {
         if (maxHealth > 0 && curHealth <= 0)
         {
-            GameManager.instance.SpawnSplash(transform.position);
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    protected virtual void Die()
+    {
+        GameManager.instance.SpawnSplash(transform.position);
+        Destroy(gameObject);
     }
 
     protected IEnumerator AtkCountdown(float time)
@@ -73,6 +80,16 @@ public abstract class Unit : MonoBehaviour
     public virtual void LoseHealth(int amount)
     {
         curHealth -= amount;
+        StartCoroutine(Coloration(Color.red, 0.05f));
+    }
+
+    protected IEnumerator Coloration(Color color, float time)
+    {
+        SpriteRenderer spRend = GetComponent<SpriteRenderer>();
+        Color baseColor = spRend.color;
+        spRend.color = color;
+        yield return new WaitForSeconds(time);
+        spRend.color = baseColor;
     }
 
     public int DealDamage()
@@ -83,5 +100,23 @@ public abstract class Unit : MonoBehaviour
     protected virtual void OnDestroy()
     {
         
+    }
+
+    public IEnumerator DOT(int damage, float duration, float cd)
+    {
+        float time = 0;
+        while(time < duration)
+        {
+            LoseHealth(damage);
+            yield return new WaitForSeconds(cd);
+            time += cd;
+        }
+    }
+
+    public IEnumerator Stunt(float duration)
+    {
+        stunt = true;
+        yield return new WaitForSeconds(duration);
+        stunt = false;
     }
 }
