@@ -1,0 +1,679 @@
+fileFormatVersion: 2
+guid: a8fbfd79370bcf7438934076cf27a50b
+ScriptedImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 2
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+  script: {fileID: 11500000, guid: b2a9591990af98743ba3ff7cf1000886, type: 3}
+  textureImporterSettings:
+    alphaSource: 1
+    mipMapMode: 0
+    enableMipMap: 1
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+    convertToNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    isReadable: 0
+    streamingMipmaps: 1
+    streamingMipmapsPriority: 0
+    nPOTScale: 1
+    sRGBTexture: 1
+    spriteMode: 2
+    spriteExtrude: 1
+    spriteMeshType: 1
+    alignment: 0
+    spritePivot: {x: 0.5, y: 0.5}
+    spritePixelsToUnits: 100
+    spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+    spriteGenerateFallbackPhysicsShape: 0
+    generateCubemap: 6
+    cubemapConvolution: 0
+    seamlessCubemap: 0
+    alphaIsTransparency: 1
+    spriteTessellationDetail: -1
+    textureType: 8
+    textureShape: 1
+    singleChannelComponent: 0
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
+    normalMap: 0
+    textureFormat: 0
+    maxTextureSize: 0
+    lightmap: 0
+    compressionQuality: 0
+    linearTexture: 0
+    grayScaleToAlpha: 0
+    rGBM: 0
+    cubemapConvolutionSteps: 0
+    cubemapConvolutionExponent: 0
+    maxTextureSizeSet: 0
+    compressionQualitySet: 0
+    textureFormatSet: 0
+    applyGammaDecoding: 0
+  spriteImportData:
+  - name: 
+    originalName: 
+    pivot: {x: 0, y: 0}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 0
+      y: 0
+      width: 0
+      height: 0
+    spriteID: 
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 0, y: 0}
+  mosaicSpriteImportData: []
+  rigSpriteImportData:
+  - name: Toit Ext
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3535
+      y: 5040
+      width: 989
+      height: 1401
+    spriteID: d73404f60d82e1045a4da566de485a27
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3535, y: 3094}
+  - name: Toit Int
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5063
+      y: 4
+      width: 989
+      height: 1191
+    spriteID: fe1be7ebbeaf84a49b1efc55c9cbb6e2
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 5063, y: -2152}
+  - name: Tour
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1559
+      y: 5040
+      width: 980
+      height: 2243
+    spriteID: d63b4e209f86e264ab190efdefc3b93b
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1554, y: 5040}
+  - name: Brique Avant
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5063
+      y: 2402
+      width: 834
+      height: 923
+    spriteID: 9e8e5b6f06008804080133ccb375a935
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4129, y: 773}
+  - name: "Brique Arri\xE8re"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2547
+      y: 7290
+      width: 500
+      height: 577
+    spriteID: e3cf1e9ae1441ee4b92069ca68cbc7d9
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1817, y: 5315}
+  - name: Mur
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 5040
+      width: 1547
+      height: 2263
+    spriteID: 4eb13b31d6e32f941be9cba59e5d78e3
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -259, y: 4823}
+  - name: Porte
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4532
+      y: 5040
+      width: 455
+      height: 1060
+    spriteID: 340a2223234582349a92e72d5b6c94d9
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 3384, y: 4485}
+  - name: "Mur int\xE9rieur"
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 1559
+      y: 7291
+      width: 846
+      height: 588
+    spriteID: 0f71bf5be3bebc949b33ff2fa10e18eb
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 754, y: 6270}
+  - name: <Groupe>
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 3535
+      y: 6449
+      width: 988
+      height: 1401
+    spriteID: 354f5a6a83c525d4aa60a2e080ea79b4
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 2472, y: 3349}
+  - name: Toit Int_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 5063
+      y: 1203
+      width: 988
+      height: 1191
+    spriteID: 6d1ff8052be202e44bf24cf444eae6b0
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 4000, y: -2107}
+  - name: Tour_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2547
+      y: 5040
+      width: 980
+      height: 2242
+    spriteID: a34cc00b7bb5ca64eb0a4c0c77057db6
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 1480, y: 3877}
+  - name: Pompe 1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 7311
+      width: 1229
+      height: 762
+    spriteID: a6f3d15eb61c6764e9c45609c666f739
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2011, y: 6022}
+  - name: Pompe 3
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 2939
+      y: 3177
+      width: 2091
+      height: 1101
+    spriteID: bb340380fa7b95e45b3aa5a37eb7c941
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: 924, y: 1881}
+  - name: Pompe 3_1
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 3177
+      width: 2927
+      height: 1855
+    spriteID: ddfff976e0eae9a408bbdedf6154672a
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2013, y: 1881}
+  - name: Pompe 4
+    originalName: 
+    pivot: {x: 0.5, y: 0.5}
+    alignment: 0
+    border: {x: 0, y: 0, z: 0, w: 0}
+    rect:
+      serializedVersion: 2
+      x: 4
+      y: 4
+      width: 5051
+      height: 3165
+    spriteID: 81ac6ad46ee05bb44b09d1d173823d00
+    internalID: 0
+    spriteBone: []
+    spriteOutline: []
+    vertices: []
+    spritePhysicsOutline: []
+    indices: 
+    edges: []
+    tessellationDetail: 0
+    parentGroupIndex: -1
+    uvTransform: {x: -2005, y: -1285}
+  platformSettings: []
+  mosaicLayers: 1
+  documentPivot: {x: 0, y: 0}
+  documentAlignment: 7
+  importHiddenLayers: 0
+  importedTextureWidth: 2048
+  importedTextureHeight: 2048
+  documentSize: {x: 7060, y: 4501}
+  paperDollMode: 0
+  keepDupilcateSpriteName: 0
+  spriteCategoryList:
+    categories: []
+  textureActualWidth: 8192
+  textureActualHeight: 8192
+  spritePackingTag: 
+  resliceFromLayer: 0
+  characterMode: 1
+  mosaicPSDLayers: []
+  rigPSDLayers:
+  - name: Toit
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 222
+    mosaicPosition: {x: 0, y: 0}
+  - name: Toit Ext
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 
+    layerID: 220
+    mosaicPosition: {x: 0, y: 0}
+  - name: Toit Ext
+    spriteName: Toit Ext
+    isGroup: 0
+    parentIndex: 1
+    spriteID: d73404f60d82e1045a4da566de485a27
+    layerID: 217
+    mosaicPosition: {x: 3535, y: 5040}
+  - name: Toit Int
+    spriteName: 
+    isGroup: 1
+    parentIndex: 0
+    spriteID: 
+    layerID: 208
+    mosaicPosition: {x: 0, y: 0}
+  - name: Toit Int
+    spriteName: Toit Int
+    isGroup: 0
+    parentIndex: 3
+    spriteID: fe1be7ebbeaf84a49b1efc55c9cbb6e2
+    layerID: 205
+    mosaicPosition: {x: 5063, y: 4}
+  - name: Tour
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 199
+    mosaicPosition: {x: 0, y: 0}
+  - name: Tour
+    spriteName: Tour
+    isGroup: 0
+    parentIndex: 5
+    spriteID: d63b4e209f86e264ab190efdefc3b93b
+    layerID: 196
+    mosaicPosition: {x: 1559, y: 5040}
+  - name: Briques
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 224
+    mosaicPosition: {x: 0, y: 0}
+  - name: Brique avant
+    spriteName: 
+    isGroup: 1
+    parentIndex: 7
+    spriteID: 
+    layerID: 187
+    mosaicPosition: {x: 0, y: 0}
+  - name: Brique Avant
+    spriteName: Brique Avant
+    isGroup: 0
+    parentIndex: 8
+    spriteID: 9e8e5b6f06008804080133ccb375a935
+    layerID: 184
+    mosaicPosition: {x: 5063, y: 2402}
+  - name: "Brique arri\xE8re"
+    spriteName: 
+    isGroup: 1
+    parentIndex: 7
+    spriteID: 
+    layerID: 194
+    mosaicPosition: {x: 0, y: 0}
+  - name: "Brique Arri\xE8re"
+    spriteName: "Brique Arri\xE8re"
+    isGroup: 0
+    parentIndex: 10
+    spriteID: e3cf1e9ae1441ee4b92069ca68cbc7d9
+    layerID: 191
+    mosaicPosition: {x: 2547, y: 7290}
+  - name: Mur
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 178
+    mosaicPosition: {x: 0, y: 0}
+  - name: Mur
+    spriteName: Mur
+    isGroup: 0
+    parentIndex: 12
+    spriteID: 4eb13b31d6e32f941be9cba59e5d78e3
+    layerID: 177
+    mosaicPosition: {x: 4, y: 5040}
+  - name: Porte
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 175
+    mosaicPosition: {x: 0, y: 0}
+  - name: Porte
+    spriteName: Porte
+    isGroup: 0
+    parentIndex: 14
+    spriteID: 340a2223234582349a92e72d5b6c94d9
+    layerID: 172
+    mosaicPosition: {x: 4532, y: 5040}
+  - name: "Mur int\xE9rieur"
+    spriteName: "Mur int\xE9rieur"
+    isGroup: 0
+    parentIndex: -1
+    spriteID: 0f71bf5be3bebc949b33ff2fa10e18eb
+    layerID: 137
+    mosaicPosition: {x: 1559, y: 7291}
+  - name: Toit
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 226
+    mosaicPosition: {x: 0, y: 0}
+  - name: Toit Ext
+    spriteName: 
+    isGroup: 1
+    parentIndex: 17
+    spriteID: 
+    layerID: 135
+    mosaicPosition: {x: 0, y: 0}
+  - name: <Groupe>
+    spriteName: <Groupe>
+    isGroup: 0
+    parentIndex: 18
+    spriteID: 354f5a6a83c525d4aa60a2e080ea79b4
+    layerID: 132
+    mosaicPosition: {x: 3535, y: 6449}
+  - name: Toit Int
+    spriteName: 
+    isGroup: 1
+    parentIndex: 17
+    spriteID: 
+    layerID: 123
+    mosaicPosition: {x: 0, y: 0}
+  - name: Toit Int
+    spriteName: Toit Int_1
+    isGroup: 0
+    parentIndex: 20
+    spriteID: 6d1ff8052be202e44bf24cf444eae6b0
+    layerID: 120
+    mosaicPosition: {x: 5063, y: 1203}
+  - name: Tour
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 114
+    mosaicPosition: {x: 0, y: 0}
+  - name: Tour
+    spriteName: Tour_1
+    isGroup: 0
+    parentIndex: 22
+    spriteID: a34cc00b7bb5ca64eb0a4c0c77057db6
+    layerID: 111
+    mosaicPosition: {x: 2547, y: 5040}
+  - name: Pumps Slot
+    spriteName: 
+    isGroup: 1
+    parentIndex: -1
+    spriteID: 
+    layerID: 107
+    mosaicPosition: {x: 0, y: 0}
+  - name: Pompe 1
+    spriteName: 
+    isGroup: 1
+    parentIndex: 24
+    spriteID: 
+    layerID: 105
+    mosaicPosition: {x: 0, y: 0}
+  - name: Pompe 1
+    spriteName: Pompe 1
+    isGroup: 0
+    parentIndex: 25
+    spriteID: a6f3d15eb61c6764e9c45609c666f739
+    layerID: 102
+    mosaicPosition: {x: 4, y: 7311}
+  - name: Pompe 2
+    spriteName: 
+    isGroup: 1
+    parentIndex: 24
+    spriteID: 
+    layerID: 95
+    mosaicPosition: {x: 0, y: 0}
+  - name: Pompe 3
+    spriteName: Pompe 3
+    isGroup: 0
+    parentIndex: 27
+    spriteID: bb340380fa7b95e45b3aa5a37eb7c941
+    layerID: 92
+    mosaicPosition: {x: 2939, y: 3177}
+  - name: Pompe 3
+    spriteName: 
+    isGroup: 1
+    parentIndex: 24
+    spriteID: 
+    layerID: 78
+    mosaicPosition: {x: 0, y: 0}
+  - name: Pompe 3
+    spriteName: Pompe 3_1
+    isGroup: 0
+    parentIndex: 29
+    spriteID: ddfff976e0eae9a408bbdedf6154672a
+    layerID: 75
+    mosaicPosition: {x: 4, y: 3177}
+  - name: Pompe 4
+    spriteName: 
+    isGroup: 1
+    parentIndex: 24
+    spriteID: 
+    layerID: 55
+    mosaicPosition: {x: 0, y: 0}
+  - name: Pompe 4
+    spriteName: Pompe 4
+    isGroup: 0
+    parentIndex: 31
+    spriteID: 81ac6ad46ee05bb44b09d1d173823d00
+    layerID: 52
+    mosaicPosition: {x: 4, y: 4}
+  characterData:
+    bones: []
+    parts: []
+    dimension: {x: 0, y: 0}
+    characterGroups: []
+  generateGOHierarchy: 0
+  textureAssetName: "Ch\xE2teau Texture"
+  prefabAssetName: "Ch\xE2teau Prefab"
+  spriteLibAssetName: "Ch\xE2teau Sprite Lib"
+  secondarySpriteTextures: []
