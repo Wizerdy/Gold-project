@@ -2,10 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerCastle : MonoBehaviour
+public class Castle : Buildings
 {
-    public int life = 100;
-    public Transform castleDoors;
 
     // Start is called before the first frame update
     void Start()
@@ -17,5 +15,20 @@ public class PlayerCastle : MonoBehaviour
     void Update()
     {
         
+    }
+
+    void AddSlot(Structure structureToAdd)
+    {
+
+    }
+
+    void ChangeSlot(Structure structureToChange)
+    {
+
+    }
+
+    void RemoveSlot(Structure structureToRemove)
+    {
+
     }
 }
