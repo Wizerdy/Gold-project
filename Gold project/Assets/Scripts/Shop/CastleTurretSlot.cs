@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tower : Structure
+public class CastleTurretSlot : MonoBehaviour
 {
     public int hudId;
 
     private void OnMouseDown()
     {
-        ShopManager.instance.ActiveCanvas(0);
+        ShopManager.instance.ActiveCanvas(1);
         ShopManager.instance.currentHudId = hudId;
     }
 }

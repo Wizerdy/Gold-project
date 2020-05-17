@@ -14,7 +14,7 @@ public enum Colors
     GREEN,
     ORANGE,
     PURPLE,
-    BLACK,
+    BLACK
 }
 
 public enum Type
@@ -28,7 +28,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 {
     public static GameObject itemBeingDragged;
     public GameObject michel;
-    public GameObject unitToSpawn;
+    //public string unitToSpawn;
 
     public Colors colorState;
 
@@ -43,11 +43,20 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void OnPointerDown(PointerEventData eventData)
     {
-        Debug.Log("click");
         if (barren == true)
         {
-            Debug.Log("Spawn");
-            GameManager.instance.InstantiateUnit(unitToSpawn, Unit.Side.ALLY);
+            string name = (structType == Type.TURRET ? "T_" : "") + colorState.ToString();
+            if (structType == Type.TURRET &&
+                ShopManager.instance.spawnList[ShopManager.instance.currentHudId].childCount > 0)
+            {
+                if (colorState == ShopManager.instance.spawnList[ShopManager.instance.currentHudId].GetChild(0).GetComponent<Turret>().color)
+                {
+                    return;
+                }
+                Destroy(ShopManager.instance.spawnList[ShopManager.instance.currentHudId].GetChild(0).gameObject);
+            }
+                GameManager.instance.InstantiateUnit(GameManager.instance.units[name], Unit.Side.ALLY,
+                    ShopManager.instance.spawnList[ShopManager.instance.currentHudId]);
         }
     }
 
@@ -87,7 +96,6 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     public void Merge(GameObject bernard)
     {
-        Debug.Log(bernard);
         if (bernard == null)
         {
             return;

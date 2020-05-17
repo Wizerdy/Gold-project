@@ -15,7 +15,7 @@ public abstract class Unit : MonoBehaviour
     public int maxHealth;
     public Vector2Int damage;
     public float attackSpeed;
-    public Color color;
+    public Colors color;
     [SerializeField] private Collider2D attackRange = null;
 
     [HideInInspector] public bool canAttack;

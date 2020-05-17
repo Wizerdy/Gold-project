@@ -102,10 +102,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  michel: {fileID: 1447646501718497134}
   colorState: 1
   structType: 1
   barren: 0
-  michel: {fileID: 1447646501718497134}
 --- !u!223 &1320845683520009899
 Canvas:
   m_ObjectHideFlags: 0
