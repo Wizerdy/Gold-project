@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 5152755110082362001}
   - component: {fileID: -4929369098298378265}
   - component: {fileID: 1834989891510124431}
+  - component: {fileID: -7139089961763554868}
   m_Layer: 5
   m_Name: Jaune
   m_TagString: Untagged
@@ -102,9 +103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorState: 0
-  barren: 0
   michel: {fileID: 566348324082799459}
+  unitToSpawn: {fileID: 3740516601931120442, guid: b12dc55f8fcfb5c40954ff77a352f7ca,
+    type: 3}
+  colorState: 0
+  structType: 0
+  barren: 0
 --- !u!223 &-4929369098298378265
 Canvas:
   m_ObjectHideFlags: 0
@@ -143,3 +147,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!58 &-7139089961763554868
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566348324082799459}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 35

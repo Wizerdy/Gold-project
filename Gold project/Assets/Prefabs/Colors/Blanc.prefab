@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -3483234551122858332}
   - component: {fileID: -7328165350391326616}
   - component: {fileID: 9032566328046908725}
+  - component: {fileID: -4270257497175837696}
   m_Layer: 5
   m_Name: Blanc
   m_TagString: Untagged
@@ -102,9 +103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorState: 3
-  barren: 0
   michel: {fileID: 566348324082799459}
+  unitToSpawn: {fileID: 3740516601931120442, guid: 61f3f34355c96c14ebae3b5e8498ae68,
+    type: 3}
+  colorState: 3
+  structType: 0
+  barren: 0
 --- !u!223 &-7328165350391326616
 Canvas:
   m_ObjectHideFlags: 0
@@ -143,3 +147,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!58 &-4270257497175837696
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566348324082799459}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 35

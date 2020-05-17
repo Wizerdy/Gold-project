@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 6882641496105085213}
   - component: {fileID: 5490570054155987687}
   - component: {fileID: 4848498078908524069}
+  - component: {fileID: -6922040724550735359}
   m_Layer: 5
   m_Name: Violet
   m_TagString: Untagged
@@ -102,9 +103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorState: 6
-  barren: 0
   michel: {fileID: 6063918825073830978}
+  unitToSpawn: {fileID: 3740516601931120442, guid: 413a5319afa77d74da8391f401ef4516,
+    type: 3}
+  colorState: 6
+  structType: 0
+  barren: 0
 --- !u!223 &5490570054155987687
 Canvas:
   m_ObjectHideFlags: 0
@@ -143,3 +147,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!58 &-6922040724550735359
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6063918825073830978}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 35

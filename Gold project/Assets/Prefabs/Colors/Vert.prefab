@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 7738236237397055775}
   - component: {fileID: 6522913500852515118}
   - component: {fileID: 1160253377460137201}
+  - component: {fileID: -1515307444273364502}
   m_Layer: 5
   m_Name: Vert
   m_TagString: Untagged
@@ -102,9 +103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorState: 4
-  barren: 0
   michel: {fileID: 8522568318328485097}
+  unitToSpawn: {fileID: 3740516601931120442, guid: 64673d906eb733141a2ef2e627a00c29,
+    type: 3}
+  colorState: 4
+  structType: 0
+  barren: 0
 --- !u!223 &6522913500852515118
 Canvas:
   m_ObjectHideFlags: 0
@@ -143,3 +147,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!58 &-1515307444273364502
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8522568318328485097}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 35

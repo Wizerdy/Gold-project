@@ -5,6 +5,8 @@ using UnityEngine.EventSystems;
 
 public class Slot : MonoBehaviour, IDropHandler
 {
+    public bool isInventorySlot;
+
     public GameObject item {
         get
         {
@@ -26,8 +28,5 @@ public class Slot : MonoBehaviour, IDropHandler
         {
             DragHandeler.itemBeingDragged.GetComponent<DragHandeler>().Merge(item);
         }
-        /*if(!item)
-        {
-        }*/
     }
 }

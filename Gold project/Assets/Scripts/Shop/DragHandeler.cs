@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
 public enum Colors
@@ -23,28 +24,50 @@ public enum Type
     PUMP
 }
 
-public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler, IPointerDownHandler
 {
     public static GameObject itemBeingDragged;
-    public Colors colorState;
-    public Type structType;
-    Vector3 startPosition;
-    Transform startParent;
-    public bool barren = false;
     public GameObject michel;
+    public GameObject unitToSpawn;
+
+    public Colors colorState;
+
+    public Type structType;
+
+    Vector3 startPosition;
+
+    Transform startParent;
+
+    public bool barren = false;
+
+
+    public void OnPointerDown(PointerEventData eventData)
+    {
+        Debug.Log("click");
+        if (barren == true)
+        {
+            Debug.Log("Spawn");
+            GameManager.instance.InstantiateUnit(unitToSpawn, Unit.Side.ALLY);
+        }
+    }
 
     public void OnBeginDrag(PointerEventData eventData)
     {
-
-        itemBeingDragged = gameObject;
-        startPosition = transform.position;
-        startParent = transform.parent;
-        GetComponent<CanvasGroup>().blocksRaycasts = false;
+        if (barren == false)
+        {
+            itemBeingDragged = gameObject;
+            startPosition = transform.position;
+            startParent = transform.parent;
+            GetComponent<CanvasGroup>().blocksRaycasts = false;
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        transform.position = Input.mousePosition;
+        if (barren == false)
+        {
+            transform.position = Input.mousePosition;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
@@ -60,6 +83,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             barren = true;
         }
     }
+
 
     public void Merge(GameObject bernard)
     {

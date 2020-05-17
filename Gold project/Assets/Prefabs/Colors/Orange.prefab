@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 2838428279006481938}
   - component: {fileID: 6747243450912468530}
   - component: {fileID: 1706763760493466145}
+  - component: {fileID: 5518858870349562762}
   m_Layer: 5
   m_Name: Orange
   m_TagString: Untagged
@@ -102,9 +103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorState: 5
-  barren: 0
   michel: {fileID: 3899408688908747806}
+  unitToSpawn: {fileID: 3740516601931120442, guid: 7253766675272e24ca9e63e30c145a24,
+    type: 3}
+  colorState: 5
+  structType: 0
+  barren: 0
 --- !u!223 &6747243450912468530
 Canvas:
   m_ObjectHideFlags: 0
@@ -143,3 +147,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!58 &5518858870349562762
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3899408688908747806}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 35

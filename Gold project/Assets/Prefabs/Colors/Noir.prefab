@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: -5921399636223750503}
   - component: {fileID: -3675132771084881229}
   - component: {fileID: -3500026596751972006}
+  - component: {fileID: 7750481759625078884}
   m_Layer: 5
   m_Name: Noir
   m_TagString: Untagged
@@ -102,9 +103,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorState: 7
-  barren: 0
   michel: {fileID: 566348324082799459}
+  unitToSpawn: {fileID: 3740516601931120442, guid: 985b711a7cd00f845a654ea16b736f97,
+    type: 3}
+  colorState: 7
+  structType: 0
+  barren: 0
 --- !u!223 &-3675132771084881229
 Canvas:
   m_ObjectHideFlags: 0
@@ -143,3 +147,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!58 &7750481759625078884
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 566348324082799459}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 35
