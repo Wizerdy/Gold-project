@@ -446,7 +446,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &640572826
 Transform:
   m_ObjectHideFlags: 0
@@ -483,6 +483,7 @@ MonoBehaviour:
   color: {r: 0, g: 0, b: 0, a: 0}
   attackRange: {fileID: 903434219}
   canAttack: 0
+  curHealth: 0
   hit: []
   ammo: {fileID: 1127284204803739376, guid: b84d14d18942b3648b34cc2498f78a76, type: 3}
   sprite: {fileID: 983580937}
@@ -521,6 +522,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   splash: {fileID: 5897656158704275477, guid: 262b9eb291a73654d9781f94b80b1658, type: 3}
+  explosion: {fileID: 7979257505062667211, guid: 05b11472405937c4499a7d71915909e0,
+    type: 3}
 --- !u!4 &757456566
 Transform:
   m_ObjectHideFlags: 0
@@ -576,7 +579,7 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 6.608554, y: -1.8978267}

@@ -23,6 +23,9 @@ public abstract class Pawn : Unit
 
     private void Update()
     {
+        if (stunt)
+            return;
+
         if(!CheckAttackRange()) {
             Move();
         } else if(canAttack)
@@ -53,16 +56,27 @@ public abstract class Pawn : Unit
 
     }
 
-    public int AddSlow(float slow)
+    #region Slow
+
+    public void AddSlow(float slow)
     {
+        if (!slows.ContainsKey(slow))
+        {
+            slows.Add(slow, 0);
+        }
+
         slows[slow]++;
 
         if(TestSlow(slow))
         {
             curSpeed = speed * (1 - slow);
         }
+    }
 
-        return slows.Count - 1;
+    public void AddSlow(float slow, float time)
+    {
+        AddSlow(slow);
+        StartCoroutine(RemSlow(slow, time));
     }
 
     public void RemSlow(float slow)
@@ -71,10 +85,15 @@ public abstract class Pawn : Unit
         {
             slows[slow]--;
 
-            if(slows[slow] == 0)
-                foreach(int value in slows.Values)
-                    if(TestSlow(value))
-                        curSpeed = speed * (1 - value);
+            if (slows[slow] == 0)
+            {
+                foreach (KeyValuePair<float, int> pair in slows)
+                    if (pair.Value > 0 && TestSlow(pair.Key))
+                        curSpeed = speed * (1 - pair.Key);
+
+                if(curSpeed == speed * (1 - slow))
+                    curSpeed = speed;
+            }
         }
     }
 
@@ -92,19 +111,11 @@ public abstract class Pawn : Unit
         return false;
     }
 
-    //IEnumerator TakeDamage(float time)
-    //{
+    IEnumerator RemSlow(float slow, float time)
+    {
+        yield return new WaitForSeconds(time);
+        RemSlow(slow);
+    }
 
-    //}
-
-    //private void SlowAdd(float slow)
-    //{
-    //    if(slows[slow] == 0)
-    //    {
-    //        slows.Add(slow, 1);
-    //    } else
-    //    {
-    //        slows[slow]++;
-    //    }
-    //}
+    #endregion
 }
