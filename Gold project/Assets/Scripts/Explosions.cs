@@ -5,8 +5,6 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "new Explosion", menuName = "ScriptableObjects/Explosion", order = 1)]
 public class Explosions : ScriptableObject
 {
-    [HideInInspector] public Unit.Side side;
-
     public Vector2 size;
 
     public int damage;

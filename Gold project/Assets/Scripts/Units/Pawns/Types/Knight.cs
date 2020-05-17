@@ -12,6 +12,7 @@ public class Knight : Pawn
         {
             GameObject insta = Instantiate(GameManager.instance.explosion, transform.position, Quaternion.identity);
             insta.GetComponent<EffectZone>().behaviour = explosion;
+            insta.GetComponent<EffectZone>().side = side;
         }
         base.Die();
     }

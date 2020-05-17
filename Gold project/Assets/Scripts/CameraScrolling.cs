@@ -54,7 +54,6 @@ public class CameraScrolling : MonoBehaviour
             return Vector3.zero;
         }
 
-
         //delta
         Ray rayBefore = gameCamera.ScreenPointToRay(touch.position - touch.deltaPosition);
         Ray rayNow = gameCamera.ScreenPointToRay(touch.position);

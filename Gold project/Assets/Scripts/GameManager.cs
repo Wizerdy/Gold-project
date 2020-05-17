@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Layers")]
     public LayerMask unitLayer;
+    public LayerMask floorLayer;
 
     [Header("GameObject")]
     public GameObject splash;
@@ -35,9 +36,9 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         if(Input.GetKeyDown(KeyCode.A))
-            InstantiateUnit(units["Knight"], Unit.Side.ALLY);
+            InstantiateUnit(units["Knight"], Unit.Side.ALLY, allyParent.position);
          else if(Input.GetKeyDown(KeyCode.E))
-            InstantiateUnit(units["Knight"], Unit.Side.ENEMY);
+            InstantiateUnit(units["Knight"], Unit.Side.ENEMY, enemyParent.position);
     }
 
     public void InstantiateUnit(GameObject unit, Transform parent, Transform target)
@@ -46,19 +47,30 @@ public class GameManager : MonoBehaviour
         insta.GetComponent<Pawn>().target = target;
     }
 
-    public void InstantiateUnit(GameObject unit, Unit.Side side)
+    public void InstantiateUnit(GameObject unit, Unit.Side side, Vector2 pos)
     {
         GameObject insta = Instantiate(unit, (side == Unit.Side.ALLY ? allyParent : enemyParent) );
+        insta.transform.position = pos;
         insta.layer = (side == Unit.Side.ALLY ? allyParent : enemyParent).gameObject.layer;
         insta.transform.localEulerAngles = new Vector3(insta.transform.rotation.x, insta.transform.rotation.y + 180 * (side == Unit.Side.ALLY ? 0 : 1), insta.transform.rotation.z);
         insta.GetComponent<Unit>().side = side;
 
-        if(insta.GetComponent<Unit>().type == Unit.Type.PAWN)
+        if (insta.GetComponent<Unit>().type == Unit.Type.PAWN)
+        {
             insta.GetComponent<Pawn>().target = (side == Unit.Side.ALLY ? enemyParent : allyParent);
+        }
     }
 
     public void SpawnSplash(Vector2 pos)
     {
         Instantiate(splash, pos, Quaternion.identity);
+    }
+
+    public static bool InsideLayer(int layer, LayerMask mask)
+    {
+        if (mask == (mask | (1 << layer)))
+            return true;
+
+        return false;
     }
 }

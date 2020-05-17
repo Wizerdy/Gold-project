@@ -5,11 +5,11 @@ using UnityEngine;
 public abstract class Unit : MonoBehaviour
 {
     public enum Type { PAWN, STRUCTURE };
-    public enum Side { ALLY, ENEMY, NEUTRAL };
+    public enum Side { NEUTRAL, ALLY, ENEMY };
 
     [Header("States")]
     [HideInInspector] public Type type;
-    [HideInInspector] public Side side;
+    public Side side;
 
     [Header("Stats")]
     public int maxHealth;
@@ -19,8 +19,8 @@ public abstract class Unit : MonoBehaviour
     [SerializeField] private Collider2D attackRange = null;
 
     [HideInInspector] public bool canAttack;
-    [SerializeField] protected int curHealth;
-    public List<Collider2D> hit;
+    [HideInInspector] protected int curHealth;
+    [HideInInspector] public List<Collider2D> hit;
     protected int hitIndex;
     protected ContactFilter2D attackFilter;
     protected bool stunt;

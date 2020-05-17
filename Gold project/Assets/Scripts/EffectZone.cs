@@ -6,6 +6,8 @@ public class EffectZone : MonoBehaviour
 {
     public Explosions behaviour;
 
+    [HideInInspector] public Unit.Side side;
+
     private Collider2D zone;
 
     public List<Pawn> affected;
@@ -28,7 +30,7 @@ public class EffectZone : MonoBehaviour
 
         if (zone.OverlapCollider(attackFilter, hit) > 0)
             for (int i = 0; i < hit.Count; i++)
-                if (hit[i].GetComponent<Unit>().side != behaviour.side && hit[i].GetComponent<Unit>().type == Unit.Type.PAWN)
+                if (hit[i].GetComponent<Unit>().side != side && hit[i].GetComponent<Unit>().type == Unit.Type.PAWN)
                 {
                     Attack(hit[i].GetComponent<Pawn>());
                 }
@@ -77,7 +79,7 @@ public class EffectZone : MonoBehaviour
         GameObject go = collision.gameObject;
 
         if(GameManager.instance.unitLayer == (GameManager.instance.unitLayer | (1 << go.layer)) &&
-            go.GetComponent<Unit>().side != behaviour.side &&
+            go.GetComponent<Unit>().side != side &&
             go.GetComponent<Unit>().type == Unit.Type.PAWN &&
             SearchAffected(go.GetComponent<Pawn>()) == -1)
         {
@@ -99,7 +101,10 @@ public class EffectZone : MonoBehaviour
         if (go.GetComponent<Pawn>() != null ? SearchAffected(go.GetComponent<Pawn>()) >= 0 : false)
         {
             int index = SearchAffected(go.GetComponent<Pawn>());
-            affected[index].RemSlow(behaviour.slow);
+
+            if (behaviour.slow > 0 && behaviour.slowTime <= 0)
+                affected[index].RemSlow(behaviour.slow);
+
             affected.RemoveAt(index);
         }
     }
