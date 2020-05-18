@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: GrayscaleBorder
-  m_Shader: {fileID: -6465566751694194690, guid: 98515e3daa0d0884695bdcdce38d3fdc,
+  m_Name: Player_Aura
+  m_Shader: {fileID: -6465566751694194690, guid: 65fa8a819d88f8b4692f342e177d68ea,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4
@@ -20,19 +20,10 @@ Material:
   m_SavedProperties:
     serializedVersion: 3
     m_TexEnvs:
-    - Texture2D_1F388F81:
-        m_Texture: {fileID: 2800000, guid: 9121b2781a2ff8b48a9617a510468f20, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4f5982d87f83ea047bce8d5f60ac6cec, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
-    m_Floats:
-    - Vector1_17B7CAE7: 0
-    - Vector1_E9923202: 0
-    - _Border: 1.37
-    - _WaveSpeed: 0.55
+    m_Floats: []
     m_Colors:
-    - Vector2_F1ED2FDC: {r: 0, g: 0, b: 0, a: 0}
-    - _Wavy: {r: 1, g: 0.2, b: 0, a: 0}
+    - Color_BDC21F48: {r: 0, g: 0.6602616, b: 1, a: 0.3607843}
