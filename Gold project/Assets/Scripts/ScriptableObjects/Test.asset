@@ -20,7 +20,7 @@ MonoBehaviour:
   damageSpeed: 2
   lifetime: 0
   dotDuration: 10
-  poison: 1
+  poison: 0
   slow: 0
   slowTime: 3
   burn: 0
