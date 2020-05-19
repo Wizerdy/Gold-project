@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3740516601931120441}
   - component: {fileID: 634356893387697209}
   m_Layer: 8
-  m_Name: WhiteSlim
-  m_TagString: Untagged
+  m_Name: REDSLIME
+  m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 3740516601931120442}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.6666667, y: 0.6666667, z: 0.6666667}
+  m_LocalScale: {x: 0.325, y: 0.35, z: 1}
   m_Children:
   - {fileID: 9065462687598279394}
   - {fileID: 7432706384927186703}
@@ -48,17 +48,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   side: 0
-  maxHealth: 80
-  damage: {x: 8, y: 16}
-  attackSpeed: 0.8
-  color: {r: 0, g: 0, b: 0, a: 0}
+  maxHealth: 130
+  damage: {x: 12, y: 24}
+  attackSpeed: 1
+  color: 1
   attackRange: {fileID: 5278358871612878103}
   canAttack: 0
-  curHealth: 0
   hit: []
-  speed: 3
+  speed: 2
   target: {fileID: 0}
-  explosion: {fileID: 11400000, guid: 6e6f044a31e4046428198412544729c1, type: 2}
+  explosion: {fileID: 11400000, guid: 77e77c2e5d511b149ab6353b42248d02, type: 2}
 --- !u!61 &634356893387697209
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -72,7 +71,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.01, y: 0.4}
+  m_Offset: {x: 0.029603243, y: 0.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -161,13 +160,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -5154567182115903944, guid: a511a51b86b0a0345bc21aaa4e221bb8,
         type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
+      propertyPath: m_LocalPosition.x
+      value: 1.43
       objectReference: {fileID: 0}
     - target: {fileID: -5154567182115903944, guid: a511a51b86b0a0345bc21aaa4e221bb8,
         type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
+      propertyPath: m_LocalPosition.y
+      value: -0.12
       objectReference: {fileID: 0}
     - target: {fileID: -2199952218324825453, guid: a511a51b86b0a0345bc21aaa4e221bb8,
         type: 3}
@@ -191,12 +190,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3903950030413692080, guid: a511a51b86b0a0345bc21aaa4e221bb8,
         type: 3}
-      propertyPath: m_LocalPosition.y
+      propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3903950030413692080, guid: a511a51b86b0a0345bc21aaa4e221bb8,
         type: 3}
-      propertyPath: m_LocalPosition.x
+      propertyPath: m_LocalPosition.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4275284717822529569, guid: a511a51b86b0a0345bc21aaa4e221bb8,
@@ -268,6 +267,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157740749945990938, guid: a511a51b86b0a0345bc21aaa4e221bb8,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157740749945990938, guid: a511a51b86b0a0345bc21aaa4e221bb8,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.11694199
+      objectReference: {fileID: 0}
+    - target: {fileID: 8157740749945990938, guid: a511a51b86b0a0345bc21aaa4e221bb8,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: -3899389300678912937, guid: a511a51b86b0a0345bc21aaa4e221bb8,

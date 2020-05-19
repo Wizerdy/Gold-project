@@ -12,11 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea43c3998c2a96e42ac79be7334b69d3, type: 3}
   m_Name: PurpleXplosion
   m_EditorClassIdentifier: 
-  side: 2
   size: {x: 0, y: 0}
   damage: 0
   stunt: 1
-  stuntDuration: 1
+  stuntDuration: 2
   dot: 0
   damageSpeed: 0
   lifetime: 0
