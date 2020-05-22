@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using TMPro;
 
 public class ShopManager : MonoBehaviour
 {
@@ -10,8 +11,23 @@ public class ShopManager : MonoBehaviour
     public GameObject[] canvasList;
 
     public int currentHudId;
+    public int money;
+
+    public TextMeshProUGUI[] moneyText;
 
     public Transform[] spawnList;
+
+    public bool Pay(int cost)
+    {
+        if (money >= cost)
+        {
+            money -= cost;
+            return true;
+        } else
+        {
+            return false;
+        }
+    }
 
     public void ActiveCanvas(int number)
     {

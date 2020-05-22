@@ -8,7 +8,8 @@ public class ResetColor : MonoBehaviour
 
     public void WhiteColor(GameObject slot)
     {
-            Destroy(slot.transform.GetChild(0).gameObject);
-            Instantiate(white, slot.transform).GetComponent<DragHandeler>().barren = true;
+        Destroy(slot.transform.GetChild(0).gameObject);
+        Instantiate(white, slot.transform).GetComponent<DragHandeler>().barren = true;
+        ShopManager.instance.moneyText[white.GetComponent<DragHandeler>().structType == Type.TURRET ? 1 : 0].text = white.GetComponent<DragHandeler>().cost.ToString();
     }
 }

@@ -104,8 +104,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   michel: {fileID: 6063918825073830978}
-  unitToSpawn: {fileID: 3740516601931120442, guid: 413a5319afa77d74da8391f401ef4516,
-    type: 3}
+  cost: 50
   colorState: 6
   structType: 0
   barren: 0
