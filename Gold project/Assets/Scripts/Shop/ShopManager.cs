@@ -29,6 +29,11 @@ public class ShopManager : MonoBehaviour
         }
     }
 
+    public void SetHudId(int id)
+    {
+        currentHudId = id;
+    }
+
     public void ActiveCanvas(int number)
     {
         for (int i = 0; i < canvasList.Length; i++)

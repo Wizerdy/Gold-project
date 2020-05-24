@@ -19,6 +19,9 @@ public class GameManager : MonoBehaviour
     public GameObject splash;
     public GameObject explosion;
 
+    [Header("Array")]
+    public Color[] differentsColors;
+
     [HideInInspector] public Dictionary<string, GameObject> units;
 
     private void Awake()

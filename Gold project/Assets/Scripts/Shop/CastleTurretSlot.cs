@@ -21,4 +21,9 @@ public class CastleTurretSlot : MonoBehaviour
             }
         }
     }
+
+    public void SetHudId(int id)
+    {
+        hudId = id;
+    }
 }
