@@ -12,16 +12,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea43c3998c2a96e42ac79be7334b69d3, type: 3}
   m_Name: OrangeXplosion
   m_EditorClassIdentifier: 
-  side: 2
   size: {x: 0, y: 0}
-  damage: 40
+  damage: 120
   stunt: 0
   stuntDuration: 0
-  dot: 0
-  damageSpeed: 0
+  dot: 20
+  damageSpeed: 1
   lifetime: 0
-  dotDuration: 0
+  dotDuration: 5
   poison: 0
   slow: 0
   slowTime: 0
   burn: 1
+  little: 0
+  littleslime: {fileID: 0}

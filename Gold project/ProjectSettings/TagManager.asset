@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Slime
+  - Knight
   layers:
   - Default
   - TransparentFX

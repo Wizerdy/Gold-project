@@ -28,4 +28,10 @@ public class Explosions : ScriptableObject
 
     [Header("Burn")]
     public bool burn;
+
+    [Header("Little")]
+    public bool little;
+    public GameObject littleslime;
+
+
 }

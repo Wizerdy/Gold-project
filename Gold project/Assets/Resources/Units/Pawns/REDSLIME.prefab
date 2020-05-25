@@ -48,8 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   side: 0
-  maxHealth: 130
-  damage: {x: 12, y: 24}
+  maxHealth: 200
+  damage: {x: 20, y: 30}
   attackSpeed: 1
   color: 1
   attackRange: {fileID: 5278358871612878103}

@@ -12,9 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ea43c3998c2a96e42ac79be7334b69d3, type: 3}
   m_Name: RedXplosion
   m_EditorClassIdentifier: 
-  side: 2
   size: {x: 0, y: 0}
-  damage: 25
+  damage: 60
   stunt: 0
   stuntDuration: 0
   dot: 0
@@ -25,3 +24,5 @@ MonoBehaviour:
   slow: 0
   slowTime: 0
   burn: 0
+  little: 0
+  littleslime: {fileID: 0}

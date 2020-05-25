@@ -49,13 +49,13 @@ MonoBehaviour:
   type: 0
   side: 0
   maxHealth: 80
-  damage: {x: 8, y: 16}
+  damage: {x: 10, y: 20}
   attackSpeed: 1
   color: 3
   attackRange: {fileID: 5278358871612878103}
   canAttack: 0
   hit: []
-  speed: 3
+  speed: 4
   target: {fileID: 0}
   explosion: {fileID: 11400000, guid: 6e6f044a31e4046428198412544729c1, type: 2}
 --- !u!61 &634356893387697209

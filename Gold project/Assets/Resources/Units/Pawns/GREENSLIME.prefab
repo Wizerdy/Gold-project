@@ -48,9 +48,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   type: 0
   side: 0
-  maxHealth: 500
-  damage: {x: 56, y: 64}
-  attackSpeed: 2.4
+  maxHealth: 700
+  damage: {x: 150, y: 200}
+  attackSpeed: 3
   color: 4
   attackRange: {fileID: 5278358871612878103}
   canAttack: 0
