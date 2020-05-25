@@ -61,41 +61,41 @@ public class GameManager : MonoBehaviour
             InstantiateUnit(units["Knight"], Unit.Side.ALLY, allyParent.position);
 
         else if (Input.GetKeyDown(KeyCode.Z))
-            InstantiateUnit(units["WHITESLIME"], Unit.Side.ALLY, allyParent.position);
+            InstantiateUnit(units["WHITE"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.E))
-            InstantiateUnit(units["REDSLIME"], Unit.Side.ALLY, allyParent.position);
+            InstantiateUnit(units["REDS"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.R))
-            InstantiateUnit(units["YELLOWSLIME"], Unit.Side.ALLY, allyParent.position);
+            InstantiateUnit(units["YELLOW"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.T))
-            InstantiateUnit(units["BLUESLIME"], Unit.Side.ALLY, allyParent.position);
+            InstantiateUnit(units["BLUE"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.Y))
-            InstantiateUnit(units["ORANGESLIME"], Unit.Side.ALLY, allyParent.position);
+            InstantiateUnit(units["ORANGE"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.U))
-            InstantiateUnit(units["GREENSLIME"], Unit.Side.ALLY, allyParent.position);
+            InstantiateUnit(units["GREEN"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.I))
-            InstantiateUnit(units["PURPLESLIME"], Unit.Side.ALLY, allyParent.position);
+            InstantiateUnit(units["PURPLE"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.O))
-            InstantiateUnit(units["BLACKSLIME"], Unit.Side.ALLY, allyParent.position);
+            InstantiateUnit(units["BLACK"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.P))
-            InstantiateUnit(units["LITTLEPURPLESLIME"], Unit.Side.ALLY, allyParent.position);
+            InstantiateUnit(units["LITTLEPURPLE"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.S))
-            InstantiateUnit(units["WHITESLIME"], Unit.Side.ENEMY, enemyParent.position);
+            InstantiateUnit(units["WHITE"], Unit.Side.ENEMY, enemyParent.position);
         else if (Input.GetKeyDown(KeyCode.D))
-            InstantiateUnit(units["REDSLIME"], Unit.Side.ENEMY, enemyParent.position);
+            InstantiateUnit(units["RED"], Unit.Side.ENEMY, enemyParent.position);
         else if (Input.GetKeyDown(KeyCode.F))
-            InstantiateUnit(units["YELLOWSLIME"], Unit.Side.ENEMY, enemyParent.position);
+            InstantiateUnit(units["YELLOW"], Unit.Side.ENEMY, enemyParent.position);
         else if (Input.GetKeyDown(KeyCode.G))
-            InstantiateUnit(units["BLUESLIME"], Unit.Side.ENEMY, enemyParent.position);
+            InstantiateUnit(units["BLUE"], Unit.Side.ENEMY, enemyParent.position);
         else if (Input.GetKeyDown(KeyCode.H))
-            InstantiateUnit(units["ORANGESLIME"], Unit.Side.ENEMY, enemyParent.position);
+            InstantiateUnit(units["ORANGE"], Unit.Side.ENEMY, enemyParent.position);
         else if (Input.GetKeyDown(KeyCode.J))
-            InstantiateUnit(units["GREENSLIME"], Unit.Side.ENEMY, enemyParent.position);
+            InstantiateUnit(units["GREEN"], Unit.Side.ENEMY, enemyParent.position);
         else if (Input.GetKeyDown(KeyCode.K))
-            InstantiateUnit(units["PURPLESLIME"], Unit.Side.ENEMY, enemyParent.position);
+            InstantiateUnit(units["PURPLE"], Unit.Side.ENEMY, enemyParent.position);
         else if (Input.GetKeyDown(KeyCode.L))
-            InstantiateUnit(units["BLACKSLIME"], Unit.Side.ENEMY, enemyParent.position);
+            InstantiateUnit(units["BLACK"], Unit.Side.ENEMY, enemyParent.position);
         else if (Input.GetKeyDown(KeyCode.M))
-            InstantiateUnit(units["LITTLEPURPLESLIME"], Unit.Side.ENEMY, enemyParent.position);
+            InstantiateUnit(units["LITTLEPURPLE"], Unit.Side.ENEMY, enemyParent.position);
         else if (Input.GetKey(KeyCode.Q))
             Destroy(GameObject.FindWithTag("Slime"));
 
