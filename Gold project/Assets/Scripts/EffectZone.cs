@@ -24,9 +24,11 @@ public class EffectZone : MonoBehaviour
         transform.localScale = new Vector2(sizeX, sizeY);
 
         hit = new List<Collider2D>();
-        attackFilter = new ContactFilter2D();
-        attackFilter.layerMask = GameManager.instance.unitLayer;
-        attackFilter.useLayerMask = true;
+        attackFilter = new ContactFilter2D
+        {
+            layerMask = GameManager.instance.unitLayer,
+            useLayerMask = true
+        };
 
         if (zone.OverlapCollider(attackFilter, hit) > 0)
             for (int i = 0; i < hit.Count; i++)
@@ -70,8 +72,8 @@ public class EffectZone : MonoBehaviour
         if (behaviour.stunt)
             unit.StartCoroutine(unit.Stunt(behaviour.stuntDuration));
 
-        if (behaviour.burn)
-            unit.StartCoroutine(unit.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
+        //if (behaviour.burn)
+        //    unit.StartCoroutine(unit.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -87,8 +89,8 @@ public class EffectZone : MonoBehaviour
             affected.Add(pawn);
 
 
-            if (behaviour.burn)
-                pawn.StartCoroutine(pawn.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
+            //if (behaviour.burn)
+            //    pawn.StartCoroutine(pawn.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
 
             if (behaviour.slow > 0)
                 pawn.AddSlow(behaviour.slow);

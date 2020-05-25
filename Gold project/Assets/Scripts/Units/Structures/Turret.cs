@@ -13,8 +13,8 @@ public class Turret : Structure
     {
         base.Attack(target);
 
-        Vector2 dir = (target.transform.position - 
-            (sprite.transform.position + new Vector3(1, 0, 0) * (target.GetComponent<Pawn>() != null ? (target.GetComponent<Pawn>().speed / 4) : 1))
+        Vector2 dir = (target.transform.position -
+            (sprite.transform.position + new Vector3(1, 0, 0) * (target.GetComponent<Pawn>() != null && !target.GetComponent<Pawn>().immobilize ? (target.GetComponent<Pawn>().speed / 4) : 1))
         );
 
         Quaternion rotation = Quaternion.LookRotation(dir, Vector2.right);
@@ -23,8 +23,11 @@ public class Turret : Structure
         GameObject insta = Instantiate(ammo, sprite.position, rotation);
         insta.transform.eulerAngles = new Vector3(0, 0, -rotation.eulerAngles.x);
         insta.GetComponent<Rigidbody2D>().AddForce(dir * ammoSpeed);
-        insta.GetComponent<ArrowController>().damage = DealDamage();
-        insta.GetComponent<ArrowController>().side = side;
+
+        if (insta.GetComponent<ArrowController>() != null) {
+            insta.GetComponent<ArrowController>().damage = DealDamage();
+            insta.GetComponent<ArrowController>().side = side;
+        }
     }
 
     private void Update()

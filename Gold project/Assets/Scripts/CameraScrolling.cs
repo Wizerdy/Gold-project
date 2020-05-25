@@ -8,18 +8,29 @@ public class CameraScrolling : MonoBehaviour
     protected Plane Plane;
 
     [Header("The x boundaries of the camera")]
-    public Vector3[] cameraBounds;
+    public Vector2 cameraBounds;
+
+    [Header("Options")]
+    [Range(0f, 1f)] public float scrollSpeed = 1f;
+    [Range(0f, 1f)] public float parallaxSpeed = 1f;
+
+    [SerializeField] private List<Transform> parallax;
+
+    private Vector3 basePos;
+    private Vector2 oriMousePos;
 
     private void Awake()
     {
         if (gameCamera == null)
             gameCamera = Camera.main;
 
-        for (int i = 0; i < cameraBounds.Length; i++)
-        {
-            cameraBounds[i].y = gameCamera.transform.position.y;
-            cameraBounds[i].z = gameCamera.transform.position.z;
-        }
+        basePos = gameCamera.transform.position;
+
+        //for (int i = 0; i < cameraBounds.Length; i++)
+        //{
+        //    cameraBounds[i].y = gameCamera.transform.position.y;
+        //    cameraBounds[i].z = gameCamera.transform.position.z;
+        //}
     }
 
     private void Update()
@@ -27,8 +38,32 @@ public class CameraScrolling : MonoBehaviour
         if(Input.touchCount >= 1)
         {
             Scroll();
-        }
+        } else if(Input.GetMouseButton(0))
+        {
+            if (Input.GetMouseButtonDown(0))
+                oriMousePos = Input.mousePosition;
 
+            float delta = -(Input.mousePosition.x - oriMousePos.x) * scrollSpeed;
+
+            if (!CameraOutBounds(delta))
+            {
+                gameCamera.transform.Translate(new Vector2(delta, 0));
+                Parallax(delta);
+            } else
+            {
+                if (delta < 0)
+                {
+                    Parallax(cameraBounds.x - gameCamera.transform.position.x);
+                    gameCamera.transform.position = new Vector3(cameraBounds.x, basePos.y, basePos.z);
+                } else
+                {
+                    Parallax(cameraBounds.y - gameCamera.transform.position.x);
+                    gameCamera.transform.position = new Vector3(cameraBounds.y, basePos.y, basePos.z);
+                }
+            }
+
+            oriMousePos = Input.mousePosition;
+        }
     }
 
     protected void Scroll()
@@ -69,17 +104,30 @@ public class CameraScrolling : MonoBehaviour
 
     protected void ReplaceCameraInBounds()
     {
-            if (gameCamera.transform.position.x < cameraBounds[0].x)
+            if (gameCamera.transform.position.x < cameraBounds.x)
             {
-                gameCamera.transform.position = cameraBounds[0];
+                gameCamera.transform.position = new Vector3(cameraBounds.x, basePos.y, basePos.z);
             }
-            else if (gameCamera.transform.position.x > cameraBounds[1].x)
+            else if (gameCamera.transform.position.x > cameraBounds.y)
             {
-                gameCamera.transform.position = cameraBounds[1];
+                gameCamera.transform.position = new Vector3(cameraBounds.y, basePos.y, basePos.z);
             }
-            else
-            {
-                gameCamera.transform.position = gameCamera.transform.position;
-            }
+    }
+
+    private bool CameraOutBounds(float movement)
+    {
+        if (gameCamera.transform.position.x + movement < cameraBounds.x || gameCamera.transform.position.x + movement > cameraBounds.y)
+        {
+            return true;
+        }
+        return false;
+    }
+
+    private void Parallax(float delta)
+    {
+        for (int i = 0; i < parallax.Count; i++)
+        {
+            parallax[i].Translate(new Vector2(delta * ((float)(parallax.Count - i) / (float)parallax.Count) * parallaxSpeed, 0));
+        }
     }
 }

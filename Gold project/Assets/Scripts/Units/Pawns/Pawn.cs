@@ -5,8 +5,12 @@ using UnityEngine;
 public abstract class Pawn : Unit
 {
     public float speed;
-    private float curSpeed;
+    protected float curSpeed;
     private Dictionary<float, int> slows;
+
+    protected Vector3 baseScale;
+
+    public bool immobilize;
 
     [Header("Other")]
     public Transform target;
@@ -19,6 +23,10 @@ public abstract class Pawn : Unit
 
         curSpeed = speed;
         slows = new Dictionary<float, int>();
+
+        baseScale = transform.localScale;
+
+        immobilize = false;
     }
 
     private void Update()
@@ -28,9 +36,11 @@ public abstract class Pawn : Unit
 
         if(!CheckAttackRange()) {
             Move();
+            immobilize = false;
         } else if(canAttack)
         {
             Attack(hit[hitIndex].gameObject);
+            immobilize = true;
         }
     }
 
@@ -49,11 +59,22 @@ public abstract class Pawn : Unit
     {
         base.Attack(target);
         target.GetComponent<Unit>().LoseHealth(DealDamage());
+
+        if (target.GetComponent<Tower>() != null)
+            target.GetComponent<Tower>().lastDamageSide = side;
     }
 
-    protected override void OnDestroy()
+    public override void LoseHealth(int amount)
     {
+        base.LoseHealth(amount);
 
+        transform.localScale = Tools.Map(curHealth, 0, maxHealth, baseScale * GameManager.instance.slimeMinSize, baseScale);
+    }
+
+    protected override void Die()
+    {
+        ShopManager.instance.Gain(Mathf.FloorToInt(cost * GameManager.instance.slimeRefund));
+        base.Die();
     }
 
     #region Slow

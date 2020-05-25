@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -419,10 +419,12 @@ MonoBehaviour:
   maxHealth: 10
   damage: {x: 0, y: 0}
   attackSpeed: 0
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: 0
   attackRange: {fileID: 0}
+  sprRend: {fileID: 0}
   canAttack: 0
   hit: []
+  lastDamageSide: 0
 --- !u!61 &599175068
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -485,7 +487,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 4802159008358983179}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &757456564
+--- !u!1 &711734220
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -493,8 +495,8 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 757456566}
-  - component: {fileID: 757456565}
+  - component: {fileID: 711734222}
+  - component: {fileID: 711734221}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -502,13 +504,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &757456565
+--- !u!114 &711734221
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757456564}
+  m_GameObject: {fileID: 711734220}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e9e25a98496931e45b26552726f6e6a5, type: 3}
@@ -525,13 +527,13 @@ MonoBehaviour:
   splash: {fileID: 5897656158704275477, guid: 262b9eb291a73654d9781f94b80b1658, type: 3}
   explosion: {fileID: 7979257505062667211, guid: 05b11472405937c4499a7d71915909e0,
     type: 3}
---- !u!4 &757456566
+--- !u!4 &711734222
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 757456564}
+  m_GameObject: {fileID: 711734220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}

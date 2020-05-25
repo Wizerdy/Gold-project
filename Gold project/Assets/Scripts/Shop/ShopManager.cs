@@ -13,6 +13,8 @@ public class ShopManager : MonoBehaviour
     public int currentHudId;
     public int money;
 
+    public GameObject[] superColors;
+
     public TextMeshProUGUI[] moneyText;
 
     public Transform[] spawnList;
@@ -48,8 +50,11 @@ public class ShopManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;        
+        instance = this;
     }
 
-    public GameObject[] superColors;
+    public void Gain(int amount)
+    {
+        money += amount;
+    }
 }

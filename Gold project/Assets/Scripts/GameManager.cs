@@ -7,6 +7,10 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
 
+    [Header("Settings")]
+    [Range(0f, 1f)] public float slimeMinSize;
+    [Range(0f, 1f)] public float slimeRefund;
+
     [Header("Parents")]
     public Transform allyParent;
     public Transform enemyParent;
@@ -22,7 +26,11 @@ public class GameManager : MonoBehaviour
     [Header("Array")]
     public Color[] differentsColors;
 
+    [Header("Ohter")]
+    public Material grayScaleBorder;
+
     [HideInInspector] public Dictionary<string, GameObject> units;
+     public List<GameObject> allies;
 
     private void Awake()
     {
@@ -34,6 +42,17 @@ public class GameManager : MonoBehaviour
         {
             units.Add(obj[i].name, obj[i]);
         }
+    }
+
+    private void Start()
+    {
+        allies = new List<GameObject>();
+        Collider2D[] hits = Physics2D.OverlapBoxAll(Vector2.zero, new Vector2(300, 50), 0, unitLayer);
+        Debug.Log(hits.Length);
+
+        for (int i = 0; i < hits.Length; i++)
+            if(hits[i].GetComponent<Unit>().side == Unit.Side.ALLY)
+                allies.Add(hits[i].gameObject);
     }
 
     private void Update()
@@ -81,7 +100,22 @@ public class GameManager : MonoBehaviour
             Destroy(GameObject.FindWithTag("Slime"));
 
 
+        int index = 0;
+        for (int i = 0; i < allies.Count; i++)
+        {
+            if (allies[i] == null || allies[i].GetComponent<Unit>().side != Unit.Side.ALLY)
+                allies.RemoveAt(i);
 
+            if (index < allies.Count && i < allies.Count &&
+                allies[index].transform.position.x < allies[i].transform.position.x
+            )
+                index = i;
+        }
+
+        if (index < allies.Count)
+            grayScaleBorder.SetFloat("_Border", allies[index].transform.position.x * -1);
+        else if(allies.Count <= 0)
+            grayScaleBorder.SetFloat("_Border", 20);
     }
 
     public void InstantiateUnit(GameObject unit, Transform parent, Transform target)
@@ -100,9 +134,10 @@ public class GameManager : MonoBehaviour
         insta.GetComponent<Unit>().side = side;
 
         if (insta.GetComponent<Unit>().type == Unit.Type.PAWN)
-        {
             insta.GetComponent<Pawn>().target = (side == Unit.Side.ALLY ? enemyParent : allyParent);
-        }
+
+        if (side == Unit.Side.ALLY)
+            allies.Add(insta);
     }
 
     public void InstantiateUnit(GameObject unit, Unit.Side side, Transform parent)
@@ -114,9 +149,10 @@ public class GameManager : MonoBehaviour
         insta.GetComponent<Unit>().side = side;
 
         if (insta.GetComponent<Unit>().type == Unit.Type.PAWN)
-        {
             insta.GetComponent<Pawn>().target = (side == Unit.Side.ALLY ? enemyParent : allyParent);
-        }
+
+        if (side == Unit.Side.ALLY)
+            allies.Add(insta);
     }
 
     public void SpawnSplash(Vector2 pos)

@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[SelectionBase]
 public abstract class Unit : MonoBehaviour
 {
     public enum Type { PAWN, STRUCTURE };
@@ -17,10 +18,12 @@ public abstract class Unit : MonoBehaviour
     public float attackSpeed;
     public Colors color;
     [SerializeField] private Collider2D attackRange = null;
+    [SerializeField] private SpriteRenderer sprRend = null;
 
     [HideInInspector] public bool canAttack;
     [HideInInspector] protected int curHealth;
     [HideInInspector] public List<Collider2D> hit;
+    public int cost;
     protected int hitIndex;
     protected ContactFilter2D attackFilter;
     protected bool stunt;
@@ -34,17 +37,20 @@ public abstract class Unit : MonoBehaviour
         stunt = false;
 
         hit = new List<Collider2D>();
-        attackFilter = new ContactFilter2D();
-        attackFilter.layerMask = GameManager.instance.unitLayer;
-        attackFilter.useLayerMask = true;
+        attackFilter = new ContactFilter2D
+        {
+            layerMask = GameManager.instance.unitLayer,
+            useLayerMask = true
+        };
+
+        if (sprRend == null)
+            sprRend = GetComponent<SpriteRenderer>();
     }
 
     protected void LateUpdate()
     {
         if (maxHealth > 0 && curHealth <= 0)
-        {
             Die();
-        }
     }
 
     protected virtual void Die()
@@ -80,16 +86,16 @@ public abstract class Unit : MonoBehaviour
     public virtual void LoseHealth(int amount)
     {
         curHealth -= amount;
-        StartCoroutine(Coloration(Color.red, 0.05f));
+        if (sprRend != null)
+            StartCoroutine(Coloration(Color.red, 0.05f));
     }
 
     protected IEnumerator Coloration(Color color, float time)
     {
-        SpriteRenderer spRend = GetComponent<SpriteRenderer>();
-        Color baseColor = spRend.color;
-        spRend.color = color;
+        Color baseColor = sprRend.color;
+        sprRend.color = color;
         yield return new WaitForSeconds(time);
-        spRend.color = baseColor;
+        sprRend.color = baseColor;
     }
 
     public int DealDamage()

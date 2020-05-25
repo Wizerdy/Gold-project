@@ -5,10 +5,14 @@ using UnityEngine;
 public class Touched : MonoBehaviour
 {
     public int hudId;
+    public bool active;
 
     private void OnMouseDown()
     {
-        ShopManager.instance.ActiveCanvas(0);
-        ShopManager.instance.currentHudId = hudId;
+        if (active)
+        {
+            ShopManager.instance.ActiveCanvas(0);
+            ShopManager.instance.currentHudId = hudId;
+        }
     }
 }
