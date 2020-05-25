@@ -257,7 +257,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         }
 
         //Instantiate(mergedColor, bernard.transform.parent).GetComponent<DragHandeler>().barren = true;
-        ShopManager.instance.moneyText[structType == Type.TURRET ? 1 : 0].text = mergedColor.GetComponent<DragHandeler>().cost.ToString();
+        //ShopManager.instance.moneyText[structType == Type.TURRET ? 1 : 0].text = mergedColor.GetComponent<DragHandeler>().cost.ToString();
         /*if (mergedColor.GetComponent<DragHandeler>().structType == Type.TURRET)
         {
             ShopManager.instance.spawnList[ShopManager.instance.currentHudId].GetComponent<CastleTurretSlot>().color = mergedColor;

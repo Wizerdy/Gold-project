@@ -17,8 +17,8 @@ public class Tower : Structure
 
     protected override void Die()
     {
-        for (int i = 1; i < transform.childCount; i++)
-            Destroy(transform.GetChild(i).gameObject);
+        //for (int i = 1; i < transform.childCount; i++)
+            //Destroy(transform.GetChild(i).gameObject);
 
         side = lastDamageSide;
 
