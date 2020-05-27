@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 115
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: ccfd03bc05f9259498ff2196eb590847, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -183,7 +183,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 114
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 5dd869e042c51f545bb07677bd06157c, type: 3}
   m_Color: {r: 0, g: 0.8867924, b: 0.08434425, a: 1}
   m_FlipX: 0
@@ -206,7 +206,7 @@ GameObject:
   - component: {fileID: 1556557123657386656}
   - component: {fileID: 3308456190138823619}
   m_Layer: 0
-  m_Name: T_WHITE 5
+  m_Name: T_GREEN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -324,7 +324,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 113
+  m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: aa7e47feda800274db666fc7b568c9c3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.78431374}
   m_FlipX: 0
@@ -462,7 +462,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 115
+  m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: e389e51068b466748bff5d3ff317e5a5, type: 3}
   m_Color: {r: 0.23584908, g: 0.23584908, b: 0.23584908, a: 1}
   m_FlipX: 0

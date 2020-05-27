@@ -10,7 +10,19 @@ public class TurretButton : MonoBehaviour
         {
             Destroy(ShopManager.instance.spawnList[ShopManager.instance.currentHudId].GetChild(0).gameObject);
         }
-            string name = (Turret.structType == Type.TURRET ? "T_" : "") + Turret.colorState.ToString();
-            GameManager.instance.InstantiateUnit(GameManager.instance.units[name], Unit.Side.ALLY, ShopManager.instance.spawnList[ShopManager.instance.currentHudId]);
+        
+        string name = (Turret.structType == Type.TURRET ? "T_" : "") + Turret.colorState.ToString();
+        GameObject insta = GameManager.instance.InstantiateUnit(GameManager.instance.units[name], Unit.Side.ALLY, ShopManager.instance.spawnList[ShopManager.instance.currentHudId]);
+
+        if (ShopManager.instance.spawnList[ShopManager.instance.currentHudId].GetComponent<OrderInLayer>() != null)
+        {
+            int add = ShopManager.instance.spawnList[ShopManager.instance.currentHudId].GetComponent<OrderInLayer>().orderInLayer;
+
+            SpriteRenderer[] sprRenders = insta.GetComponentsInChildren<SpriteRenderer>();
+            for (int i = 0; i < sprRenders.Length; i++)
+            {
+                sprRenders[i].sortingOrder += add;
+            }
+        }
     }
 }

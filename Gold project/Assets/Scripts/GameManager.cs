@@ -11,6 +11,16 @@ public class GameManager : MonoBehaviour
     [Range(0f, 1f)] public float slimeMinSize;
     [Range(0f, 1f)] public float slimeRefund;
 
+    [Header("Minimap")]
+    [SerializeField] private Transform minimapParent;
+    [SerializeField] private GameObject castle;
+    [SerializeField] private GameObject tower;
+    [SerializeField] private GameObject unit;
+
+    [SerializeField] private Color allyColor;
+    [SerializeField] private Color neutralColor;
+    [SerializeField] private Color enemyColor;
+
     [Header("Parents")]
     public Transform allyParent;
     public Transform enemyParent;
@@ -30,7 +40,8 @@ public class GameManager : MonoBehaviour
     public Material grayScaleBorder;
 
     [HideInInspector] public Dictionary<string, GameObject> units;
-     public List<GameObject> allies;
+    [HideInInspector] public List<GameObject> allies;
+    private RaycastHit2D[] mnpHits;
 
     private void Awake()
     {
@@ -57,6 +68,8 @@ public class GameManager : MonoBehaviour
 
     private void Update()
     {
+        Minimap();
+
         if (Input.GetKeyDown(KeyCode.A))
             InstantiateUnit(units["Knight"], Unit.Side.ALLY, allyParent.position);
 
@@ -118,13 +131,15 @@ public class GameManager : MonoBehaviour
             grayScaleBorder.SetFloat("_Border", 20);
     }
 
-    public void InstantiateUnit(GameObject unit, Transform parent, Transform target)
+    public GameObject InstantiateUnit(GameObject unit, Transform parent, Transform target)
     {
         GameObject insta = Instantiate(unit, parent);
         insta.GetComponent<Pawn>().target = target;
+
+        return insta;
     }
 
-    public void InstantiateUnit(GameObject unit, Unit.Side side, Vector2 pos)
+    public GameObject InstantiateUnit(GameObject unit, Unit.Side side, Vector2 pos)
     {
         Debug.Log(pos);
         GameObject insta = Instantiate(unit, (side == Unit.Side.ALLY ? allyParent : enemyParent) );
@@ -138,9 +153,11 @@ public class GameManager : MonoBehaviour
 
         if (side == Unit.Side.ALLY)
             allies.Add(insta);
+
+        return insta;
     }
 
-    public void InstantiateUnit(GameObject unit, Unit.Side side, Transform parent)
+    public GameObject InstantiateUnit(GameObject unit, Unit.Side side, Transform parent)
     {
         GameObject insta = Instantiate(unit, parent);
         insta.transform.position = parent.position;
@@ -153,6 +170,8 @@ public class GameManager : MonoBehaviour
 
         if (side == Unit.Side.ALLY)
             allies.Add(insta);
+
+        return insta;
     }
 
     public void SpawnSplash(Vector2 pos)
@@ -166,5 +185,66 @@ public class GameManager : MonoBehaviour
             return true;
 
         return false;
+    }
+
+    private void Minimap()
+    {
+        
+        if(minimapParent != null)
+        {
+            List<GameObject> childs = new List<GameObject>();
+            for (int i = 0; i < minimapParent.childCount; i++)
+                childs.Add(minimapParent.GetChild(i).gameObject);
+
+            float dist = enemyParent.position.x - allyParent.position.x;
+            mnpHits = Physics2D.RaycastAll(allyParent.position, enemyParent.position - allyParent.position, dist, unitLayer);
+            for (int i = 0; i < mnpHits.Length; i++)
+            {
+                Unit hitted = mnpHits[i].collider.gameObject.GetComponent<Unit>();
+                GameObject needed = null;
+                switch(hitted.type)
+                {
+                    case Unit.Type.PAWN:
+                        needed = unit;
+                        break;
+                    case Unit.Type.STRUCTURE:
+                        needed = tower;
+                        break;
+                }
+
+                GameObject insta = SearchChildName(minimapParent, needed.name);
+
+                if (insta == null)
+                {
+                    insta = Instantiate(needed, minimapParent);
+                    insta.name = needed.name;
+                }
+                else
+                {
+                    childs.Remove(insta);
+                    insta.SetActive(true);
+                }
+
+                insta.GetComponent<RectTransform>().anchoredPosition = new Vector2(mnpHits[i].distance / dist * minimapParent.GetComponent<RectTransform>().rect.width, 0);
+            }
+
+            for (int i = 0; i < childs.Count; i++)
+                childs[i].gameObject.SetActive(false);
+
+            for (int i = 0; i < minimapParent.childCount; i++)
+                if (minimapParent.GetChild(i).name == unit.name)
+                    minimapParent.GetChild(i).SetAsLastSibling();
+
+            Debug.Log(minimapParent.childCount + " .. " + childs.Count);
+        }
+    }
+
+    private GameObject SearchChildName(Transform parent, string name)
+    {
+        for (int i = 0; i < parent.childCount; i++)
+            if(!parent.GetChild(i).gameObject.activeSelf && parent.GetChild(i).name == name)
+                return parent.GetChild(i).gameObject;
+
+        return null;
     }
 }
