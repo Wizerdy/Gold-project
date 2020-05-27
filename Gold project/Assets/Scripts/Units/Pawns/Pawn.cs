@@ -5,6 +5,7 @@ using UnityEngine;
 public abstract class Pawn : Unit
 {
     public float speed;
+    [SerializeField]
     protected float curSpeed;
     private Dictionary<float, int> slows;
 

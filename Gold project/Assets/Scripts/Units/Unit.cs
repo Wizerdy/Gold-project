@@ -21,7 +21,7 @@ public abstract class Unit : MonoBehaviour
     [SerializeField] private SpriteRenderer sprRend = null;
 
     [HideInInspector] public bool canAttack;
-    [HideInInspector] protected int curHealth;
+    [SerializeField] protected int curHealth;
     [HideInInspector] public List<Collider2D> hit;
     public int cost;
     protected int hitIndex;
