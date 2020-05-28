@@ -250,9 +250,10 @@ MonoBehaviour:
   attackRange: {fileID: 3017508311607322558}
   sprRend: {fileID: 0}
   canAttack: 0
+  curHealth: 0
   hit: []
   cost: 0
-  ammo: {fileID: 1127284204803739376, guid: b84d14d18942b3648b34cc2498f78a76, type: 3}
+  ammo: {fileID: 3975769326864515960, guid: 3647cc3b0ba68b04e99b8cf07bc5cd03, type: 3}
   ammoSpeed: 300
   sprite: {fileID: 546008598194761017}
 --- !u!1 &4978383070831852508

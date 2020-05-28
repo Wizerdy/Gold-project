@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3740516601931120441}
   - component: {fileID: 634356893387697209}
   m_Layer: 8
-  m_Name: LITTLEPURPLESLIME
+  m_Name: LITTLEPURPLE
   m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,9 +53,16 @@ MonoBehaviour:
   attackSpeed: 0.2
   color: 6
   attackRange: {fileID: 5278358871612878103}
+  sprRend: {fileID: 0}
   canAttack: 0
+  curHealth: 0
   hit: []
+  cost: 0
+  deathExplosion: {fileID: 9144037421436212920, guid: d3bae9eb3214d224a8203c1e6a21db60,
+    type: 3}
   speed: 6
+  curSpeed: 0
+  immobilize: 0
   target: {fileID: 0}
   explosion: {fileID: 11400000, guid: 1ec82851b61bbaf45922a2dc179e6f7b, type: 2}
 --- !u!61 &634356893387697209

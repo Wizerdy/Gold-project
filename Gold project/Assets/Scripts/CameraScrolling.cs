@@ -37,7 +37,10 @@ public class CameraScrolling : MonoBehaviour
 
     private void Update()
     {
-        if(Input.touchCount >= 1 && active)
+        if (Input.GetMouseButtonDown(0))
+            oriMousePos = Input.mousePosition;
+
+        if (Input.touchCount >= 1 && active)
         {
             Scroll();
         } else if(Input.GetMouseButton(0) && active)
@@ -63,9 +66,6 @@ public class CameraScrolling : MonoBehaviour
 
             oriMousePos = Input.mousePosition;
         }
-
-        if (Input.GetMouseButtonDown(0))
-            oriMousePos = Input.mousePosition;
     }
 
     protected void Scroll()

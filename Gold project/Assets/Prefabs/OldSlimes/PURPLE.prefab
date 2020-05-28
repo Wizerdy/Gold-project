@@ -55,9 +55,13 @@ MonoBehaviour:
   attackRange: {fileID: 5278358871612878103}
   sprRend: {fileID: 0}
   canAttack: 0
+  curHealth: 0
   hit: []
   cost: 50
+  deathExplosion: {fileID: 9144037421436212920, guid: d3bae9eb3214d224a8203c1e6a21db60,
+    type: 3}
   speed: 2
+  curSpeed: 0
   immobilize: 0
   target: {fileID: 0}
   explosion: {fileID: 11400000, guid: e88391b22bfb04642a4dd89f35080e2d, type: 2}

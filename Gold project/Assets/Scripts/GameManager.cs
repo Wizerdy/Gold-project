@@ -177,10 +177,12 @@ public class GameManager : MonoBehaviour
 
     public void SpawnSplash(Vector2 pos, Color color)
     {
-        //GameObject insta = Instantiate(splash, pos, Quaternion.identity);
-        //insta.GetComponent<SpriteRenderer>().color = color;
-        GameObject insta = Instantiate(deathParticle, pos, Quaternion.identity);
-        insta.GetComponent<ParticleSystem>().startColor = color;
+        GameObject insta = Instantiate(splash, pos, Quaternion.identity);
+        float size = UnityEngine.Random.Range(0.1f, 1);
+        insta.transform.localScale = new Vector3(size, size, 1);
+        insta.GetComponent<SpriteRenderer>().color = color;
+        GameObject insta2 = Instantiate(deathParticle, pos, deathParticle.transform.rotation);
+        insta2.GetComponent<ParticleSystem>().startColor = color;
 
     }
 
