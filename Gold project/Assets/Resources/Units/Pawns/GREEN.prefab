@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3740516601931120441}
   - component: {fileID: 634356893387697209}
   m_Layer: 8
-  m_Name: GREENSLIME
+  m_Name: GREEN
   m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,9 +53,12 @@ MonoBehaviour:
   attackSpeed: 3
   color: 4
   attackRange: {fileID: 5278358871612878103}
+  sprRend: {fileID: 0}
   canAttack: 0
   hit: []
+  cost: 50
   speed: 1
+  immobilize: 0
   target: {fileID: 0}
   explosion: {fileID: 11400000, guid: 76b02a44cc3d19141ab1710ba2c2bf06, type: 2}
 --- !u!61 &634356893387697209

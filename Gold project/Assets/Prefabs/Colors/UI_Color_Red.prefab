@@ -117,8 +117,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  michel: {fileID: 0}
+  michel: {fileID: 4287196824367435257}
   cost: 0
   colorState: 1
   structType: 0
+  text: {fileID: 0}
   barren: 0

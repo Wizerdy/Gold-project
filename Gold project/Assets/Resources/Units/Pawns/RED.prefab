@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3740516601931120441}
   - component: {fileID: 634356893387697209}
   m_Layer: 8
-  m_Name: REDSLIME
+  m_Name: RED
   m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,9 +53,12 @@ MonoBehaviour:
   attackSpeed: 1
   color: 1
   attackRange: {fileID: 5278358871612878103}
+  sprRend: {fileID: 0}
   canAttack: 0
   hit: []
+  cost: 10
   speed: 2
+  immobilize: 0
   target: {fileID: 0}
   explosion: {fileID: 11400000, guid: 77e77c2e5d511b149ab6353b42248d02, type: 2}
 --- !u!61 &634356893387697209

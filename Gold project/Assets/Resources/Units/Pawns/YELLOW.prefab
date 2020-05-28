@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 3740516601931120441}
   - component: {fileID: 634356893387697209}
   m_Layer: 8
-  m_Name: YELLOWSLIME
+  m_Name: YELLOW
   m_TagString: Slime
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,9 +53,12 @@ MonoBehaviour:
   attackSpeed: 1
   color: 0
   attackRange: {fileID: 5278358871612878103}
+  sprRend: {fileID: 0}
   canAttack: 0
   hit: []
+  cost: 10
   speed: 2.2
+  immobilize: 0
   target: {fileID: 0}
   explosion: {fileID: 11400000, guid: 5fdae8f5bc61399459cbae9f7edb9c7d, type: 2}
 --- !u!61 &634356893387697209
@@ -266,7 +269,7 @@ PrefabInstance:
     - target: {fileID: 8102805989974717206, guid: a511a51b86b0a0345bc21aaa4e221bb8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 8157740749945990938, guid: a511a51b86b0a0345bc21aaa4e221bb8,
         type: 3}

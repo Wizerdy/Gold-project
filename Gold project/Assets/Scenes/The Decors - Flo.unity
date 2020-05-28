@@ -5643,7 +5643,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -6880,7 +6880,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -7450,8 +7450,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -126.1, y: -81.7}
-  m_SizeDelta: {x: 761.90204, y: 189.77296}
+  m_AnchoredPosition: {x: -128.13, y: -81.7}
+  m_SizeDelta: {x: 809.1641, y: 189.77296}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &280400940
 MonoBehaviour:
@@ -8998,7 +8998,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -9066,10 +9066,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  michel: {fileID: 4802159008993754002, guid: 71ed81b5ac243024691eb9454845d02c, type: 3}
+  michel: {fileID: 4426236122652340427, guid: 2f78c9309cd28a04b887b8f4fea6f7a3, type: 3}
   cost: 0
   colorState: 3
   structType: 1
+  text: {fileID: 1180003483}
   barren: 1
 --- !u!114 &329898783
 MonoBehaviour:
@@ -10267,7 +10268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -10430,7 +10431,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -11208,9 +11209,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   michel: {fileID: 566348324082799459, guid: 905eb646f97fb6f4798814ed80485bc9, type: 3}
-  cost: 0
-  colorState: 3
+  cost: 5
+  colorState: 0
   structType: 0
+  text: {fileID: 1221526835}
   barren: 1
 --- !u!114 &421108490
 MonoBehaviour:
@@ -13009,10 +13011,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  michel: {fileID: 4802159008993754002, guid: 71ed81b5ac243024691eb9454845d02c, type: 3}
+  michel: {fileID: 4426236122652340427, guid: 2f78c9309cd28a04b887b8f4fea6f7a3, type: 3}
   cost: 0
-  colorState: 3
+  colorState: 0
   structType: 1
+  text: {fileID: 1734448358}
   barren: 1
 --- !u!114 &500151367
 MonoBehaviour:
@@ -14005,7 +14008,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -17797,7 +17800,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 49.025146, y: -51.627686}
+  m_AnchoredPosition: {x: 49.024902, y: -51.627686}
   m_SizeDelta: {x: 250, y: 75}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &706492338
@@ -19308,9 +19311,9 @@ MonoBehaviour:
   castle: {fileID: 8731877998126489393, guid: 0facc117e3fdbf14c8c0e323ddaa0280, type: 3}
   tower: {fileID: 2655949084660282997, guid: b668c3f7ca33a5c44b2d27c9d89a854e, type: 3}
   unit: {fileID: 8310812582937066816, guid: 3f7ec1a451fb01b4eb1d89719f65e1d1, type: 3}
-  allyColor: {r: 0, g: 0, b: 0, a: 0}
-  neutralColor: {r: 0, g: 0, b: 0, a: 0}
-  enemyColor: {r: 0, g: 0, b: 0, a: 0}
+  allyColor: {r: 0, g: 0.4431373, b: 0.7372549, a: 1}
+  neutralColor: {r: 0.427451, g: 0.427451, b: 0.427451, a: 1}
+  enemyColor: {r: 0.7568628, g: 0.15294118, b: 0.1764706, a: 1}
   allyParent: {fileID: 1095048868}
   enemyParent: {fileID: 524513730}
   unitLayer:
@@ -19364,26 +19367,19 @@ MonoBehaviour:
   - {fileID: 1225393774}
   - {fileID: 1474531311}
   - {fileID: 1885480641}
+  health: 100
   currentHudId: 0
-  money: 100
-  superColors:
-  - {fileID: 3899408688908747806, guid: 4637b2d64c66cce45a4c3faddd0c1928, type: 3}
-  - {fileID: 8522568318328485097, guid: c65e41031a7de1d45bd12b48583845fe, type: 3}
-  - {fileID: 6063918825073830978, guid: 7aa9bca5d817a904abd5825b57938a99, type: 3}
-  - {fileID: 566348324082799459, guid: 88a26a6c67246834b892368c5920e30b, type: 3}
-  - {fileID: 566348324082799459, guid: 8218fea7aceba5f43a929318031e6d6f, type: 3}
-  - {fileID: 566348324082799459, guid: fee8120ff355f7a4f8f91fabd0dbec92, type: 3}
-  - {fileID: 566348324082799459, guid: 7f3b82d9bcfd63b4fb422d0aa1c75914, type: 3}
-  - {fileID: 1447646501718497134, guid: d031f1a92b7aca440b03453fed0258fb, type: 3}
-  - {fileID: 1447646501718497134, guid: 8f1a170af6dd8ac4981e00222a808363, type: 3}
-  - {fileID: 1447646501718497134, guid: d228033ca27f3a64b8e45b4ef6ef135b, type: 3}
-  - {fileID: 1447646501718497134, guid: 828e7619b9ae59d43aad28bcb8473433, type: 3}
-  - {fileID: 1447646501718497134, guid: e86f488fc6cecfa4b95c36bc7c5e6b69, type: 3}
-  - {fileID: 1447646501718497134, guid: d88fddf3ff5004a4f977b267eeca3e24, type: 3}
-  - {fileID: 1447646501718497134, guid: f17bb2c6059321f4ba108831f47d099a, type: 3}
-  moneyText:
-  - {fileID: 0}
-  - {fileID: 0}
+  money: 999
+  Pumps:
+  - {fileID: 4681066913695463968}
+  - {fileID: 2827377913258644291}
+  - {fileID: 1099739234614383178}
+  - {fileID: 7968277629152129898}
+  - {fileID: 780897736}
+  - {fileID: 1417594087}
+  - {fileID: 1407349619}
+  moneyText: {fileID: 1515821259}
+  healthText: {fileID: 857302723}
   spawnList:
   - {fileID: 1095048868}
   - {fileID: 887992988}
@@ -20085,9 +20081,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sprite
       objectReference: {fileID: 0}
+    - target: {fileID: -1540635183182011900, guid: f7efea440af97284f846e571803f7c7d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 2678513733818043863, guid: f7efea440af97284f846e571803f7c7d,
     type: 3}
+--- !u!1 &780897736 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1540635183182011900, guid: f7efea440af97284f846e571803f7c7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 780897735}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &781253110
 GameObject:
   m_ObjectHideFlags: 0
@@ -20847,7 +20854,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -21336,9 +21343,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   michel: {fileID: 566348324082799459, guid: 905eb646f97fb6f4798814ed80485bc9, type: 3}
-  cost: 0
-  colorState: 3
+  cost: 5
+  colorState: 0
   structType: 0
+  text: {fileID: 1904757155}
   barren: 1
 --- !u!114 &844528378
 MonoBehaviour:
@@ -21391,10 +21399,10 @@ RectTransform:
   m_Father: {fileID: 1458218370}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
-  m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 50, y: -50}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &844648057
 GameObject:
@@ -21777,8 +21785,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   michel: {fileID: 566348324082799459, guid: 905eb646f97fb6f4798814ed80485bc9, type: 3}
   cost: 0
-  colorState: 3
+  colorState: 0
   structType: 0
+  text: {fileID: 2068502257}
   barren: 1
 --- !u!114 &864371597
 MonoBehaviour:
@@ -23952,7 +23961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 1}
+  m_Color: {r: 0.9056604, g: 0.9056604, b: 0.9056604, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -24743,7 +24752,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.22352941, g: 0.70980394, b: 0.2901961, a: 1}
+  m_Color: {r: 0.22352941, g: 0.70980394, b: 0.2901961, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -26915,10 +26924,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  michel: {fileID: 4802159008993754002, guid: 71ed81b5ac243024691eb9454845d02c, type: 3}
+  michel: {fileID: 4426236122652340427, guid: 2f78c9309cd28a04b887b8f4fea6f7a3, type: 3}
   cost: 0
   colorState: 3
   structType: 1
+  text: {fileID: 209406399}
   barren: 1
 --- !u!114 &1117965519
 MonoBehaviour:
@@ -33626,6 +33636,7 @@ GameObject:
   - component: {fileID: 1375781683}
   - component: {fileID: 1375781682}
   - component: {fileID: 1375781681}
+  - component: {fileID: 1375781684}
   m_Layer: 5
   m_Name: BT_Pump_Buy
   m_TagString: Untagged
@@ -33697,7 +33708,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1375781682}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1375781684}
+        m_MethodName: ActivePump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1375781682
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33735,6 +33757,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1375781679}
   m_CullTransparentMesh: 0
+--- !u!114 &1375781684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1375781679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e8d09b3bde82449a86a1ede4a87a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 4
 --- !u!1 &1376612175
 GameObject:
   m_ObjectHideFlags: 0
@@ -34386,9 +34421,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sprite
       objectReference: {fileID: 0}
+    - target: {fileID: -1540635183182011900, guid: f7efea440af97284f846e571803f7c7d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 2678513733818043863, guid: f7efea440af97284f846e571803f7c7d,
     type: 3}
+--- !u!1 &1407349619 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1540635183182011900, guid: f7efea440af97284f846e571803f7c7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1407349618}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1414729333
 GameObject:
   m_ObjectHideFlags: 0
@@ -34591,9 +34637,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Sprite
       objectReference: {fileID: 0}
+    - target: {fileID: -1540635183182011900, guid: f7efea440af97284f846e571803f7c7d,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 2678513733818043863, guid: f7efea440af97284f846e571803f7c7d,
     type: 3}
+--- !u!1 &1417594087 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -1540635183182011900, guid: f7efea440af97284f846e571803f7c7d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1417594086}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1419818607
 GameObject:
   m_ObjectHideFlags: 0
@@ -36894,7 +36951,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
-  m_AnchoredPosition: {x: 101.00952, y: 85.99887}
+  m_AnchoredPosition: {x: 101.00928, y: 85.99887}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!1 &1526712578
@@ -38487,6 +38544,7 @@ GameObject:
   - component: {fileID: 1573904453}
   - component: {fileID: 1573904452}
   - component: {fileID: 1573904451}
+  - component: {fileID: 1573904454}
   m_Layer: 5
   m_Name: BT_Pump_Buy
   m_TagString: Untagged
@@ -38558,7 +38616,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1573904452}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1573904454}
+        m_MethodName: ActivePump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1573904452
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38596,6 +38665,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1573904449}
   m_CullTransparentMesh: 0
+--- !u!114 &1573904454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1573904449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e8d09b3bde82449a86a1ede4a87a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 6
 --- !u!1 &1576774924
 GameObject:
   m_ObjectHideFlags: 0
@@ -38956,7 +39038,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1606500004}
   m_Layer: 5
-  m_Name: Ojects
+  m_Name: Objects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -40703,6 +40785,7 @@ GameObject:
   - component: {fileID: 1680096971}
   - component: {fileID: 1680096970}
   - component: {fileID: 1680096969}
+  - component: {fileID: 1680096972}
   m_Layer: 5
   m_Name: BT_Pump_Buy
   m_TagString: Untagged
@@ -40774,7 +40857,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1680096970}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1680096972}
+        m_MethodName: ActivePump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1680096970
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40812,6 +40906,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1680096967}
   m_CullTransparentMesh: 0
+--- !u!114 &1680096972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1680096967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e8d09b3bde82449a86a1ede4a87a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 5
 --- !u!1 &1682080243
 GameObject:
   m_ObjectHideFlags: 0
@@ -42893,6 +43000,7 @@ GameObject:
   - component: {fileID: 1759676312}
   - component: {fileID: 1759676311}
   - component: {fileID: 1759676310}
+  - component: {fileID: 1759676313}
   m_Layer: 5
   m_Name: BT_Pump_Buy
   m_TagString: Untagged
@@ -42964,7 +43072,18 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1759676311}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1759676313}
+        m_MethodName: ActivePump
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1759676311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42978,7 +43097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.22352941, g: 0.70980394, b: 0.2901961, a: 1}
+  m_Color: {r: 0.22352941, g: 0.70980394, b: 0.2901961, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -43002,6 +43121,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1759676308}
   m_CullTransparentMesh: 0
+--- !u!114 &1759676313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1759676308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54e8d09b3bde82449a86a1ede4a87a47, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  number: 0
 --- !u!1 &1768816944
 GameObject:
   m_ObjectHideFlags: 0
@@ -43132,7 +43264,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -43974,8 +44106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   michel: {fileID: 566348324082799459, guid: 905eb646f97fb6f4798814ed80485bc9, type: 3}
   cost: 0
-  colorState: 3
+  colorState: 0
   structType: 0
+  text: {fileID: 744534851}
   barren: 1
 --- !u!114 &1816188847
 MonoBehaviour:
@@ -44395,10 +44528,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e4f8d97dcd8442458174f9fdfb17913, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  michel: {fileID: 4802159008993754002, guid: 71ed81b5ac243024691eb9454845d02c, type: 3}
+  michel: {fileID: 4426236122652340427, guid: 2f78c9309cd28a04b887b8f4fea6f7a3, type: 3}
   cost: 0
   colorState: 3
   structType: 1
+  text: {fileID: 1079665878}
   barren: 1
 --- !u!114 &1837059537
 MonoBehaviour:
@@ -45631,7 +45765,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 9999
+  m_Text: 5
 --- !u!222 &1904757156
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -49600,7 +49734,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2093170830
 RectTransform:
   m_ObjectHideFlags: 0
@@ -50704,6 +50838,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Castle_Pompe 3
       objectReference: {fileID: 0}
+    - target: {fileID: 430272493028376240, guid: 9a58c704e1541674c87766e2cbbe760e,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 430272493028376243, guid: 9a58c704e1541674c87766e2cbbe760e,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -50776,6 +50915,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9a58c704e1541674c87766e2cbbe760e, type: 3}
+--- !u!1 &1099739234614383178 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 430272493028376240, guid: 9a58c704e1541674c87766e2cbbe760e,
+    type: 3}
+  m_PrefabInstance: {fileID: 1099739234614383177}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1099739234614383179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1099739234614383178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  side: 0
+  maxHealth: 0
+  damage: {x: 0, y: 0}
+  attackSpeed: 0
+  color: 0
+  attackRange: {fileID: 0}
+  sprRend: {fileID: 0}
+  canAttack: 0
+  hit: []
+  cost: 0
 --- !u!1 &1678291736268440369
 GameObject:
   m_ObjectHideFlags: 0
@@ -50841,6 +51009,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Castle_Pompe 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6022089801379591402, guid: 8b8700c5cfcb0bb41b41625f1a747215,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6022089801379591403, guid: 8b8700c5cfcb0bb41b41625f1a747215,
         type: 3}
@@ -51014,6 +51187,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8b8700c5cfcb0bb41b41625f1a747215, type: 3}
+--- !u!1 &2827377913258644291 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6022089801379591402, guid: 8b8700c5cfcb0bb41b41625f1a747215,
+    type: 3}
+  m_PrefabInstance: {fileID: 2827377913258644290}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2827377913258644292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2827377913258644291}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  side: 0
+  maxHealth: 0
+  damage: {x: 0, y: 0}
+  attackSpeed: 0
+  color: 0
+  attackRange: {fileID: 0}
+  sprRend: {fileID: 0}
+  canAttack: 0
+  hit: []
+  cost: 0
 --- !u!1 &3819758359775694593
 GameObject:
   m_ObjectHideFlags: 0
@@ -52207,12 +52409,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 977981579}
     m_Modifications:
-    - target: {fileID: 4287196824367435253, guid: 9f5ce03e73ac13b408930a56c62a3110,
-        type: 3}
-      propertyPath: michel
-      value: 
-      objectReference: {fileID: 4287196824367435257, guid: 9f5ce03e73ac13b408930a56c62a3110,
-        type: 3}
     - target: {fileID: 4287196824367435256, guid: 9f5ce03e73ac13b408930a56c62a3110,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -52457,8 +52653,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: Castle_Pompe 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3716854026396515519, guid: 88589f0936a97964cb9f4bfa302f3f5b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 88589f0936a97964cb9f4bfa302f3f5b, type: 3}
+--- !u!1 &4681066913695463968 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3716854026396515519, guid: 88589f0936a97964cb9f4bfa302f3f5b,
+    type: 3}
+  m_PrefabInstance: {fileID: 4681066913695463967}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &4681066913695463969
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4681066913695463968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  side: 0
+  maxHealth: 0
+  damage: {x: 0, y: 0}
+  attackSpeed: 0
+  color: 0
+  attackRange: {fileID: 0}
+  sprRend: {fileID: 0}
+  canAttack: 0
+  hit: []
+  cost: 0
 --- !u!1001 &7968277629152129897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52711,6 +52941,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Castle_Pompe 4
       objectReference: {fileID: 0}
+    - target: {fileID: 7275405249035073912, guid: 0f6176928dfc7fa4582b9f188152bfdb,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7275405249035073919, guid: 0f6176928dfc7fa4582b9f188152bfdb,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -52793,6 +53028,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0f6176928dfc7fa4582b9f188152bfdb, type: 3}
+--- !u!1 &7968277629152129898 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7275405249035073912, guid: 0f6176928dfc7fa4582b9f188152bfdb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7968277629152129897}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &7968277629152129899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7968277629152129898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 1
+  side: 0
+  maxHealth: 0
+  damage: {x: 0, y: 0}
+  attackSpeed: 0
+  color: 0
+  attackRange: {fileID: 0}
+  sprRend: {fileID: 0}
+  canAttack: 0
+  hit: []
+  cost: 0
 --- !u!1001 &8043062715544918409
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52802,10 +53066,9 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8043062716771606923, guid: 1a7b9a5d28dd1644eb957f913afafdd9,
         type: 3}
-      propertyPath: michel
-      value: 
-      objectReference: {fileID: 8043062716771610228, guid: 1a7b9a5d28dd1644eb957f913afafdd9,
-        type: 3}
+      propertyPath: colorState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 8043062716771610228, guid: 1a7b9a5d28dd1644eb957f913afafdd9,
         type: 3}
       propertyPath: m_Name
@@ -53032,10 +53295,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8810296283167651403, guid: 40915510045963f4faf013f4023472e5,
         type: 3}
-      propertyPath: michel
-      value: 
-      objectReference: {fileID: 8810296283167651407, guid: 40915510045963f4faf013f4023472e5,
-        type: 3}
+      propertyPath: colorState
+      value: 3
+      objectReference: {fileID: 0}
     - target: {fileID: 8810296283167651407, guid: 40915510045963f4faf013f4023472e5,
         type: 3}
       propertyPath: m_Name

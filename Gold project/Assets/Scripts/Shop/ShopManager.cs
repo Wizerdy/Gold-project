@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using TMPro;
+using UnityEngine.UI;
 
 public class ShopManager : MonoBehaviour
 {
@@ -10,12 +11,15 @@ public class ShopManager : MonoBehaviour
 
     public GameObject[] canvasList;
 
+    public int health;
+
     public int currentHudId;
     public int money;
 
-    public GameObject[] superColors;
+    public GameObject[] Pumps;
 
-    public TextMeshProUGUI[] moneyText;
+    public Text moneyText;
+    public Text healthText;
 
     public Transform[] spawnList;
 
@@ -24,6 +28,7 @@ public class ShopManager : MonoBehaviour
         if (money >= cost)
         {
             money -= cost;
+            moneyText.text = money.ToString();
             return true;
         } else
         {
@@ -51,6 +56,9 @@ public class ShopManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
+        moneyText.text = money.ToString();
+        healthText.text = health.ToString();
+
     }
 
     public void Gain(int amount)

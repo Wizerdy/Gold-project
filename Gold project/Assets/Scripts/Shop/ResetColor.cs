@@ -9,6 +9,6 @@ public class ResetColor : MonoBehaviour
     {
         unit.GetComponent<Image>().color = GameManager.instance.differentsColors[0];
         unit.GetComponent<DragHandeler>().colorState = Colors.WHITE;
-
+        unit.GetComponent<DragHandeler>().text.text = "5";
     }
 }

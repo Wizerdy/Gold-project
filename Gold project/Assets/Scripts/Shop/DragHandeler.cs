@@ -7,13 +7,13 @@ using UnityEngine.EventSystems;
 
 public enum Colors
 {
-    YELLOW,
-    RED,
-    BLUE,
     WHITE,
-    GREEN,
+    RED,
+    YELLOW,
+    BLUE,
     ORANGE,
     PURPLE,
+    GREEN,
     BLACK
 }
 
@@ -39,6 +39,8 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
     Vector3 startPosition;
 
     Transform startParent;
+
+    public Text text;
 
     public bool barren = false;
 
@@ -84,29 +86,25 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
         }
         Colors bernardColor = bernard.GetComponent<DragHandeler>().colorState;
         int term = (bernard.GetComponent<DragHandeler>().structType == Type.TURRET ? 7 : 0);
-        GameObject mergedColor = null;
-        switch(colorState)
+        Colors mergedColor = Colors.WHITE;
+        switch (colorState)
         {
             case Colors.YELLOW:
-                switch(bernardColor)
+                switch (bernardColor)
                 {
                     case Colors.RED:
-                        mergedColor = ShopManager.instance.superColors[0 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[4];
+                        mergedColor = Colors.ORANGE;
                         break;
                     case Colors.BLUE:
-                        mergedColor = ShopManager.instance.superColors[1 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[6];
+                        mergedColor = Colors.GREEN;
                         break;
                     case Colors.ORANGE:
                     case Colors.PURPLE:
                     case Colors.GREEN:
-                        mergedColor = ShopManager.instance.superColors[6 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[7];
+                        mergedColor = Colors.BLACK;
                         break;
                     case Colors.WHITE:
-                        mergedColor = ShopManager.instance.superColors[4 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[2];
+                        mergedColor = Colors.YELLOW;
                         break;
                 }
                 break;
@@ -114,22 +112,18 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 switch (bernardColor)
                 {
                     case Colors.YELLOW:
-                        mergedColor = ShopManager.instance.superColors[0 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[4];
+                        mergedColor = Colors.ORANGE;
                         break;
                     case Colors.BLUE:
-                        mergedColor = ShopManager.instance.superColors[2 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[5];
+                        mergedColor = Colors.PURPLE;
                         break;
                     case Colors.ORANGE:
                     case Colors.PURPLE:
                     case Colors.GREEN:
-                        mergedColor = ShopManager.instance.superColors[6 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[7];
+                        mergedColor = Colors.BLACK;
                         break;
                     case Colors.WHITE:
-                        mergedColor = ShopManager.instance.superColors[5 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[1];
+                        mergedColor = Colors.RED;
                         break;
                 }
                 break;
@@ -137,22 +131,18 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 switch (bernardColor)
                 {
                     case Colors.RED:
-                        mergedColor = ShopManager.instance.superColors[2 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[5];
+                        mergedColor = Colors.PURPLE;
                         break;
                     case Colors.YELLOW:
-                        mergedColor = ShopManager.instance.superColors[1 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[6];
+                        mergedColor = Colors.GREEN;
                         break;
                     case Colors.ORANGE:
                     case Colors.PURPLE:
                     case Colors.GREEN:
-                        mergedColor = ShopManager.instance.superColors[6 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[7];
+                        mergedColor = Colors.BLACK;
                         break;
                     case Colors.WHITE:
-                        mergedColor = ShopManager.instance.superColors[3 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[3];
+                        mergedColor = Colors.BLUE;
                         break;
                 }
                 break;
@@ -164,12 +154,10 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                     case Colors.YELLOW:
                     case Colors.PURPLE:
                     case Colors.GREEN:
-                        mergedColor = ShopManager.instance.superColors[6 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[7];
+                        mergedColor = Colors.BLACK;
                         break;
                     case Colors.WHITE:
-                        mergedColor = ShopManager.instance.superColors[0 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[4];
+                        mergedColor = Colors.ORANGE;
                         break;
                 }
                 break;
@@ -181,12 +169,10 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                     case Colors.YELLOW:
                     case Colors.ORANGE:
                     case Colors.GREEN:
-                        mergedColor = ShopManager.instance.superColors[6 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[7];
+                        mergedColor = Colors.BLACK;
                         break;
                     case Colors.WHITE:
-                        mergedColor = ShopManager.instance.superColors[2 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[5];
+                        mergedColor = Colors.PURPLE;
                         break;
                 }
                 break;
@@ -198,12 +184,10 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                     case Colors.YELLOW:
                     case Colors.PURPLE:
                     case Colors.ORANGE:
-                        mergedColor = ShopManager.instance.superColors[6 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[7];
+                        mergedColor = Colors.BLACK;
                         break;
                     case Colors.WHITE:
-                        mergedColor = ShopManager.instance.superColors[1 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[6];
+                        mergedColor = Colors.GREEN;
                         break;
                 }
                 break;
@@ -211,8 +195,7 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 switch (bernardColor)
                 {
                     case Colors.WHITE:
-                        mergedColor = ShopManager.instance.superColors[6 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[7];
+                        mergedColor = Colors.BLACK;
                         break;
                 }
                 break;
@@ -220,41 +203,31 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
                 switch (bernardColor)
                 {
                     case Colors.RED:
-                        mergedColor = ShopManager.instance.superColors[5 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[1];
+                        mergedColor = Colors.RED;
                         break;
                     case Colors.BLUE:
-                        mergedColor = ShopManager.instance.superColors[3 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[3];
+                        mergedColor = Colors.BLUE;
                         break;
                     case Colors.YELLOW:
-                        mergedColor = ShopManager.instance.superColors[4 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[2];
+                        mergedColor = Colors.YELLOW;
                         break;
                     case Colors.PURPLE:
-                        mergedColor = ShopManager.instance.superColors[2 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[5];
+                        mergedColor = Colors.PURPLE;
                         break;
                     case Colors.GREEN:
-                        mergedColor = ShopManager.instance.superColors[1 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[6];
+                        mergedColor = Colors.GREEN;
                         break;
                     case Colors.ORANGE:
-                        mergedColor = ShopManager.instance.superColors[0 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[4];
+                        mergedColor = Colors.ORANGE;
                         break;
                     case Colors.BLACK:
-                        mergedColor = ShopManager.instance.superColors[6 + term];
-                        mergedColor.GetComponent<Image>().color = GameManager.instance.differentsColors[7];
+                        mergedColor = Colors.BLACK;
                         break;
                 }
                 break;
         }
 
-        if (mergedColor == null)
-        {
-            return;
-        }
+        bernard.GetComponent<Image>().color = GameManager.instance.differentsColors[(int)mergedColor];
 
         //Instantiate(mergedColor, bernard.transform.parent).GetComponent<DragHandeler>().barren = true;
         //ShopManager.instance.moneyText[structType == Type.TURRET ? 1 : 0].text = mergedColor.GetComponent<DragHandeler>().cost.ToString();
@@ -268,9 +241,14 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
             michel = Instantiate(michel, startParent);
             michel.GetComponent<DragHandeler>().barren = false;
         }
-        bernard.GetComponent<Image>().color = mergedColor.GetComponent<Image>().color;
-        bernard.GetComponent<DragHandeler>().colorState = mergedColor.GetComponent<DragHandeler>().colorState;
-        //Destroy(bernard);
+
+        string name = (bernard.GetComponent<DragHandeler>().structType == Type.TURRET ? "T_" : "") + mergedColor.ToString();
+
+        bernard.GetComponent<DragHandeler>().colorState = mergedColor;
+
+        bernard.GetComponent<DragHandeler>().cost = GameManager.instance.units[name].GetComponent<Unit>().cost;
+
+        bernard.GetComponent<DragHandeler>().text.text = GameManager.instance.units[name].GetComponent<Unit>().cost.ToString();
         Destroy(this.gameObject);
     }
 }

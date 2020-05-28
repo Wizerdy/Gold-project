@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -226,6 +227,20 @@ public class GameManager : MonoBehaviour
                 }
 
                 insta.GetComponent<RectTransform>().anchoredPosition = new Vector2(mnpHits[i].distance / dist * minimapParent.GetComponent<RectTransform>().rect.width, 0);
+                Color color = Color.white;
+                switch (hitted.side)
+                {
+                    case Unit.Side.NEUTRAL:
+                        color = neutralColor;
+                        break;
+                    case Unit.Side.ALLY:
+                        color = allyColor;
+                        break;
+                    case Unit.Side.ENEMY:
+                        color = enemyColor;
+                        break;
+                }
+                insta.GetComponent<Image>().color = color;
             }
 
             for (int i = 0; i < childs.Count; i++)
