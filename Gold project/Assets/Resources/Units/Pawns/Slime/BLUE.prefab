@@ -214,7 +214,7 @@ MonoBehaviour:
   maxHealth: 350
   damage: {x: 40, y: 50}
   attackSpeed: 1.4
-  color: 2
+  color: 3
   attackRange: {fileID: 5278358871612878103}
   sprRend: {fileID: 0}
   canAttack: 0

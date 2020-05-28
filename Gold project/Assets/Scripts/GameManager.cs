@@ -32,6 +32,7 @@ public class GameManager : MonoBehaviour
 
     [Header("GameObject")]
     public GameObject splash;
+    public GameObject deathParticle;
     public GameObject explosion;
 
     [Header("Array")]
@@ -60,7 +61,6 @@ public class GameManager : MonoBehaviour
     {
         allies = new List<GameObject>();
         Collider2D[] hits = Physics2D.OverlapBoxAll(Vector2.zero, new Vector2(300, 50), 0, unitLayer);
-        Debug.Log(hits.Length);
 
         for (int i = 0; i < hits.Length; i++)
             if(hits[i].GetComponent<Unit>().side == Unit.Side.ALLY)
@@ -175,9 +175,13 @@ public class GameManager : MonoBehaviour
         return insta;
     }
 
-    public void SpawnSplash(Vector2 pos)
+    public void SpawnSplash(Vector2 pos, Color color)
     {
-        Instantiate(splash, pos, Quaternion.identity);
+        //GameObject insta = Instantiate(splash, pos, Quaternion.identity);
+        //insta.GetComponent<SpriteRenderer>().color = color;
+        GameObject insta = Instantiate(deathParticle, pos, Quaternion.identity);
+        insta.GetComponent<ParticleSystem>().startColor = color;
+
     }
 
     public static bool InsideLayer(int layer, LayerMask mask)
@@ -249,8 +253,6 @@ public class GameManager : MonoBehaviour
             for (int i = 0; i < minimapParent.childCount; i++)
                 if (minimapParent.GetChild(i).name == unit.name)
                     minimapParent.GetChild(i).SetAsLastSibling();
-
-            Debug.Log(minimapParent.childCount + " .. " + childs.Count);
         }
     }
 

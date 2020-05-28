@@ -55,7 +55,6 @@ public abstract class Unit : MonoBehaviour
 
     protected virtual void Die()
     {
-        GameManager.instance.SpawnSplash(transform.position);
         Destroy(gameObject);
     }
 

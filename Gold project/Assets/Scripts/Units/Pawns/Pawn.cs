@@ -74,6 +74,7 @@ public abstract class Pawn : Unit
 
     protected override void Die()
     {
+        GameManager.instance.SpawnSplash(transform.position, GameManager.instance.differentsColors[(int)color]);
         ShopManager.instance.Gain(Mathf.FloorToInt(cost * GameManager.instance.slimeRefund));
         base.Die();
     }

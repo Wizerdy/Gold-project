@@ -16,6 +16,8 @@ public class CameraScrolling : MonoBehaviour
 
     [SerializeField] private List<Transform> parallax;
 
+    public bool active;
+
     private Vector3 basePos;
     private Vector2 oriMousePos;
 
@@ -35,14 +37,11 @@ public class CameraScrolling : MonoBehaviour
 
     private void Update()
     {
-        if(Input.touchCount >= 1)
+        if(Input.touchCount >= 1 && active)
         {
             Scroll();
-        } else if(Input.GetMouseButton(0))
+        } else if(Input.GetMouseButton(0) && active)
         {
-            if (Input.GetMouseButtonDown(0))
-                oriMousePos = Input.mousePosition;
-
             float delta = -(Input.mousePosition.x - oriMousePos.x) * scrollSpeed;
 
             if (!CameraOutBounds(delta))
@@ -64,6 +63,9 @@ public class CameraScrolling : MonoBehaviour
 
             oriMousePos = Input.mousePosition;
         }
+
+        if (Input.GetMouseButtonDown(0))
+            oriMousePos = Input.mousePosition;
     }
 
     protected void Scroll()
@@ -129,5 +131,10 @@ public class CameraScrolling : MonoBehaviour
         {
             parallax[i].Translate(new Vector2(delta * ((float)(parallax.Count - i) / (float)parallax.Count) * parallaxSpeed, 0));
         }
+    }
+
+    public void ToggleActive()
+    {
+        active = !active;
     }
 }
