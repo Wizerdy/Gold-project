@@ -37,7 +37,10 @@ public class CameraScrolling : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
+        if (Input.GetMouseButtonDown(0))
+            oriMousePos = Input.mousePosition;
+
+        if(Input.touchCount > 0)
             oriMousePos = Input.GetTouch(0).position;
 
         if (Input.touchCount >= 1 && active)
