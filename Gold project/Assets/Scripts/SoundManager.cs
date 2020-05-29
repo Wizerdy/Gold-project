@@ -14,7 +14,7 @@ public class Sound
     [Range(0f, 1f)] public float randomVolume;
     [Range(0f, 1f)] public float randomPitch;
 
-    private AudioSource source;
+    [HideInInspector] public AudioSource source;
 
     public void SetSource(AudioSource source)
     {
@@ -43,12 +43,21 @@ public class SoundManager : MonoBehaviour
 
     private void Start()
     {
+        GameObject go;
         for (int i = 0; i < sounds.Length; i++)
         {
-            GameObject go = new GameObject("Sound_" + i + "_" + sounds[i].name);
+            go = new GameObject("Sound_" + i + "_" + sounds[i].name);
             sounds[i].SetSource(go.AddComponent<AudioSource>());
             go.transform.parent = transform;
         }
+
+        PlaySound("Music");
+    }
+
+    private void Update()
+    {
+        if (!GetSound("Music").source.isPlaying && !GetSound("Loop").source.isPlaying)
+            PlaySound("Loop");
     }
 
     public void PlaySound(string name)
@@ -61,5 +70,18 @@ public class SoundManager : MonoBehaviour
                 return;
             }
         }
+    }
+
+    public Sound GetSound(string name)
+    {
+        for (int i = 0; i < sounds.Length; i++)
+        {
+            if (sounds[i].name == name)
+            {
+                return sounds[i];
+            }
+        }
+
+        return null;
     }
 }

@@ -90,7 +90,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3740516601931120440}
-  - component: {fileID: 3740516601931120441}
+  - component: {fileID: 8265437695161462440}
   - component: {fileID: 634356893387697209}
   m_Layer: 8
   m_Name: PURPLE
@@ -116,7 +116,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3740516601931120441
+--- !u!114 &8265437695161462440
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,7 +125,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3740516601931120442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c4b1294ce621f46b4bbdf608bea717, type: 3}
+  m_Script: {fileID: 11500000, guid: c671728fb22e08a40b7d38470bba793b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
@@ -135,16 +135,20 @@ MonoBehaviour:
   attackSpeed: 1
   color: 5
   attackRange: {fileID: 5278358871612878103}
-  sprRend: {fileID: 0}
+  sprRend: {fileID: 5689884118935796028}
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 100
+  cost: 0
   speed: 2
   curSpeed: 0
   immobilize: 0
   target: {fileID: 0}
-  explosion: {fileID: 11400000, guid: e88391b22bfb04642a4dd89f35080e2d, type: 2}
+  explosion: {fileID: 0}
+  SlimeToSpawn: {fileID: 3740516601931120442, guid: bbc1acb5416737e408bfdcb903f07fef,
+    type: 3}
+  numberToSpawn: 3
+  spawnOffset: 0.3
 --- !u!61 &634356893387697209
 BoxCollider2D:
   m_ObjectHideFlags: 0

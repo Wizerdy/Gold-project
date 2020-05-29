@@ -23,6 +23,12 @@ public class Tower : Structure
         ChangeColor(GameManager.instance.neutralColor);
     }
 
+    public override void LoseHealth(int amount)
+    {
+        base.LoseHealth(amount);
+        ShopManager.instance.RefreshHUD();
+    }
+
     protected override void Die()
     {
         //for (int i = 1; i < transform.childCount; i++)

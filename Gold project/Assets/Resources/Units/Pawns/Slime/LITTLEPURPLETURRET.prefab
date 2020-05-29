@@ -9,9 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3740516601931120440}
-  - component: {fileID: 3740516601931120441}
+  - component: {fileID: 8498663467653826402}
   - component: {fileID: 634356893387697209}
-  m_Layer: 8
+  - component: {fileID: 5449375589081059821}
+  m_Layer: 11
   m_Name: LITTLEPURPLETURRET
   m_TagString: Slime
   m_Icon: {fileID: 0}
@@ -35,7 +36,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3740516601931120441
+--- !u!114 &8498663467653826402
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -44,7 +45,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3740516601931120442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a4c4b1294ce621f46b4bbdf608bea717, type: 3}
+  m_Script: {fileID: 11500000, guid: 0081bdf556c819d4fb6e69d8ad0afb98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   type: 0
@@ -54,18 +55,16 @@ MonoBehaviour:
   attackSpeed: 0.2
   color: 5
   attackRange: {fileID: 5278358871612878103}
-  sprRend: {fileID: 0}
+  sprRend: {fileID: 2896934492127192878}
   canAttack: 0
   curHealth: 0
   hit: []
   cost: 0
-  deathExplosion: {fileID: 9144037421436212920, guid: d3bae9eb3214d224a8203c1e6a21db60,
-    type: 3}
   speed: 2
   curSpeed: 0
   immobilize: 0
   target: {fileID: 0}
-  explosion: {fileID: 11400000, guid: 1ec82851b61bbaf45922a2dc179e6f7b, type: 2}
+  lifeTime: 5
 --- !u!61 &634356893387697209
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -79,7 +78,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.029603243, y: 1.9044352}
+  m_Offset: {x: -0.01734382, y: 0.020679235}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -90,8 +89,29 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 4.8088727, y: 2.2038403}
+  m_Size: {x: 1.1704646, y: 0.7602143}
   m_EdgeRadius: 0
+--- !u!50 &5449375589081059821
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3740516601931120442}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &5053164095768797328
 GameObject:
   m_ObjectHideFlags: 0

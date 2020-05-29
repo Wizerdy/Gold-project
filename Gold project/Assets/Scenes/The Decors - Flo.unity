@@ -1272,7 +1272,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  side: 0
+  side: 2
   maxHealth: 50
   damage: {x: 0, y: 0}
   attackSpeed: 0
@@ -20182,7 +20182,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  side: 0
+  side: 1
   maxHealth: 50
   damage: {x: 0, y: 0}
   attackSpeed: 0
@@ -20623,30 +20623,42 @@ MonoBehaviour:
     pitch: 0
     randomVolume: 0
     randomPitch: 0
+    source: {fileID: 0}
   - name: Death_1
     clip: {fileID: 8300000, guid: 7168cf4421621e84f856d96e1b163620, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0
     randomPitch: 0
+    source: {fileID: 0}
   - name: Death_2
     clip: {fileID: 8300000, guid: 457133351884a8747bc9f0adb235f927, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0
     randomPitch: 0
+    source: {fileID: 0}
   - name: Death_3
     clip: {fileID: 8300000, guid: 4d5538031479d5c4bb6dad9d6d293a03, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0
     randomPitch: 0
+    source: {fileID: 0}
   - name: Music
-    clip: {fileID: 8300000, guid: 4d5538031479d5c4bb6dad9d6d293a03, type: 3}
-    volume: 0
-    pitch: 0
+    clip: {fileID: 8300000, guid: d17468d7137cf8442aa165ef183c9338, type: 3}
+    volume: 1
+    pitch: 1
     randomVolume: 0
     randomPitch: 0
+    source: {fileID: 0}
+  - name: Loop
+    clip: {fileID: 8300000, guid: 8ad5d1f315bdd4d4f8c6aa89fb34ae5b, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0
+    randomPitch: 0
+    source: {fileID: 0}
 --- !u!1 &757462097
 GameObject:
   m_ObjectHideFlags: 0
@@ -44204,7 +44216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   type: 1
-  side: 0
+  side: 1
   maxHealth: 50
   damage: {x: 0, y: 0}
   attackSpeed: 0
@@ -47750,7 +47762,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 43.79077, y: -5.404808}
+  m_Offset: {x: 43.79077, y: -5.542493}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -47761,7 +47773,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 102.54047, y: 0.40419388}
+  m_Size: {x: 102.54047, y: 1.5307045}
   m_EdgeRadius: 0
 --- !u!224 &1879384972 stripped
 RectTransform:

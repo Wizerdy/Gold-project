@@ -18,7 +18,7 @@ public abstract class Unit : MonoBehaviour
     public float attackSpeed;
     public Colors color;
     [SerializeField] private Collider2D attackRange = null;
-    [SerializeField] private SpriteRenderer sprRend = null;
+    [SerializeField] protected SpriteRenderer sprRend = null;
 
     [HideInInspector] public bool canAttack;
     [HideInInspector] public int curHealth;

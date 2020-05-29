@@ -227,7 +227,6 @@ public class IAController : MonoBehaviour
     {
         if (money >= amount)
         {
-            Debug.LogWarning("Payed : " + amount);
             money -= amount;
             return true;
         }

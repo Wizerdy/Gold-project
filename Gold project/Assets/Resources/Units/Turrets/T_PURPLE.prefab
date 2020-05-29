@@ -253,8 +253,9 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 40
-  ammo: {fileID: 3975769326864515960, guid: 4fd049fd673b51b4fb9505570461158f, type: 3}
+  ammo: {fileID: 3740516601931120442, guid: 7f5c929ba18630e4fbe231219be8a843, type: 3}
   ammoSpeed: 300
+  offSet: 2.5
   sprite: {fileID: 546008598194761017}
 --- !u!1 &4978383070831852508
 GameObject:
