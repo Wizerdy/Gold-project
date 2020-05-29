@@ -30,7 +30,7 @@ public abstract class Pawn : Unit
         immobilize = false;
 
         if(sprRend != null)
-            sprRend.transform.localScale = new Vector3(Mathf.Sqrt(maxHealth / 50f), Mathf.Sqrt(maxHealth / 50f), 1);
+            sprRend.transform.localScale = new Vector3(Mathf.Sqrt((float)maxHealth / 50f), Mathf.Sqrt((float)maxHealth / 50f), 1);
     }
 
     private void Update()

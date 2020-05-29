@@ -135,7 +135,7 @@ MonoBehaviour:
   attackSpeed: 1
   color: 1
   attackRange: {fileID: 5278358871612878103}
-  sprRend: {fileID: 0}
+  sprRend: {fileID: 5669544073192628219}
   canAttack: 0
   curHealth: 0
   hit: []
