@@ -40,14 +40,14 @@ public class CameraScrolling : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
             oriMousePos = Input.mousePosition;
 
-        if(Input.touchCount > 0)
+        if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
             oriMousePos = Input.GetTouch(0).position;
 
         if (Input.touchCount >= 1 && active)
         {
             //Scroll();
             float delta = -(Input.GetTouch(0).position.x - oriMousePos.x) * scrollSpeed;
-
+            Debug.LogWarning(delta + " .. " + Input.GetTouch(0).position.x + " .. " + oriMousePos.x + " .. " + scrollSpeed);
             if (!CameraOutBounds(delta))
             {
                 gameCamera.transform.Translate(new Vector2(delta, 0));
