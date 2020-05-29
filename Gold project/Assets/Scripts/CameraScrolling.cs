@@ -37,12 +37,35 @@ public class CameraScrolling : MonoBehaviour
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            oriMousePos = Input.mousePosition;
+        if (Input.GetMouseButtonDown(0) || Input.touchCount > 0)
+            oriMousePos = Input.GetTouch(0).position;
 
         if (Input.touchCount >= 1 && active)
         {
-            Scroll();
+            //Scroll();
+            float delta = -(Input.GetTouch(0).position.x - oriMousePos.x) * scrollSpeed;
+
+            if (!CameraOutBounds(delta))
+            {
+                gameCamera.transform.Translate(new Vector2(delta, 0));
+                Parallax(delta);
+            }
+            else
+            {
+                if (delta < 0)
+                {
+                    Parallax(cameraBounds.x - gameCamera.transform.position.x);
+                    gameCamera.transform.position = new Vector3(cameraBounds.x, basePos.y, basePos.z);
+                }
+                else
+                {
+                    Parallax(cameraBounds.y - gameCamera.transform.position.x);
+                    gameCamera.transform.position = new Vector3(cameraBounds.y, basePos.y, basePos.z);
+                }
+            }
+
+            oriMousePos = Input.GetTouch(0).position;
+
         } else if(Input.GetMouseButton(0) && active)
         {
             float delta = -(Input.mousePosition.x - oriMousePos.x) * scrollSpeed;

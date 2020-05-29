@@ -85,8 +85,8 @@ public abstract class Unit : MonoBehaviour
     public virtual void LoseHealth(int amount)
     {
         curHealth -= amount;
-        if (sprRend != null)
-            StartCoroutine(Coloration(Color.red, 0.05f));
+        //if (sprRend != null)
+            //StartCoroutine(Coloration(Color.red, 0.05f));
     }
 
     protected IEnumerator Coloration(Color color, float time)
