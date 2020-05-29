@@ -10,13 +10,17 @@ public class Tower : Structure
     public List<Transform> turrets;
     public List<Transform> pumps;
 
+    [Header("Sprites")]
+    [SerializeField] private List<SpriteRenderer> toColor;
+
     protected override void Start()
     {
         base.Start();
         Touched touch = GetComponent<Touched>();
         if (side == Side.ALLY && touch != null)
             touch.active = true;
-            
+
+        ChangeColor(GameManager.instance.neutralColor);
     }
 
     protected override void Die()
@@ -42,26 +46,38 @@ public class Tower : Structure
                 GameManager.instance.iA.pumpCount--;
         }
 
-
         Touched touch = GetComponent<Touched>();
+
+        Color coloration = coloration = GameManager.instance.neutralColor;
 
         switch (side)
         {
             case Side.ALLY:
                 if (touch != null)
                     touch.active = true;
+                coloration = GameManager.instance.allyColor;
                 GameManager.instance.allies.Add(gameObject);
                 break;
             case Side.ENEMY:
                 if (touch != null)
                     touch.active = false;
+                coloration = GameManager.instance.enemyColor;
                 break;
             case Side.NEUTRAL:
                 if (touch != null)
                     touch.active = false;
+                coloration = GameManager.instance.neutralColor;
                 break;
         }
 
+        ChangeColor(coloration);
+
         curHealth = maxHealth;
+    }
+
+    private void ChangeColor(Color color)
+    {
+        for (int i = 0; i < toColor.Count; i++)
+            toColor[i].color = color;
     }
 }

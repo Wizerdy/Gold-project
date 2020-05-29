@@ -18,7 +18,7 @@ public class IAController : MonoBehaviour
     public float spawnOffset;
     public float defActionTime;
 
-    private int defChance = 100;
+    [Range(0, 100)] public int defChance = 100;
     private int atkReduction = 0;
 
     [HideInInspector] public int pumpCount = 0;
@@ -180,17 +180,25 @@ public class IAController : MonoBehaviour
 
     private void SpawnUnit(Colors color)
     {
-        GameManager.instance.InstantiateUnit(GetUnit(color), Unit.Side.ENEMY, structures[0].transform.position);
+        for (int i = structures.Count - 1; i > -1; i--)
+        {
+            if (structures[i].side == Unit.Side.ENEMY)
+            {
+                GameManager.instance.InstantiateUnit(GetUnit(color), Unit.Side.ENEMY, structures[i].spawnPoint.position);
+                return;
+            }
+        }
     }
 
     private void ActivateAPump()
     {
-        if (Pay(GameManager.instance.pumpCost))
+        if (money >= GameManager.instance.pumpCost)
             for (int i = 0; i < structures.Count; i++)
                 if(structures[i].side == Unit.Side.ENEMY)
                     for (int j = 0; j < structures[i].pumps.Count; j++)
                         if (!structures[i].pumps[j].gameObject.activeSelf)
                         {
+                            Pay(GameManager.instance.pumpCost);
                             structures[i].pumps[j].GetComponent<Pump>().enabled = false;
                             structures[i].pumps[j].gameObject.SetActive(true);
                             Debug.Log("+ Pump");
@@ -219,6 +227,7 @@ public class IAController : MonoBehaviour
     {
         if (money >= amount)
         {
+            Debug.LogWarning("Payed : " + amount);
             money -= amount;
             return true;
         }

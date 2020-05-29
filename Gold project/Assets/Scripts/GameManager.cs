@@ -23,9 +23,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] private GameObject tower;
     [SerializeField] private GameObject unit;
 
-    [SerializeField] private Color allyColor;
-    [SerializeField] private Color neutralColor;
-    [SerializeField] private Color enemyColor;
+    public Color allyColor;
+    public Color neutralColor;
+    public Color enemyColor;
 
     [Header("Parents")]
     public Transform allyParent;
@@ -150,7 +150,6 @@ public class GameManager : MonoBehaviour
 
     public GameObject InstantiateUnit(GameObject unit, Unit.Side side, Vector2 pos)
     {
-        Debug.Log(pos);
         GameObject insta = Instantiate(unit, (side == Unit.Side.ALLY ? allyParent : enemyParent) );
         insta.transform.position = pos;
         //insta.layer = (side == Unit.Side.ALLY ? allyParent : enemyParent).gameObject.layer;

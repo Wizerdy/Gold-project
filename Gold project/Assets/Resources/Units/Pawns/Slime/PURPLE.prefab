@@ -139,9 +139,7 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 0
-  deathExplosion: {fileID: 9144037421436212920, guid: d3bae9eb3214d224a8203c1e6a21db60,
-    type: 3}
+  cost: 100
   speed: 2
   curSpeed: 0
   immobilize: 0

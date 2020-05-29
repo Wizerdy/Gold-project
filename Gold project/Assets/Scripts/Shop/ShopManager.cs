@@ -11,7 +11,7 @@ public class ShopManager : MonoBehaviour
 
     public GameObject[] canvasList;
 
-    public int health;
+    public Tower health;
 
     public int currentHudId;
     public int money;
@@ -28,7 +28,7 @@ public class ShopManager : MonoBehaviour
         if (money >= cost)
         {
             money -= cost;
-            moneyText.text = money.ToString();
+            RefreshHUD();
             return true;
         } else
         {
@@ -56,13 +56,28 @@ public class ShopManager : MonoBehaviour
     private void Awake()
     {
         instance = this;
-        moneyText.text = money.ToString();
-        healthText.text = health.ToString();
+    }
 
+    private void Start()
+    {
+        moneyText.text = money.ToString();
+        healthText.text = health.maxHealth.ToString();
+    }
+
+    private void Update()
+    {
+        healthText.text = health.curHealth.ToString();
+    }
+
+    public void RefreshHUD()
+    {
+        moneyText.text = money.ToString();
+        healthText.text = health.curHealth.ToString();
     }
 
     public void Gain(int amount)
     {
         money += amount;
+        RefreshHUD();
     }
 }

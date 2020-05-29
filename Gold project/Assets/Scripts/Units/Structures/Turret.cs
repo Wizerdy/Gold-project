@@ -18,7 +18,7 @@ public class Turret : Structure
         );
 
         Quaternion rotation = Quaternion.LookRotation(dir, Vector2.right);
-        sprite.eulerAngles = new Vector3(0, 0, -rotation.eulerAngles.x);
+        sprite.eulerAngles = new Vector3(sprite.eulerAngles.x, sprite.eulerAngles.y, -rotation.eulerAngles.x);
         //Debug.Log(sprite.name + " .. " + rotation + " .. " + rotation.eulerAngles);
         GameObject insta = Instantiate(ammo, sprite.position, rotation);
         insta.transform.eulerAngles = new Vector3(0, 0, -rotation.eulerAngles.x);
