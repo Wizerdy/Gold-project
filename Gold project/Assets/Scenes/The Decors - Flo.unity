@@ -9599,7 +9599,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   michel: {fileID: 4426236122652340427, guid: 2f78c9309cd28a04b887b8f4fea6f7a3, type: 3}
   cost: 0
-  colorState: 3
+  colorState: 0
   structType: 1
   text: {fileID: 1180003483}
   barren: 1
@@ -28272,7 +28272,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   michel: {fileID: 4426236122652340427, guid: 2f78c9309cd28a04b887b8f4fea6f7a3, type: 3}
   cost: 0
-  colorState: 3
+  colorState: 0
   structType: 1
   text: {fileID: 209406399}
   barren: 1
@@ -47035,7 +47035,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   michel: {fileID: 4426236122652340427, guid: 2f78c9309cd28a04b887b8f4fea6f7a3, type: 3}
   cost: 0
-  colorState: 3
+  colorState: 0
   structType: 1
   text: {fileID: 1079665878}
   barren: 1
