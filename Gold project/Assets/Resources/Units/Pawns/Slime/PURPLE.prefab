@@ -139,7 +139,7 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 0
+  cost: 100
   speed: 2
   curSpeed: 0
   immobilize: 0

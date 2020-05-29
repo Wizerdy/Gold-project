@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -47,13 +48,22 @@ public class GameManager : MonoBehaviour
     public Material grayScaleBorder;
     public IAController iA;
 
+    public GameObject victoryScreen;
+    public GameObject defeatScreen;
+
     [HideInInspector] public Dictionary<string, GameObject> units;
     [HideInInspector] public List<GameObject> allies;
     private RaycastHit2D[] mnpHits;
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null)
+        {
+            instance = this;
+            //DontDestroyOnLoad(gameObject);
+        }
+        else
+            Destroy(this);
 
         units = new Dictionary<string, GameObject>();
         GameObject[] obj = Resources.LoadAll<GameObject>("Units");
@@ -61,6 +71,8 @@ public class GameManager : MonoBehaviour
         {
             units.Add(obj[i].name, obj[i]);
         }
+
+        Time.timeScale = 1;
     }
 
     private void Start()
@@ -80,7 +92,8 @@ public class GameManager : MonoBehaviour
         Minimap();
 
         if (Input.GetKeyDown(KeyCode.A))
-            InstantiateUnit(units["Knight"], Unit.Side.ALLY, allyParent.position);
+            Defeat();
+        //InstantiateUnit(units["Knight"], Unit.Side.ALLY, allyParent.position);
 
         else if (Input.GetKeyDown(KeyCode.Z))
             InstantiateUnit(units["WHITE"], Unit.Side.ALLY, allyParent.position);
@@ -281,5 +294,22 @@ public class GameManager : MonoBehaviour
             yield return new WaitForSeconds(pumpTime);
             ShopManager.instance.Gain(passivePump);
         }
+    }
+
+    public void Defeat()
+    {
+        defeatScreen.GetComponent<PauseMenu>().TimeScaleToZero();
+        defeatScreen.SetActive(true);
+    }
+
+    public void Victory()
+    {
+        victoryScreen.GetComponent<PauseMenu>().TimeScaleToZero();
+        victoryScreen.SetActive(true);
+    }
+
+    public void LoadScene(string name)
+    {
+        SceneManager.LoadScene(name);
     }
 }

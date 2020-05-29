@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Tower : Structure
 {
@@ -12,6 +13,9 @@ public class Tower : Structure
 
     [Header("Sprites")]
     [SerializeField] private List<SpriteRenderer> toColor;
+
+    [Header("OnDead")]
+    [SerializeField] private UnityEvent action;
 
     protected override void Start()
     {
@@ -79,6 +83,11 @@ public class Tower : Structure
         ChangeColor(coloration);
 
         curHealth = maxHealth;
+
+        if(action != null)
+        {
+            action.Invoke();
+        }
     }
 
     private void ChangeColor(Color color)
