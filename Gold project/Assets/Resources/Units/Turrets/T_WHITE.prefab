@@ -252,7 +252,7 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 0
+  cost: 10
   ammo: {fileID: 3975769326864515960, guid: 9c587243adc6c8e4eb9c239f4c9e32f6, type: 3}
   ammoSpeed: 300
   sprite: {fileID: 546008598194761017}

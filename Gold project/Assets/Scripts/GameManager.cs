@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
     [Range(0f, 1f)] public float slimeMinSize;
     [Range(0f, 1f)] public float slimeRefund;
 
+    public int passivePump;
+    public float pumpTime;
+    public int pumpCost;
+    public int pumpAmount;
+
     [Header("Minimap")]
     [SerializeField] private Transform minimapParent;
     [SerializeField] private GameObject castle;
@@ -40,6 +45,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Ohter")]
     public Material grayScaleBorder;
+    public IAController iA;
 
     [HideInInspector] public Dictionary<string, GameObject> units;
     [HideInInspector] public List<GameObject> allies;
@@ -65,6 +71,8 @@ public class GameManager : MonoBehaviour
         for (int i = 0; i < hits.Length; i++)
             if(hits[i].GetComponent<Unit>().side == Unit.Side.ALLY)
                 allies.Add(hits[i].gameObject);
+
+        StartCoroutine(Gain());
     }
 
     private void Update()
@@ -265,5 +273,14 @@ public class GameManager : MonoBehaviour
                 return parent.GetChild(i).gameObject;
 
         return null;
+    }
+
+    private IEnumerator Gain()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(pumpTime);
+            ShopManager.instance.Gain(passivePump);
+        }
     }
 }

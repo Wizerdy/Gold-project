@@ -4,20 +4,224 @@ using UnityEngine;
 
 public class IAController : MonoBehaviour
 {
-    public Vector2 timeToSpawn;
+    private enum Behaviour { AGRESSIVE, DEFENSIVE }
 
-    private IEnumerator SpawnUnit()
-    {
-        while (true)
-        {
-            string name = ((Colors)Random.Range(0, 7)).ToString();
-            GameManager.instance.InstantiateUnit(GameManager.instance.units[name], Unit.Side.ENEMY, GameManager.instance.enemyParent);
-            yield return new WaitForSeconds(Random.Range((float)timeToSpawn.x, (float)timeToSpawn.y));
-        }
-    }
+
+    public int money;
+
+    private Behaviour behaviour = Behaviour.DEFENSIVE;
+
+    public List<Tower> structures;
+
+    [Header("Options")]
+    public float actionTime;
+    public float spawnOffset;
+    public float defActionTime;
+
+    private int defChance = 100;
+    private int atkReduction = 0;
+
+    [HideInInspector] public int pumpCount = 0;
+    [HideInInspector] public int turretCount = 0;
+
+    private int moneyToUse;
+    private int unitToSpawn;
+
+    private Coroutine action;
 
     private void Start()
     {
-        StartCoroutine(SpawnUnit());
+        StartCoroutine(Pump());
+        StartCoroutine(Act());
+        ChooseBehaviour();
+    }
+
+    private IEnumerator Act()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(actionTime);
+            ChooseBehaviour();
+
+            if(defChance > 10)
+                defChance = Mathf.FloorToInt(defChance * 0.94f);
+        }
+    }
+
+    private void ChooseBehaviour()
+    {
+        int rand = Random.Range(0, 100);
+
+        if(rand < defChance + ((100 - defChance) * (atkReduction / 4)))
+            ChangeBehaviour(Behaviour.DEFENSIVE);
+        else
+            ChangeBehaviour(Behaviour.AGRESSIVE);
+    }
+
+    private void ChangeBehaviour(Behaviour behaviour)
+    {
+        this.behaviour = behaviour;
+
+        if(action != null)
+            StopCoroutine(action);
+
+        switch (behaviour)
+        {
+            case Behaviour.DEFENSIVE:
+                atkReduction = 0;
+                action = StartCoroutine(Defensive());
+                break;
+            case Behaviour.AGRESSIVE:
+                if (atkReduction < 4)
+                    atkReduction++;
+
+                moneyToUse = Mathf.FloorToInt(money * Random.Range(0f, 1f));
+                unitToSpawn = Random.Range(0, 8);
+
+                while (GetUnit((Colors)unitToSpawn).GetComponent<Unit>().cost > moneyToUse)
+                {
+                    if (unitToSpawn > 1)
+                        unitToSpawn--;
+                    else
+                    {
+                        ChangeBehaviour(Behaviour.DEFENSIVE);
+                        return;
+                    }
+                }
+                action = StartCoroutine(Agressive());
+                break;
+        }
+
+        Debug.Log("-- Def Mode !");
+    }
+
+    private IEnumerator Agressive()
+    {
+        while (moneyToUse > 0)
+        {
+            yield return new WaitForSeconds(spawnOffset);
+
+            int rand = Random.Range(0, unitToSpawn + 1);
+            if (Pay(GetUnit((Colors)rand).GetComponent<Unit>().cost))
+            {
+                SpawnUnit((Colors)rand);
+                moneyToUse -= GetUnit((Colors)rand).GetComponent<Unit>().cost;
+                Debug.Log("+ Spawned : " + ((Colors)rand).ToString());
+            }
+        }
+    }
+
+    private IEnumerator Defensive()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(defActionTime);
+
+            int rand = Random.Range(0, 100);
+            if (rand < 20 + ((100 - 20) * (turretCount / 7)))
+            {
+                ActivateAPump();
+            }
+            else
+            {
+
+                int turretIndex = 0;
+
+                for (int i = 0; i < 8; i++)
+                    if (GetTurret((Colors)i).GetComponent<Unit>().cost * 1.5f <= money)
+                        turretIndex = i;
+                    else
+                        break;
+
+                Transform parent = SearchTurretSlot(turretIndex);
+                if (parent != null && Pay(GetTurret((Colors)turretIndex).GetComponent<Unit>().cost))
+                {
+                    if (parent.childCount > 0)
+                    {
+                        for (int i = 0; i < parent.childCount; i++)
+                            Destroy(parent.GetChild(i).gameObject);
+                    }
+
+                    GameObject insta = GameManager.instance.InstantiateUnit(GetTurret((Colors)turretIndex), Unit.Side.ENEMY, parent);
+                    if (parent.GetComponent<OrderInLayer>() != null)
+                    {
+                        int add = parent.GetComponent<OrderInLayer>().orderInLayer;
+
+                        SpriteRenderer[] sprRenders = insta.GetComponentsInChildren<SpriteRenderer>();
+                        for (int i = 0; i < sprRenders.Length; i++)
+                            sprRenders[i].sortingOrder += add;
+                    }
+
+                    turretCount++;
+                    Debug.Log("+ Turret");
+                }
+            }
+        }
+    }
+
+    private IEnumerator Pump()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(GameManager.instance.pumpTime);
+            Gain(GameManager.instance.passivePump + GameManager.instance.pumpAmount * pumpCount);
+        }
+    }
+
+    private GameObject GetUnit(Colors color)
+    {
+        return GameManager.instance.units[color.ToString()];
+    }
+
+    private GameObject GetTurret(Colors color)
+    {
+        return GameManager.instance.units["T_" + color.ToString()];
+    }
+
+    private void SpawnUnit(Colors color)
+    {
+        GameManager.instance.InstantiateUnit(GetUnit(color), Unit.Side.ENEMY, structures[0].transform.position);
+    }
+
+    private void ActivateAPump()
+    {
+        if (Pay(GameManager.instance.pumpCost))
+            for (int i = 0; i < structures.Count; i++)
+                if(structures[i].side == Unit.Side.ENEMY)
+                    for (int j = 0; j < structures[i].pumps.Count; j++)
+                        if (!structures[i].pumps[j].gameObject.activeSelf)
+                        {
+                            structures[i].pumps[j].GetComponent<Pump>().enabled = false;
+                            structures[i].pumps[j].gameObject.SetActive(true);
+                            Debug.Log("+ Pump");
+                            pumpCount++;
+                            return;
+                        }
+    }
+    
+    private Transform SearchTurretSlot(int upgrade)
+    {
+        for (int i = 0; i < structures.Count; i++)
+            if (structures[i].GetComponent<Tower>().side == Unit.Side.ENEMY)
+                for (int j = 0; j < structures[i].turrets.Count; j++)
+                    if (structures[i].turrets[j].childCount == 0 || (int)structures[i].turrets[j].GetChild(0).GetComponent<Turret>().color < upgrade)
+                        return structures[i].turrets[j];
+
+        return null;
+    }
+
+    public void Gain(int amount)
+    {
+        money += amount;
+    }
+
+    public bool Pay(int amount)
+    {
+        if (money >= amount)
+        {
+            money -= amount;
+            return true;
+        }
+        return false;
     }
 }

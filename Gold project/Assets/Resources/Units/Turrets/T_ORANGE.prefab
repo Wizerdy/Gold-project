@@ -246,13 +246,13 @@ MonoBehaviour:
   maxHealth: 0
   damage: {x: 30, y: 50}
   attackSpeed: 1
-  color: 0
+  color: 4
   attackRange: {fileID: 3017508311607322558}
   sprRend: {fileID: 0}
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 0
+  cost: 40
   ammo: {fileID: 3975769326864515960, guid: 2d1409b690d607f429de4b2b4f971534, type: 3}
   ammoSpeed: 300
   sprite: {fileID: 546008598194761017}

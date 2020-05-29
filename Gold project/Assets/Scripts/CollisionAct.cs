@@ -12,7 +12,6 @@ public class CollisionAct : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         collisionEnter.Invoke();
-        Debug.Log("non");
     }
 
     private void OnTriggerStay2D(Collider2D collision)
@@ -23,7 +22,6 @@ public class CollisionAct : MonoBehaviour
     private void OnTriggerExit2D(Collider2D collision)
     {
         collisionExit.Invoke();
-        Debug.Log("oui");
     }
 
     public void SetHodor(bool state)

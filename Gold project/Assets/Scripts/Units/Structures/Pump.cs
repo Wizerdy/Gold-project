@@ -13,8 +13,8 @@ public class Pump : Structure
     {
         while (true)
         {
-            yield return new WaitForSeconds(attackSpeed);
-            ShopManager.instance.Gain(damage.x);
+            yield return new WaitForSeconds(GameManager.instance.pumpTime);
+            ShopManager.instance.Gain(GameManager.instance.pumpAmount);
         }
     }
 }

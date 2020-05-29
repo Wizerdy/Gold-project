@@ -6,6 +6,10 @@ public class Tower : Structure
 {
     [HideInInspector] public Side lastDamageSide;
 
+    public Transform spawnPoint;
+    public List<Transform> turrets;
+    public List<Transform> pumps;
+
     protected override void Start()
     {
         base.Start();
@@ -21,6 +25,23 @@ public class Tower : Structure
             //Destroy(transform.GetChild(i).gameObject);
 
         side = lastDamageSide;
+
+        for (int i = 0; i < turrets.Count; i++)
+            for (int j = 0; j < turrets[i].childCount; j++)
+            {
+                Destroy(turrets[i].GetChild(j).gameObject);
+                if(side == Side.ENEMY)
+                    GameManager.instance.iA.turretCount--;
+            }
+
+        for (int i = 0; i < pumps.Count; i++)
+        {
+            pumps[i].gameObject.SetActive(false);
+            pumps[i].GetComponent<Pump>().enabled = true;
+            if (side == Side.ENEMY)
+                GameManager.instance.iA.pumpCount--;
+        }
+
 
         Touched touch = GetComponent<Touched>();
 
