@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 458245310298029518}
   - component: {fileID: 5982894562162800581}
   m_Layer: 0
-  m_Name: Slimp_ptitViole_attac
+  m_Name: Attaque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 158419121739161151}
   - component: {fileID: 5086843157799912185}
   m_Layer: 0
-  m_Name: Slimp_ptitViolet
+  m_Name: Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

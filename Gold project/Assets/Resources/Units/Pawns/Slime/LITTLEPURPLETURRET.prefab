@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 6693839309678468824}
   - component: {fileID: 4144542064984683148}
   m_Layer: 0
-  m_Name: Slime_ptitViolet_attac
+  m_Name: Attaque
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ GameObject:
   - component: {fileID: 5862809122797151366}
   - component: {fileID: 2896934492127192878}
   m_Layer: 0
-  m_Name: Slime_ptitViolet
+  m_Name: Normal
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
