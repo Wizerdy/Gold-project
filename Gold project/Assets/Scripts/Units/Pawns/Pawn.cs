@@ -35,7 +35,7 @@ public abstract class Pawn : Unit
 
     private void Update()
     {
-        if (stunt)
+        if (stunned)
             return;
 
         if(!CheckAttackRange()) {

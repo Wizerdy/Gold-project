@@ -36,8 +36,8 @@ public class ArrowController : MonoBehaviour
                         else
                             unit.AddSlow(behaviour.slow);
 
-                    if (behaviour.poison)
-                        unit.StartCoroutine(unit.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
+                    if (behaviour.dot > 0)
+                        unit.AddDoT(behaviour.dot, behaviour.dotDuration);
                 }
             }
 

@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     [Header("Settings")]
     [Range(0f, 1f)] public float slimeMinSize;
     [Range(0f, 1f)] public float slimeRefund;
+    public float dotSpeed;
 
     public int passivePump;
     public float pumpTime;
@@ -235,7 +236,11 @@ public class GameManager : MonoBehaviour
                         needed = unit;
                         break;
                     case Unit.Type.STRUCTURE:
-                        needed = tower;
+                        if (hitted.maxHealth > 3000)
+                            needed = castle;
+                        else
+                            needed = tower;
+
                         break;
                 }
 

@@ -19,6 +19,7 @@ public class IAController : MonoBehaviour
     public float defActionTime;
 
     [Range(0, 100)] public int defChance = 100;
+    [Range(0f, 1f)] private float defReduction = 0.94f;
     private int atkReduction = 0;
 
     [HideInInspector] public int pumpCount = 0;
@@ -44,7 +45,7 @@ public class IAController : MonoBehaviour
             ChooseBehaviour();
 
             if(defChance > 10)
-                defChance = Mathf.FloorToInt(defChance * 0.94f);
+                defChance = Mathf.FloorToInt(defChance * defReduction);
         }
     }
 
@@ -70,6 +71,7 @@ public class IAController : MonoBehaviour
             case Behaviour.DEFENSIVE:
                 atkReduction = 0;
                 action = StartCoroutine(Defensive());
+                Debug.Log("-- Def Mode !");
                 break;
             case Behaviour.AGRESSIVE:
                 if (atkReduction < 4)
@@ -89,10 +91,9 @@ public class IAController : MonoBehaviour
                     }
                 }
                 action = StartCoroutine(Agressive());
+                Debug.Log("-- Atk Mode !");
                 break;
         }
-
-        Debug.Log("-- Def Mode !");
     }
 
     private IEnumerator Agressive()
@@ -128,7 +129,7 @@ public class IAController : MonoBehaviour
                 int turretIndex = 0;
 
                 for (int i = 0; i < 8; i++)
-                    if (GetTurret((Colors)i).GetComponent<Unit>().cost * 1.5f <= money)
+                    if (GetTurret((Colors)i).GetComponent<Unit>().cost <= money)
                         turretIndex = i;
                     else
                         break;
@@ -227,6 +228,7 @@ public class IAController : MonoBehaviour
     {
         if (money >= amount)
         {
+            Debug.LogWarning("Pay : " + amount);
             money -= amount;
             return true;
         }

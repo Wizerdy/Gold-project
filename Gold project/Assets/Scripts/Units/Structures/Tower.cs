@@ -36,26 +36,28 @@ public class Tower : Structure
     protected override void Die()
     {
         //for (int i = 1; i < transform.childCount; i++)
-            //Destroy(transform.GetChild(i).gameObject);
+        //Destroy(transform.GetChild(i).gameObject);
 
-        side = lastDamageSide;
 
         for (int i = 0; i < turrets.Count; i++)
-            for (int j = 0; j < turrets[i].childCount; j++)
+            if(turrets[i].childCount > 0)
+                for (int j = 0; j < turrets[i].childCount; j++)
+                {
+                    Destroy(turrets[i].GetChild(j).gameObject);
+                    if(side == Side.ENEMY)
+                        GameManager.instance.iA.turretCount--;
+                }
+
+        if(pumps.Count > 0)
+            for (int i = 0; i < pumps.Count; i++)
             {
-                Destroy(turrets[i].GetChild(j).gameObject);
-                if(side == Side.ENEMY)
-                    GameManager.instance.iA.turretCount--;
+                pumps[i].gameObject.SetActive(false);
+                pumps[i].GetComponent<Pump>().enabled = true;
+                if (side == Side.ENEMY)
+                    GameManager.instance.iA.pumpCount--;
             }
 
-        for (int i = 0; i < pumps.Count; i++)
-        {
-            pumps[i].gameObject.SetActive(false);
-            pumps[i].GetComponent<Pump>().enabled = true;
-            if (side == Side.ENEMY)
-                GameManager.instance.iA.pumpCount--;
-        }
-
+        side = lastDamageSide;
         Touched touch = GetComponent<Touched>();
 
         Color coloration = coloration = GameManager.instance.neutralColor;

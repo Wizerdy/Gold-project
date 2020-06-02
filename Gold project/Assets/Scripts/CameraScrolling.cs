@@ -8,7 +8,9 @@ public class CameraScrolling : MonoBehaviour
     protected Plane Plane;
 
     [Header("The x boundaries of the camera")]
-    public Vector2 cameraBounds;
+    //public Vector2 cameraBounds;
+    public SpriteRenderer cameraBounds;
+    private Vector2 bounds;
 
     [Header("Options")]
     [Range(0f, 1f)] public float scrollSpeed = 1f;
@@ -19,7 +21,9 @@ public class CameraScrolling : MonoBehaviour
     public bool active;
 
     private Vector3 basePos;
-    private Vector2 oriMousePos;
+    private float oriMousePosX;
+
+    private Vector2 cameraSize;
 
     private void Awake()
     {
@@ -28,85 +32,52 @@ public class CameraScrolling : MonoBehaviour
 
         basePos = gameCamera.transform.position;
 
-        //for (int i = 0; i < cameraBounds.Length; i++)
-        //{
-        //    cameraBounds[i].y = gameCamera.transform.position.y;
-        //    cameraBounds[i].z = gameCamera.transform.position.z;
-        //}
+        float orthoSize = cameraBounds.bounds.size.y / 2;
+        gameCamera.orthographicSize = orthoSize;
+
+        cameraSize = new Vector2(orthoSize / 0.5f * Screen.width / Screen.height, orthoSize);
+        Debug.Log(cameraSize);
+
+        bounds = new Vector2(cameraBounds.transform.position.x - cameraBounds.bounds.size.x/2, cameraBounds.transform.position.x + cameraBounds.bounds.size.x/2);
     }
 
     private void Update()
     {
-        if (Input.GetMouseButtonDown(0))
-            oriMousePos = Input.mousePosition;
-
         if (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)
-            oriMousePos = Input.GetTouch(0).position;
+            oriMousePosX = Input.GetTouch(0).position.x;
+        else if (Input.GetMouseButtonDown(0))
+            oriMousePosX = Input.mousePosition.x;
 
         if (Input.touchCount >= 1 && active)
+            Scroll(Input.GetTouch(0).position.x);
+        else if(Input.GetMouseButton(0) && active)
+            Scroll(Input.mousePosition.x);
+    }
+
+    private void Scroll(float posX)
+    {
+        float delta = -(posX - oriMousePosX) * scrollSpeed;
+
+        if (!CameraOutBounds(delta))
         {
-            //Scroll();
-            float delta = -(Input.GetTouch(0).position.x - oriMousePos.x) * scrollSpeed;
-            Debug.LogWarning(delta + " .. " + Input.GetTouch(0).position.x + " .. " + oriMousePos.x + " .. " + scrollSpeed);
-            if (!CameraOutBounds(delta))
+            gameCamera.transform.Translate(new Vector2(delta, 0));
+            Parallax(delta);
+        }
+        else
+        {
+            if (delta < 0)
             {
-                gameCamera.transform.Translate(new Vector2(delta, 0));
-                Parallax(delta);
+                Parallax(bounds.x - (gameCamera.transform.position.x - cameraSize.x / 2));
+                gameCamera.transform.position = new Vector3(bounds.x + cameraSize.x / 2, basePos.y, basePos.z);
             }
             else
             {
-                if (delta < 0)
-                {
-                    Parallax(cameraBounds.x - gameCamera.transform.position.x);
-                    gameCamera.transform.position = new Vector3(cameraBounds.x, basePos.y, basePos.z);
-                }
-                else
-                {
-                    Parallax(cameraBounds.y - gameCamera.transform.position.x);
-                    gameCamera.transform.position = new Vector3(cameraBounds.y, basePos.y, basePos.z);
-                }
+                Parallax(bounds.y - (gameCamera.transform.position.x + cameraSize.x / 2));
+                gameCamera.transform.position = new Vector3(bounds.y - cameraSize.x / 2, basePos.y, basePos.z);
             }
-
-            oriMousePos = Input.GetTouch(0).position;
-
-        } else if(Input.GetMouseButton(0) && active)
-        {
-            float delta = -(Input.mousePosition.x - oriMousePos.x) * scrollSpeed;
-
-            if (!CameraOutBounds(delta))
-            {
-                gameCamera.transform.Translate(new Vector2(delta, 0));
-                Parallax(delta);
-            } else
-            {
-                if (delta < 0)
-                {
-                    Parallax(cameraBounds.x - gameCamera.transform.position.x);
-                    gameCamera.transform.position = new Vector3(cameraBounds.x, basePos.y, basePos.z);
-                } else
-                {
-                    Parallax(cameraBounds.y - gameCamera.transform.position.x);
-                    gameCamera.transform.position = new Vector3(cameraBounds.y, basePos.y, basePos.z);
-                }
-            }
-
-            oriMousePos = Input.mousePosition;
         }
-    }
 
-    protected void Scroll()
-    {
-        Plane.SetNormalAndPosition(transform.up, transform.position);
-
-        Vector3 Delta1 = Vector3.zero;
-        Vector3 Delta2 = Vector3.zero;
-
-        Delta1 = PlanePositionDelta(Input.GetTouch(0));
-
-        if (Input.GetTouch(0).phase == TouchPhase.Moved)
-        {
-            gameCamera.transform.Translate(Delta1, Space.World);
-        }
+        oriMousePosX = posX;
     }
 
     protected Vector3 PlanePositionDelta(Touch touch)
@@ -122,7 +93,7 @@ public class CameraScrolling : MonoBehaviour
         Ray rayNow = gameCamera.ScreenPointToRay(touch.position);
         if (Plane.Raycast(rayBefore, out float enterBefore) && Plane.Raycast(rayNow, out float enterNow))
         {
-            ReplaceCameraInBounds();
+            //ReplaceCameraInBounds();
             return new Vector3(rayBefore.GetPoint(enterBefore).x - rayNow.GetPoint(enterNow).x, 0, 0);
         }
 
@@ -130,24 +101,13 @@ public class CameraScrolling : MonoBehaviour
         return Vector3.zero;
     }
 
-    protected void ReplaceCameraInBounds()
-    {
-            if (gameCamera.transform.position.x < cameraBounds.x)
-            {
-                gameCamera.transform.position = new Vector3(cameraBounds.x, basePos.y, basePos.z);
-            }
-            else if (gameCamera.transform.position.x > cameraBounds.y)
-            {
-                gameCamera.transform.position = new Vector3(cameraBounds.y, basePos.y, basePos.z);
-            }
-    }
-
     private bool CameraOutBounds(float movement)
     {
-        if (gameCamera.transform.position.x + movement < cameraBounds.x || gameCamera.transform.position.x + movement > cameraBounds.y)
-        {
+        if (gameCamera.transform.position.x - cameraSize.x / 2 + movement < bounds.x ||
+            gameCamera.transform.position.x + cameraSize.x / 2 + movement > bounds.y
+        )
             return true;
-        }
+
         return false;
     }
 

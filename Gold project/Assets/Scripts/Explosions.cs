@@ -13,25 +13,15 @@ public class Explosions : ScriptableObject
     public bool stunt;
     public float stuntDuration;
 
-    [Header("Effects")]
-    public int dot;
-    public float damageSpeed;
-    public float lifetime;
-    public float dotDuration;
-
     [Header("Poison")]
-    public bool poison;
+    public int dot;
+    public float dotDuration;
 
     [Header("Slow")]
     [Range(0.0f, 1.0f)] public float slow;
     public float slowTime;
 
-    [Header("Burn")]
-    public bool burn;
-
     [Header("Little")]
     public bool little;
     public GameObject littleslime;
-
-
 }
