@@ -1,0 +1,3188 @@
+fileFormatVersion: 2
+guid: b944f6e8ba9c58e42967dd43962835b7
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7644752618229107107
+    second: Drapeau_0
+  - first:
+      213: 7687785823509370578
+    second: Drapeau_1
+  - first:
+      213: -5713840613183295694
+    second: Drapeau_2
+  - first:
+      213: -5037177221716790037
+    second: Drapeau_3
+  - first:
+      213: -1547774247583798404
+    second: Drapeau_4
+  - first:
+      213: -6208276718666398514
+    second: Drapeau_5
+  - first:
+      213: 2324071358532851863
+    second: Drapeau_6
+  - first:
+      213: 3228498168995928189
+    second: Drapeau_7
+  - first:
+      213: 169537918196548868
+    second: Drapeau_8
+  - first:
+      213: 391357522815289567
+    second: Drapeau_9
+  - first:
+      213: -2488778555197783230
+    second: Drapeau_10
+  - first:
+      213: 5732218219023493327
+    second: Drapeau_11
+  - first:
+      213: -3077817783639952900
+    second: Drapeau_12
+  - first:
+      213: -8985704057724625847
+    second: Drapeau_13
+  - first:
+      213: -2231325112215892194
+    second: Drapeau_14
+  - first:
+      213: -3188983612908466709
+    second: Drapeau_15
+  - first:
+      213: -7237845918934790827
+    second: Drapeau_16
+  - first:
+      213: -2345211310522118629
+    second: Drapeau_17
+  - first:
+      213: -4871040420929753224
+    second: Drapeau_18
+  - first:
+      213: -2026762119302770746
+    second: Drapeau_19
+  - first:
+      213: -8599519739673514435
+    second: Drapeau_20
+  - first:
+      213: -3472505439209666342
+    second: Drapeau_21
+  - first:
+      213: 5814681604225100881
+    second: Drapeau_22
+  - first:
+      213: -595963737099371016
+    second: Drapeau_23
+  - first:
+      213: -8491382310281992096
+    second: Drapeau_24
+  - first:
+      213: -1822063733589766215
+    second: Drapeau_25
+  - first:
+      213: -3834227758699363313
+    second: Drapeau_26
+  - first:
+      213: 1923296455267359814
+    second: Drapeau_27
+  - first:
+      213: 1998564222646827669
+    second: Drapeau_28
+  - first:
+      213: 2827806529646112677
+    second: Drapeau_29
+  - first:
+      213: 3568315535465660882
+    second: Drapeau_30
+  - first:
+      213: 1108974219720612782
+    second: Drapeau_31
+  - first:
+      213: 268064833586647385
+    second: Drapeau_32
+  - first:
+      213: 4478161047608272084
+    second: Drapeau_33
+  - first:
+      213: 5415578522113540658
+    second: Drapeau_34
+  - first:
+      213: -8898932795141807209
+    second: Drapeau_35
+  - first:
+      213: -1687274758830844282
+    second: Drapeau_36
+  - first:
+      213: 3691449057337623821
+    second: Drapeau_37
+  - first:
+      213: -7548118210459616835
+    second: Drapeau_38
+  - first:
+      213: 3745179653742682516
+    second: Drapeau_39
+  - first:
+      213: -6265509094547283160
+    second: Drapeau_40
+  - first:
+      213: 6091448487176099159
+    second: Drapeau_41
+  - first:
+      213: 6984052374423720273
+    second: Drapeau_42
+  - first:
+      213: 5975638410849742354
+    second: Drapeau_43
+  - first:
+      213: -1360939182019236782
+    second: Drapeau_44
+  - first:
+      213: 2224894377862507481
+    second: Drapeau_45
+  - first:
+      213: 8876778039574305568
+    second: Drapeau_46
+  - first:
+      213: 4202881158450828370
+    second: Drapeau_47
+  - first:
+      213: -4199408335224716943
+    second: Drapeau_48
+  - first:
+      213: -6918325694871580320
+    second: Drapeau_49
+  - first:
+      213: -200744001757704558
+    second: Drapeau_50
+  - first:
+      213: 6849619112714911650
+    second: Drapeau_51
+  - first:
+      213: -4150934798937245611
+    second: Drapeau_52
+  - first:
+      213: -4608905016470446071
+    second: Drapeau_53
+  - first:
+      213: -864204946760068429
+    second: Drapeau_54
+  - first:
+      213: -4257134289848153715
+    second: Drapeau_55
+  - first:
+      213: -7268610749026501586
+    second: Drapeau_56
+  - first:
+      213: -4821360053561343934
+    second: Drapeau_57
+  - first:
+      213: -1339391426625869906
+    second: Drapeau_58
+  - first:
+      213: 4723808784525012094
+    second: Drapeau_59
+  - first:
+      213: -3797788290270097193
+    second: Drapeau_60
+  - first:
+      213: 2453330982904222787
+    second: Drapeau_61
+  - first:
+      213: -2233543563885581418
+    second: Drapeau_62
+  - first:
+      213: -7798378097051440895
+    second: Drapeau_63
+  - first:
+      213: -188855178157345758
+    second: Drapeau_64
+  - first:
+      213: 4857963260977289902
+    second: Drapeau_65
+  - first:
+      213: -6991126539565877256
+    second: Drapeau_66
+  - first:
+      213: -8200579840880427507
+    second: Drapeau_67
+  - first:
+      213: 1914650419303845797
+    second: Drapeau_68
+  - first:
+      213: -6760296847926504199
+    second: Drapeau_69
+  - first:
+      213: 2624278857919325681
+    second: Drapeau_70
+  - first:
+      213: 8611621110423054001
+    second: Drapeau_71
+  - first:
+      213: 537492790731911896
+    second: Drapeau_72
+  - first:
+      213: 8456337361396115242
+    second: Drapeau_73
+  - first:
+      213: -6316431039239653316
+    second: Drapeau_74
+  - first:
+      213: -5413794750085104191
+    second: Drapeau_75
+  - first:
+      213: 7786722037488866524
+    second: Drapeau_76
+  - first:
+      213: 7996073477990042874
+    second: Drapeau_77
+  - first:
+      213: -8784702090067247281
+    second: Drapeau_78
+  - first:
+      213: -2731943392583948014
+    second: Drapeau_79
+  - first:
+      213: 3053979532285992952
+    second: Drapeau_80
+  - first:
+      213: 3846055061931236551
+    second: Drapeau_81
+  - first:
+      213: 5398324410000534275
+    second: Drapeau_82
+  - first:
+      213: 6016968896739554890
+    second: Drapeau_83
+  - first:
+      213: -6503600462510670267
+    second: Drapeau_84
+  - first:
+      213: 783082962452535108
+    second: Drapeau_85
+  - first:
+      213: -7743287555482188959
+    second: Drapeau_86
+  - first:
+      213: 1903343244604501008
+    second: Drapeau_87
+  - first:
+      213: -2061480559243042881
+    second: Drapeau_88
+  - first:
+      213: -3974181959106149476
+    second: Drapeau_89
+  - first:
+      213: 4210837501296933831
+    second: Drapeau_90
+  - first:
+      213: -6389229992165061264
+    second: Drapeau_91
+  - first:
+      213: -391863193555759336
+    second: Drapeau_92
+  - first:
+      213: -2837912581965200344
+    second: Drapeau_93
+  - first:
+      213: -1091525277167035590
+    second: Drapeau_94
+  - first:
+      213: 8967090347668056977
+    second: Drapeau_95
+  - first:
+      213: -559285294247682205
+    second: Drapeau_96
+  - first:
+      213: 273622205710962107
+    second: Drapeau_97
+  - first:
+      213: 2380542620759362654
+    second: Drapeau_98
+  - first:
+      213: 5433109281731839799
+    second: Drapeau_99
+  - first:
+      213: -1880457619798929268
+    second: Drapeau_100
+  - first:
+      213: -7270256496257392845
+    second: Drapeau_101
+  - first:
+      213: 8950696009040286208
+    second: Drapeau_102
+  - first:
+      213: -3907374612470489973
+    second: Drapeau_103
+  - first:
+      213: -4479990988381887127
+    second: Drapeau_104
+  - first:
+      213: 3486560397711946207
+    second: Drapeau_105
+  - first:
+      213: -7934530236679305248
+    second: Drapeau_106
+  - first:
+      213: -2693346840169878176
+    second: Drapeau_107
+  - first:
+      213: -3655517142395034294
+    second: Drapeau_108
+  - first:
+      213: -8355773810832189066
+    second: Drapeau_109
+  - first:
+      213: 1006635408961994633
+    second: Drapeau_110
+  - first:
+      213: -1093181828098031022
+    second: Drapeau_111
+  - first:
+      213: 6686925348125266490
+    second: Drapeau_112
+  - first:
+      213: -5735818299635731704
+    second: Drapeau_113
+  - first:
+      213: -4875084142238778797
+    second: Drapeau_114
+  - first:
+      213: 7445916688527060067
+    second: Drapeau_115
+  - first:
+      213: -8454696807965489301
+    second: Drapeau_116
+  - first:
+      213: 294871667157585206
+    second: Drapeau_117
+  - first:
+      213: -2068961592859327928
+    second: Drapeau_118
+  - first:
+      213: 263582560504231390
+    second: Drapeau_119
+  - first:
+      213: -2732482773898865405
+    second: Drapeau_120
+  - first:
+      213: 9037255855796127674
+    second: Drapeau_121
+  - first:
+      213: 4688734025233240952
+    second: Drapeau_122
+  - first:
+      213: 8424028903565226238
+    second: Drapeau_123
+  - first:
+      213: 2337486914780661339
+    second: Drapeau_124
+  - first:
+      213: 6522076741441783043
+    second: Drapeau_125
+  - first:
+      213: -5752548940376559494
+    second: Drapeau_126
+  - first:
+      213: -473095868667214358
+    second: Drapeau_127
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Drapeau_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1950
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5677b25ff168e590800000000000000
+      internalID: -7644752618229107107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_1
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1950
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d65f8f897080ba60800000000000000
+      internalID: 7687785823509370578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_2
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1950
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23f620c4c3c54b0b0800000000000000
+      internalID: -5713840613183295694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_3
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1950
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be4b1e4410a581ab0800000000000000
+      internalID: -5037177221716790037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_4
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1950
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7b2544b583358ae0800000000000000
+      internalID: -1547774247583798404
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_5
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1950
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec4cf8c9735c7d9a0800000000000000
+      internalID: -6208276718666398514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_6
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1950
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 798920e4692c04020800000000000000
+      internalID: 2324071358532851863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_7
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1950
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d785009bafdedcc20800000000000000
+      internalID: 3228498168995928189
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1820
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 405801e96d15a5200800000000000000
+      internalID: 169537918196548868
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_9
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1820
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd8059fe7916e6500800000000000000
+      internalID: 391357522815289567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_10
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1820
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24383d41715167dd0800000000000000
+      internalID: -2488778555197783230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_11
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1820
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc8eaef791eec8f40800000000000000
+      internalID: 5732218219023493327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_12
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1820
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf1b2c268056945d0800000000000000
+      internalID: -3077817783639952900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_13
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1820
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94c998e84cd5c4380800000000000000
+      internalID: -8985704057724625847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_14
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1820
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f86fbe1adb801e0800000000000000
+      internalID: -2231325112215892194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_15
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1820
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bed8c0ecc447eb3d0800000000000000
+      internalID: -3188983612908466709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1690
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55d81e60c710e8b90800000000000000
+      internalID: -7237845918934790827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_17
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1690
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1ec9111db2247fd0800000000000000
+      internalID: -2345211310522118629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_18
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1690
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87fa9e78b86966cb0800000000000000
+      internalID: -4871040420929753224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_19
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1690
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cf8dba379e7fd3e0800000000000000
+      internalID: -2026762119302770746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_20
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1690
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3eecc5eb5e58a880800000000000000
+      internalID: -8599519739673514435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_21
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1690
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad8cb4f73be2fcfc0800000000000000
+      internalID: -3472505439209666342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_22
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1690
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ce5dd8c16e1b050800000000000000
+      internalID: 5814681604225100881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_23
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1690
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd7d2f7326bab7f0800000000000000
+      internalID: -595963737099371016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1560
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0682b9f27cc882a80800000000000000
+      internalID: -8491382310281992096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_25
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1560
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9bf824120bab6b6e0800000000000000
+      internalID: -1822063733589766215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_26
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1560
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0448c60b261acac0800000000000000
+      internalID: -3834227758699363313
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_27
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1560
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64c9afd9febe0ba10800000000000000
+      internalID: 1923296455267359814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_28
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1560
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59a3ba752935cbb10800000000000000
+      internalID: 1998564222646827669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_29
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1560
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af261d6e036e3720800000000000000
+      internalID: 2827806529646112677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_30
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1560
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d140f1e214358130800000000000000
+      internalID: 3568315535465660882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_31
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1560
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eab538f5d2ed36f00800000000000000
+      internalID: 1108974219720612782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_32
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1430
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 951d4bebb8b58b300800000000000000
+      internalID: 268064833586647385
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_33
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1430
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d4aea91fbf952e30800000000000000
+      internalID: 4478161047608272084
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_34
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1430
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23200df09fff72b40800000000000000
+      internalID: 5415578522113540658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_35
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1430
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 793af7975c3a08480800000000000000
+      internalID: -8898932795141807209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_36
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1430
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6869761eb889598e0800000000000000
+      internalID: -1687274758830844282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_37
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1430
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d054f090c59aa3330800000000000000
+      internalID: 3691449057337623821
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_38
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1430
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db9b5eeaa72bf3790800000000000000
+      internalID: -7548118210459616835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_39
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1430
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4916a516d0d89f330800000000000000
+      internalID: 3745179653742682516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_40
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1300
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 823a782bca07c09a0800000000000000
+      internalID: -6265509094547283160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_41
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1300
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 755d8bd002c298450800000000000000
+      internalID: 6091448487176099159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_42
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1300
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 151df36a1a65ce060800000000000000
+      internalID: 6984052374423720273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_43
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1300
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ee0e0797bbde250800000000000000
+      internalID: 5975638410849742354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_44
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1300
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25c25d64609fc1de0800000000000000
+      internalID: -1360939182019236782
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_45
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1300
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9db224f06a960ee10800000000000000
+      internalID: 2224894377862507481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_46
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1300
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 02b90d68896a03b70800000000000000
+      internalID: 8876778039574305568
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_47
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1300
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 254d4a25522a35a30800000000000000
+      internalID: 4202881158450828370
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1170
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171cd185e54b8b5c0800000000000000
+      internalID: -4199408335224716943
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_49
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1170
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 061d8b47f6b2dff90800000000000000
+      internalID: -6918325694871580320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_50
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1170
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29e017cd460d63df0800000000000000
+      internalID: -200744001757704558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_51
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1170
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2af391cca4cbe0f50800000000000000
+      internalID: 6849619112714911650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_52
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1170
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 558b98ffacae466c0800000000000000
+      internalID: -4150934798937245611
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_53
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1170
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90063c97e41e900c0800000000000000
+      internalID: -4608905016470446071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_54
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1170
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b21b3ffd2ab104f0800000000000000
+      internalID: -864204946760068429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_55
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1170
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d89477c2bee9be4c0800000000000000
+      internalID: -4257134289848153715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1040
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2c70b5d805b02b90800000000000000
+      internalID: -7268610749026501586
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_57
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 1040
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 240c7317396171db0800000000000000
+      internalID: -4821360053561343934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_58
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 1040
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea7e2c80896896de0800000000000000
+      internalID: -1339391426625869906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_59
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 1040
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7cab7ccf075e8140800000000000000
+      internalID: 4723808784525012094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_60
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 1040
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d0105aebab8b4bc0800000000000000
+      internalID: -3797788290270097193
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_61
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1040
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3445778d78bfb0220800000000000000
+      internalID: 2453330982904222787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_62
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 1040
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69b6d3466fbd001e0800000000000000
+      internalID: -2233543563885581418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_63
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 1040
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 109ef05307896c390800000000000000
+      internalID: -7798378097051440895
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 910
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22430ff473d016df0800000000000000
+      internalID: -188855178157345758
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_65
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 910
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eaa1376e8d3fa6340800000000000000
+      internalID: 4857963260977289902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_66
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 910
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8f7be5de3778afe90800000000000000
+      internalID: -6991126539565877256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_67
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 910
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d0eb7105510b13e80800000000000000
+      internalID: -8200579840880427507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_68
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 910
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5af88af7964329a10800000000000000
+      internalID: 1914650419303845797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_69
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 910
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f4d52b95d99e22a0800000000000000
+      internalID: -6760296847926504199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_70
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 910
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1f569dd97bf4b6420800000000000000
+      internalID: 2624278857919325681
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_71
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 910
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b6650b06cf928770800000000000000
+      internalID: 8611621110423054001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 780
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2b8ec68de857700800000000000000
+      internalID: 537492790731911896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_73
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 780
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2721eec602fa5570800000000000000
+      internalID: 8456337361396115242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_74
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 780
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c387ed98f678758a0800000000000000
+      internalID: -6316431039239653316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_75
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 780
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cd7d4abb565ed4b0800000000000000
+      internalID: -5413794750085104191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_76
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 780
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd4da31ff6eff0c60800000000000000
+      internalID: 7786722037488866524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_77
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 780
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afcc4859672c7fe60800000000000000
+      internalID: 7996073477990042874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_78
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 780
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4ff8ef0ef7761680800000000000000
+      internalID: -8784702090067247281
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_79
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 780
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 219ee8a75ff261ad0800000000000000
+      internalID: -2731943392583948014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 650
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ff5835343ae16a20800000000000000
+      internalID: 3053979532285992952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_81
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 650
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cc110993beef5530800000000000000
+      internalID: 3846055061931236551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_82
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 650
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30be6680373baea40800000000000000
+      internalID: 5398324410000534275
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_83
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 650
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a463cb21551908350800000000000000
+      internalID: 6016968896739554890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_84
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 650
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54e3cfe36d19eb5a0800000000000000
+      internalID: -6503600462510670267
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_85
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 650
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 447d4ae2ec11eda00800000000000000
+      internalID: 783082962452535108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_86
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 650
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 16308c57ef05a8490800000000000000
+      internalID: -7743287555482188959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_87
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 650
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01c6a4cb8980a6a10800000000000000
+      internalID: 1903343244604501008
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 520
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbfd1f28a562463e0800000000000000
+      internalID: -2061480559243042881
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_89
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 520
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9346b6709ed8d8c0800000000000000
+      internalID: -3974181959106149476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_90
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 520
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cb72bfb566ef6a30800000000000000
+      internalID: 4210837501296933831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_91
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 520
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07dcab87c25e457a0800000000000000
+      internalID: -6389229992165061264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_92
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 520
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f0f8b6082df8af0800000000000000
+      internalID: -391863193555759336
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_93
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 520
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8244a58ea85bd98d0800000000000000
+      internalID: -2837912581965200344
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_94
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 520
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3b59172b8f1ad0f0800000000000000
+      internalID: -1091525277167035590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_95
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 520
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19ba6995921817c70800000000000000
+      internalID: 8967090347668056977
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_96
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 390
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36f5444fcf40d38f0800000000000000
+      internalID: -559285294247682205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_97
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 390
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbd8f0642f91cc300800000000000000
+      internalID: 273622205710962107
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_98
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 390
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c0a03a6e2690120800000000000000
+      internalID: 2380542620759362654
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_99
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 390
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 737018b1b18466b40800000000000000
+      internalID: 5433109281731839799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_100
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 390
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c8055b402c547e5e0800000000000000
+      internalID: -1880457619798929268
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_101
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 390
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f1a927c3cda1b90800000000000000
+      internalID: -7270256496257392845
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_102
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 390
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0025a5fe892473c70800000000000000
+      internalID: 8950696009040286208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_103
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 390
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8c115bfd7736c9c0800000000000000
+      internalID: -3907374612470489973
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_104
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 260
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 965eb8c9eefd3d1c0800000000000000
+      internalID: -4479990988381887127
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_105
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 260
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd1b0998530c26030800000000000000
+      internalID: 3486560397711946207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_106
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 260
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e74227e9c2e2e190800000000000000
+      internalID: -7934530236679305248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_107
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 260
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06de0ce915f4f9ad0800000000000000
+      internalID: -2693346840169878176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_108
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 260
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a456139d68ef44dc0800000000000000
+      internalID: -3655517142395034294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_109
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 260
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 679d5d56df35a0c80800000000000000
+      internalID: -8355773810832189066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_110
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 260
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98f7281329948fd00800000000000000
+      internalID: 1006635408961994633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_111
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 260
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2520e455bec34d0f0800000000000000
+      internalID: -1093181828098031022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_112
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 130
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32df8edc2bbccc50800000000000000
+      internalID: 6686925348125266490
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_113
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 130
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 803f60a65a74660b0800000000000000
+      internalID: -5735818299635731704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_114
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 130
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ab7bb4dc8385cb0800000000000000
+      internalID: -4875084142238778797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_115
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 130
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ceece27c5355760800000000000000
+      internalID: 7445916688527060067
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_116
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 130
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b67869d4c02eaaa80800000000000000
+      internalID: -8454696807965489301
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_117
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 130
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63d414f0838971400800000000000000
+      internalID: 294871667157585206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_118
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 130
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84281b3a4629943e0800000000000000
+      internalID: -2068961592859327928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_119
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 130
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed5b7d731fe68a300800000000000000
+      internalID: 263582560504231390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_120
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30552eaf465441ad0800000000000000
+      internalID: -2732482773898865405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_121
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 0
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab70c05c158ca6d70800000000000000
+      internalID: 9037255855796127674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_122
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 0
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 873905401cab11140800000000000000
+      internalID: 4688734025233240952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_123
+      rect:
+        serializedVersion: 2
+        x: 165
+        y: 0
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef0f0a6c7a928e470800000000000000
+      internalID: 8424028903565226238
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_124
+      rect:
+        serializedVersion: 2
+        x: 220
+        y: 0
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5600a6e6fb607020800000000000000
+      internalID: 2337486914780661339
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_125
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 0
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 305897bad32138a50800000000000000
+      internalID: 6522076741441783043
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_126
+      rect:
+        serializedVersion: 2
+        x: 330
+        y: 0
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a703ecf8737da20b0800000000000000
+      internalID: -5752548940376559494
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Drapeau_127
+      rect:
+        serializedVersion: 2
+        x: 385
+        y: 0
+        width: 55
+        height: 130
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae5c26360d93f69f0800000000000000
+      internalID: -473095868667214358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
