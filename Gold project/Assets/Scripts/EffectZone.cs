@@ -37,22 +37,14 @@ public class EffectZone : MonoBehaviour
                     Attack(hit[i].GetComponent<Pawn>());
                 }
 
-        if (behaviour.lifetime > 0)
-            StartCoroutine("Live", behaviour.lifetime);
-        else
-            Destroy(gameObject);
-    }
-
-    private void Update()
-    {
-
-    }
-
-    IEnumerator Live(float time)
-    {
-        yield return new WaitForSeconds(time);
         Destroy(gameObject);
     }
+
+    //IEnumerator Live(float time)
+    //{
+    //    yield return new WaitForSeconds(time);
+    //    Destroy(gameObject);
+    //}
 
     private void Attack(Pawn unit)
     {
@@ -66,50 +58,50 @@ public class EffectZone : MonoBehaviour
             else
                 unit.AddSlow(behaviour.slow);
 
-        if (behaviour.poison)
-            unit.StartCoroutine(unit.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
+        if (behaviour.dot > 0)
+            unit.AddDoT(behaviour.dot, behaviour.dotDuration);
 
         if (behaviour.stunt)
-            unit.StartCoroutine(unit.Stunt(behaviour.stuntDuration));
+            unit.Stunt(behaviour.stuntDuration);
 
         //if (behaviour.burn)
         //    unit.StartCoroutine(unit.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        GameObject go = collision.gameObject;
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    GameObject go = collision.gameObject;
 
-        if(GameManager.instance.unitLayer == (GameManager.instance.unitLayer | (1 << go.layer)) &&
-            go.GetComponent<Unit>().side != side &&
-            go.GetComponent<Unit>().type == Unit.Type.PAWN &&
-            SearchAffected(go.GetComponent<Pawn>()) == -1)
-        {
-            Pawn pawn = go.GetComponent<Pawn>();
-            affected.Add(pawn);
+    //    if(GameManager.instance.unitLayer == (GameManager.instance.unitLayer | (1 << go.layer)) &&
+    //        go.GetComponent<Unit>().side != side &&
+    //        go.GetComponent<Unit>().type == Unit.Type.PAWN &&
+    //        SearchAffected(go.GetComponent<Pawn>()) == -1)
+    //    {
+    //        Pawn pawn = go.GetComponent<Pawn>();
+    //        affected.Add(pawn);
 
 
-            //if (behaviour.burn)
-            //    pawn.StartCoroutine(pawn.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
+    //        //if (behaviour.burn)
+    //        //    pawn.StartCoroutine(pawn.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
 
-            if (behaviour.slow > 0)
-                pawn.AddSlow(behaviour.slow);
-        }
-    }
+    //        if (behaviour.slow > 0)
+    //            pawn.AddSlow(behaviour.slow);
+    //    }
+    //}
 
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        GameObject go = collision.gameObject;
-        if (go.GetComponent<Pawn>() != null ? SearchAffected(go.GetComponent<Pawn>()) >= 0 : false)
-        {
-            int index = SearchAffected(go.GetComponent<Pawn>());
+    //private void OnTriggerExit2D(Collider2D collision)
+    //{
+    //    GameObject go = collision.gameObject;
+    //    if (go.GetComponent<Pawn>() != null ? SearchAffected(go.GetComponent<Pawn>()) >= 0 : false)
+    //    {
+    //        int index = SearchAffected(go.GetComponent<Pawn>());
 
-            if (behaviour.slow > 0 && behaviour.slowTime <= 0)
-                affected[index].RemSlow(behaviour.slow);
+    //        if (behaviour.slow > 0 && behaviour.slowTime <= 0)
+    //            affected[index].RemSlow(behaviour.slow);
 
-            affected.RemoveAt(index);
-        }
-    }
+    //        affected.RemoveAt(index);
+    //    }
+    //}
 
     private int SearchAffected(Pawn pawn)
     {

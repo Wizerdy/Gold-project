@@ -12,9 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Adrien scene.unity
     guid: 6c9efacb7ed205b4599eaef3dfcad29c
   - enabled: 1
-    path: Assets/Scenes/Game.unity
-    guid: 4e5aa59c25e3eda4983dbc0da481c67d
-  - enabled: 1
     path: Assets/Scenes/MainMenu.unity
     guid: 28a309db507c5c04d870addb55df0436
+  - enabled: 1
+    path: Assets/Scenes/Game.unity
+    guid: 4e5aa59c25e3eda4983dbc0da481c67d
   m_configObjects: {}

@@ -18,9 +18,9 @@ TagManager:
   - 
   - Unit
   - Floor
-  - Animations
-  - Arrow
-  - 
+  - OnlyUnits
+  - OnlyFloor
+  - Tower
   - 
   - 
   - 

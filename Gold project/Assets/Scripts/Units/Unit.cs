@@ -8,6 +8,10 @@ public abstract class Unit : MonoBehaviour
     public enum Type { PAWN, STRUCTURE };
     public enum Side { NEUTRAL, ALLY, ENEMY };
 
+    [Header("Descripton")]
+    public string surname;
+    [TextArea(0, 3)] public string description;
+
     [Header("States")]
     [HideInInspector] public Type type;
     public Side side;
@@ -26,7 +30,12 @@ public abstract class Unit : MonoBehaviour
     public int cost;
     protected int hitIndex;
     protected ContactFilter2D attackFilter;
-    protected bool stunt;
+
+    protected Coroutine stunt;
+    protected bool stunned;
+
+    protected Coroutine dot;
+    protected int dotDamage;
 
     public Unit(Type type) { this.type = type; }
 
@@ -34,7 +43,7 @@ public abstract class Unit : MonoBehaviour
     {
         curHealth = maxHealth;
         canAttack = true;
-        stunt = false;
+        stunned = false;
 
         hit = new List<Collider2D>();
         attackFilter = new ContactFilter2D
@@ -107,21 +116,42 @@ public abstract class Unit : MonoBehaviour
         
     }
 
-    public IEnumerator DOT(int damage, float duration, float cd)
+    public void AddDoT(int damage, float duration)
     {
-        float time = 0;
-        while(time < duration)
+        StartCoroutine(IntensifyDoT(damage, duration));
+
+        if (dot == null)
+            dot = StartCoroutine("DOT");
+    }
+
+    public void Stunt(float duration)
+    {
+        if (stunt != null)
+            StopCoroutine(stunt);
+
+        stunt = StartCoroutine(Stunned(duration));
+    }
+
+    protected IEnumerator IntensifyDoT(int damage, float duration)
+    {
+        dotDamage += damage;
+        yield return new WaitForSeconds(duration);
+        dotDamage -= damage;
+    }
+
+    protected IEnumerator DOT()
+    {
+        while(true)
         {
-            LoseHealth(damage);
-            yield return new WaitForSeconds(cd);
-            time += cd;
+            yield return new WaitForSeconds(GameManager.instance.dotSpeed);
+            LoseHealth(dotDamage);
         }
     }
 
-    public IEnumerator Stunt(float duration)
+    protected IEnumerator Stunned(float duration)
     {
-        stunt = true;
+        stunned = true;
         yield return new WaitForSeconds(duration);
-        stunt = false;
+        stunned = false;
     }
 }
