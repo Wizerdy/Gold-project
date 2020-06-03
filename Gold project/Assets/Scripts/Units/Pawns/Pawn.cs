@@ -11,9 +11,10 @@ public abstract class Pawn : Unit
 
     protected Vector3 baseScale;
 
-    public bool immobilize;
+    [HideInInspector] public bool immobilize;
 
     [Header("Immunities")]
+    public bool imuExplosion;
     [SerializeField] private bool imuSlow;
     [SerializeField] private bool imuStunt;
     [SerializeField] private bool imuPoison;

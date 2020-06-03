@@ -65,7 +65,8 @@ public class EffectZone : MonoBehaviour
     {
         affected.Add(unit);
 
-        unit.LoseHealth(behaviour.damage);
+        if(!unit.imuExplosion)
+            unit.LoseHealth(behaviour.damage);
         
         if(behaviour.slow > 0)
             if(behaviour.slowTime > 0)
