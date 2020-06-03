@@ -241,10 +241,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352e0691d3f6e3f448007f1e3c0005c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: Yellow Turret
+  description: 'Did you know it: The yellow turret was raised by snakes and can make
+    256 differents poisons.'
   type: 1
   side: 0
   maxHealth: 0
-  damage: {x: 30, y: 50}
+  damage: {x: 6, y: 6}
   attackSpeed: 1
   color: 2
   attackRange: {fileID: 3017508311607322558}
@@ -252,7 +255,7 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 200
+  cost: 500
   ammo: {fileID: 3975769326864515960, guid: fa03eafc9abc7d94b947d83bd2cc428c, type: 3}
   ammoSpeed: 300
   offSet: 1

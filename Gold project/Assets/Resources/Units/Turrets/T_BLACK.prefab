@@ -241,18 +241,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352e0691d3f6e3f448007f1e3c0005c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: Black Turret
+  description: '"One skill, one shot, one kill, nothing more ..." Black turret copyright
+    quotes.'
   type: 1
   side: 0
   maxHealth: 0
-  damage: {x: 30, y: 50}
-  attackSpeed: 1
+  damage: {x: 1000, y: 1000}
+  attackSpeed: 2
   color: 7
   attackRange: {fileID: 3017508311607322558}
   sprRend: {fileID: 0}
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 800
+  cost: 1500
   ammo: {fileID: 3975769326864515960, guid: 3647cc3b0ba68b04e99b8cf07bc5cd03, type: 3}
   ammoSpeed: 300
   offSet: 1

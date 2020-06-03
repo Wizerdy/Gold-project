@@ -99,7 +99,7 @@ public class GameManager : MonoBehaviour
         else if (Input.GetKeyDown(KeyCode.Z))
             InstantiateUnit(units["WHITE"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.E))
-            InstantiateUnit(units["REDS"], Unit.Side.ALLY, allyParent.position);
+            InstantiateUnit(units["RED"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.R))
             InstantiateUnit(units["YELLOW"], Unit.Side.ALLY, allyParent.position);
         else if (Input.GetKeyDown(KeyCode.T))

@@ -13,16 +13,13 @@ MonoBehaviour:
   m_Name: OrangeXplosion
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
-  damage: 40
+  damage: 60
   stunt: 0
   stuntDuration: 0
   dot: 20
-  damageSpeed: 1
-  lifetime: 0
   dotDuration: 5
-  poison: 0
   slow: 0
   slowTime: 0
-  burn: 1
-  little: 0
-  littleslime: {fileID: 0}
+  number: 0
+  slimeCapsule: {fileID: 0}
+  force: 0

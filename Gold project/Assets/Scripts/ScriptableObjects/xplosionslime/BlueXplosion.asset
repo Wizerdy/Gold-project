@@ -17,12 +17,9 @@ MonoBehaviour:
   stunt: 0
   stuntDuration: 0
   dot: 0
-  damageSpeed: 0
-  lifetime: 0
   dotDuration: 0
-  poison: 0
-  slow: 0.6
+  slow: 0.5
   slowTime: 5
-  burn: 0
-  little: 0
-  littleslime: {fileID: 0}
+  number: 0
+  slimeCapsule: {fileID: 0}
+  force: 0
