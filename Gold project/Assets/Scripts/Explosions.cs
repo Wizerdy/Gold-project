@@ -21,7 +21,8 @@ public class Explosions : ScriptableObject
     [Range(0.0f, 1.0f)] public float slow;
     public float slowTime;
 
-    [Header("Little")]
-    public bool little;
-    public GameObject littleslime;
+    [Header("Capsule")]
+    public int number;
+    public GameObject slimeCapsule;
+    public float force;
 }

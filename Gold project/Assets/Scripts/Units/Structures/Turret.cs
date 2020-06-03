@@ -6,7 +6,7 @@ public class Turret : Structure
 {
     public GameObject ammo;
     public float ammoSpeed;
-    public float offSet = 1f;
+    [Range(0f, 1f)] public float offSet = 1f;
 
     public Transform sprite;
 
@@ -14,10 +14,18 @@ public class Turret : Structure
     {
         base.Attack(target);
 
-        Vector2 dir = (target.transform.position + new Vector3(1 * offSet * (side == Side.ALLY ? -1 : 1), 0, 0) *
+        Vector2 dir = (target.transform.position + new Vector3(1, 0, 0) *
             (target.GetComponent<Pawn>() != null && !target.GetComponent<Pawn>().immobilize ? (target.GetComponent<Pawn>().speed / 4) : 1) - 
             sprite.transform.position
         );
+
+        if(offSet != 1)
+        {
+            float mag = dir.magnitude;
+            float ang = Mathf.Acos(Mathf.Abs(dir.y) / mag);
+            Debug.Log(ang + " .. " + (ang * offSet) + " .. " + (ang * Mathf.Rad2Deg) + " .. " + (ang * offSet * Mathf.Rad2Deg));
+            dir = new Vector2(Mathf.Sin(ang * offSet) * Mathf.Sign(dir.x), Mathf.Cos(ang * offSet) * Mathf.Sign(dir.y));
+        }
 
         Quaternion rotation = Quaternion.LookRotation(dir, Vector2.right);
         sprite.eulerAngles = new Vector3(sprite.eulerAngles.x, sprite.eulerAngles.y, -rotation.eulerAngles.x);
@@ -40,7 +48,7 @@ public class Turret : Structure
 
         insta.transform.rotation = rotation;
         insta.transform.eulerAngles = new Vector3(0, 0, -rotation.eulerAngles.x);
-        insta.GetComponent<Rigidbody2D>().AddForce(dir * ammoSpeed);
+        insta.GetComponent<Rigidbody2D>().AddForce(dir.normalized * ammoSpeed);
 
         Debug.DrawLine(transform.position, (Vector2)transform.position + dir, Color.red, attackSpeed);
     }

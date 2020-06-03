@@ -178,11 +178,14 @@ MonoBehaviour:
   speed: 2
   curSpeed: 0
   immobilize: 0
+  imuSlow: 0
+  imuStunt: 0
+  imuPoison: 0
   target: {fileID: 0}
-  explosion: {fileID: 0}
+  explosion: {fileID: 11400000, guid: d50c408d6989cb44cb1b041ea3eba9d3, type: 2}
   SlimeToSpawn: {fileID: 3740516601931120442, guid: bbc1acb5416737e408bfdcb903f07fef,
     type: 3}
-  numberToSpawn: 3
+  numberToSpawn: 0
   spawnOffset: 0.3
 --- !u!61 &634356893387697209
 BoxCollider2D:

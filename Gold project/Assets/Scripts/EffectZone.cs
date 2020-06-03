@@ -37,6 +37,21 @@ public class EffectZone : MonoBehaviour
                     Attack(hit[i].GetComponent<Pawn>());
                 }
 
+        if (behaviour.number > 0)
+            for (int i = 0; i < behaviour.number; i++)
+            {
+                GameObject insta = Instantiate(behaviour.slimeCapsule, transform.position + Vector3.up, Quaternion.identity);
+
+                if(insta.GetComponent<ArrowController>() != null)
+                    insta.GetComponent<ArrowController>().side = side;
+
+                if (insta.GetComponent<Rigidbody2D>() != null)
+                {
+                    Vector2 dir = new Vector2(Random.Range(-0.5f, 0.5f), Random.Range(0f, 1f)).normalized;
+                    insta.GetComponent<Rigidbody2D>().AddForce(dir * behaviour.force);
+                }
+            }
+
         Destroy(gameObject);
     }
 

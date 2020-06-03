@@ -244,7 +244,7 @@ MonoBehaviour:
   surname: 
   description: 
   type: 1
-  side: 0
+  side: 1
   maxHealth: 0
   damage: {x: 30, y: 50}
   attackSpeed: 1
@@ -256,8 +256,8 @@ MonoBehaviour:
   hit: []
   cost: 400
   ammo: {fileID: 3975769326864515960, guid: e5713f796e995e8499f605da22be57d7, type: 3}
-  ammoSpeed: 300
-  offSet: 2.5
+  ammoSpeed: 500
+  offSet: 0.8
   sprite: {fileID: 546008598194761017}
 --- !u!1 &4978383070831852508
 GameObject:
