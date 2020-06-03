@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4757890053573898254}
   - component: {fileID: 7712790869122441118}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -101,7 +101,7 @@ TrailRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.68235296, g: 0, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -147,11 +147,11 @@ GameObject:
   m_Component:
   - component: {fileID: 5982007168112870101}
   - component: {fileID: 1900962477798305786}
-  - component: {fileID: 6651696666255563055}
+  - component: {fileID: 138298908827722499}
   - component: {fileID: 1704087636003480694}
-  - component: {fileID: 204153369826052018}
-  m_Layer: 0
-  m_Name: A_WHITE
+  - component: {fileID: -4822273527540589809}
+  m_Layer: 11
+  m_Name: PurpleCaps
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -212,7 +212,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: bbe8648915cf753429b99c4d14cc1bde, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.68366146, g: 0, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -222,7 +222,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &6651696666255563055
+--- !u!114 &138298908827722499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -231,13 +231,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 3975769326864515960}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a01c6f0188b14949a0886c99fd152de, type: 3}
+  m_Script: {fileID: 11500000, guid: d142d80969bcf7c44babf94b8d2f6634, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   side: 0
   damage: 0
   explode: 0
-  behaviour: {fileID: 11400000, guid: 13e0367c5bdda4d4dbf666ce135cfce2, type: 2}
+  behaviour: {fileID: 0}
+  lilPurp: {fileID: 3740516601931120442, guid: bbc1acb5416737e408bfdcb903f07fef, type: 3}
 --- !u!50 &1704087636003480694
 Rigidbody2D:
   serializedVersion: 4
@@ -253,13 +254,13 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 3
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!58 &204153369826052018
+--- !u!58 &-4822273527540589809
 CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

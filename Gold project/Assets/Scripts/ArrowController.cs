@@ -10,7 +10,7 @@ public class ArrowController : MonoBehaviour
     public bool explode;
     public Explosions behaviour;
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    protected virtual void OnCollisionEnter2D(Collision2D collision)
     {
         GameObject go = collision.gameObject;
         if(GameManager.InsideLayer(go.layer, GameManager.instance.unitLayer) &&
@@ -44,6 +44,12 @@ public class ArrowController : MonoBehaviour
             Destroy(gameObject);
         } else if(GameManager.InsideLayer(go.layer, GameManager.instance.floorLayer))
         {
+            if (behaviour != null && explode)
+            {
+                GameObject insta = Instantiate(GameManager.instance.explosion, transform.position, Quaternion.identity);
+                insta.GetComponent<EffectZone>().behaviour = behaviour;
+            }
+
             Destroy(gameObject);
         }
     }

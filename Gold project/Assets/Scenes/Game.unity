@@ -1110,9 +1110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d696828e8a00d374e996a9d4814bbdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
-  maxHealth: 100
+  maxHealth: 1500
   damage: {x: 0, y: 0}
   attackSpeed: 0
   color: 0
@@ -1263,9 +1265,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d696828e8a00d374e996a9d4814bbdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 2
-  maxHealth: 1000
+  maxHealth: 5000
   damage: {x: 0, y: 0}
   attackSpeed: 0
   color: 0
@@ -9520,6 +9524,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0
@@ -18486,6 +18492,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0
@@ -20215,6 +20223,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0
@@ -20918,9 +20928,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d696828e8a00d374e996a9d4814bbdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
-  maxHealth: 100
+  maxHealth: 1500
   damage: {x: 0, y: 0}
   attackSpeed: 0
   color: 0
@@ -21228,6 +21240,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slimeMinSize: 0.7
   slimeRefund: 0
+  dotSpeed: 0
   passivePump: 2
   pumpTime: 1
   pumpCost: 500
@@ -22107,6 +22120,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0
@@ -25230,6 +25245,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0
@@ -31701,6 +31718,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0
@@ -46718,9 +46737,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d696828e8a00d374e996a9d4814bbdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
-  maxHealth: 100
+  maxHealth: 1500
   damage: {x: 0, y: 0}
   attackSpeed: 0
   color: 0
@@ -50130,6 +50151,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0
@@ -57290,6 +57313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0
@@ -57563,6 +57588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0
@@ -58127,9 +58154,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d696828e8a00d374e996a9d4814bbdd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 1
-  maxHealth: 1000
+  maxHealth: 5000
   damage: {x: 0, y: 0}
   attackSpeed: 0
   color: 0
@@ -59098,6 +59127,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0
@@ -59467,6 +59498,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d5784a4bdb3a2343b588ca78d6ef5fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0

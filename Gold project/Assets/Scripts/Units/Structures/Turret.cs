@@ -14,9 +14,9 @@ public class Turret : Structure
     {
         base.Attack(target);
 
-        Vector2 dir = (target.transform.position -
-            (sprite.transform.position + new Vector3(1 * offSet, 0, 0) * 
-            (target.GetComponent<Pawn>() != null && !target.GetComponent<Pawn>().immobilize ? (target.GetComponent<Pawn>().speed / 4) : 1))
+        Vector2 dir = (target.transform.position + new Vector3(1 * offSet * (side == Side.ALLY ? -1 : 1), 0, 0) *
+            (target.GetComponent<Pawn>() != null && !target.GetComponent<Pawn>().immobilize ? (target.GetComponent<Pawn>().speed / 4) : 1) - 
+            sprite.transform.position
         );
 
         Quaternion rotation = Quaternion.LookRotation(dir, Vector2.right);

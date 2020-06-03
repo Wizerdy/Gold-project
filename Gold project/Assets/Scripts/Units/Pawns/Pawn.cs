@@ -13,6 +13,11 @@ public abstract class Pawn : Unit
 
     public bool immobilize;
 
+    [Header("Immunities")]
+    [SerializeField] private bool imuSlow;
+    [SerializeField] private bool imuStunt;
+    [SerializeField] private bool imuPoison;
+
     [Header("Other")]
     public Transform target;
 
@@ -35,7 +40,7 @@ public abstract class Pawn : Unit
 
     private void Update()
     {
-        if (stunned)
+        if (stunned && !imuStunt)
             return;
 
         if(!CheckAttackRange()) {
@@ -75,6 +80,22 @@ public abstract class Pawn : Unit
         transform.localScale = Tools.Map(curHealth, 0, maxHealth, baseScale * GameManager.instance.slimeMinSize, baseScale);
     }
 
+    public override void AddDoT(int damage, float duration)
+    {
+        if (imuPoison)
+            return;
+
+        base.AddDoT(damage, duration);
+    }
+
+    public override void Stunt(float duration)
+    {
+        if (imuStunt)
+            return;
+
+        base.Stunt(duration);
+    }
+
     protected override void Die()
     {
         GameManager.instance.SpawnSplash(transform.position, GameManager.instance.differentsColors[(int)color]);
@@ -97,6 +118,9 @@ public abstract class Pawn : Unit
 
     public void AddSlow(float slow)
     {
+        if (imuSlow)
+            return;
+
         if (!slows.ContainsKey(slow))
         {
             slows.Add(slow, 0);
@@ -132,11 +156,6 @@ public abstract class Pawn : Unit
                     curSpeed = speed;
             }
         }
-    }
-
-    public void Burn(float damage, float time)
-    {
-
     }
 
     private bool TestSlow(float slow)

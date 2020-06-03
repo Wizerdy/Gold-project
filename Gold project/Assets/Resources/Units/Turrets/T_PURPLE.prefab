@@ -241,6 +241,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352e0691d3f6e3f448007f1e3c0005c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  surname: 
+  description: 
   type: 1
   side: 0
   maxHealth: 0
@@ -253,7 +255,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 400
-  ammo: {fileID: 3740516601931120442, guid: 7f5c929ba18630e4fbe231219be8a843, type: 3}
+  ammo: {fileID: 3975769326864515960, guid: e5713f796e995e8499f605da22be57d7, type: 3}
   ammoSpeed: 300
   offSet: 2.5
   sprite: {fileID: 546008598194761017}

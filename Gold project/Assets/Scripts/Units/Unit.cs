@@ -116,7 +116,7 @@ public abstract class Unit : MonoBehaviour
         
     }
 
-    public void AddDoT(int damage, float duration)
+    public virtual void AddDoT(int damage, float duration)
     {
         StartCoroutine(IntensifyDoT(damage, duration));
 
@@ -124,7 +124,7 @@ public abstract class Unit : MonoBehaviour
             dot = StartCoroutine("DOT");
     }
 
-    public void Stunt(float duration)
+    public virtual void Stunt(float duration)
     {
         if (stunt != null)
             StopCoroutine(stunt);
