@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using DG.Tweening;
 
 public class Transition : MonoBehaviour
 {
     public float time = 1f;
     [HideInInspector]public Material mat;
     private Image img;
-    public string SceneName;
+    public string SceneName = "Game";
 
     private void Start()
     {
@@ -37,37 +38,22 @@ public class Transition : MonoBehaviour
 
     public IEnumerator TransitionStart()
     {
-        float elapsed = 0f;
         img.raycastTarget = true;
         mat.SetVector("_Wavy", new Vector4(.01f, .003f));
         mat.SetFloat("_Border", 15f);
 
-
-        while (elapsed < time)
-        {
-            mat.SetFloat("_Border", Mathf.Lerp(15f, -15f, (elapsed/time)));
-            elapsed += Time.deltaTime;
-
-            yield return null;
-        }
+        mat.DOFloat(-15f, "_Border", 1f);     
 
         yield return new WaitForSeconds(time);
-        Debug.Log("Switch scene");
         SceneManager.LoadScene(SceneName);
     }
 
     public IEnumerator TransitionEnd()
     {
-        float elapsed = 0f;
-        img.raycastTarget = true;        
+        img.raycastTarget = true;
 
-        while (elapsed < time)
-        {
-            mat.SetFloat("_Border", Mathf.Lerp(-15f, 15f, (elapsed / time)));
-            elapsed += Time.deltaTime;
+        mat.DOFloat(15f, "_Border", 1f);
 
-            yield return null;
-        }
 
         yield return new WaitForSeconds(time);
         img.raycastTarget = false;
