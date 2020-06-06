@@ -32,12 +32,15 @@ public class GameManager : MonoBehaviour
     [Header("Parents")]
     public Transform allyParent;
     public Transform enemyParent;
+    public Transform splashParent;
 
     [Header("Layers")]
     public LayerMask unitLayer;
     public LayerMask floorLayer;
+    public LayerMask splashLayer;
 
     [Header("GameObject")]
+    public GameObject splashParticles;
     public GameObject splash;
     public GameObject deathParticle;
     public GameObject explosion;
@@ -154,27 +157,19 @@ public class GameManager : MonoBehaviour
             grayScaleBorder.SetFloat("_Border", 20);
     }
 
-    public GameObject InstantiateUnit(GameObject unit, Transform parent, Transform target)
-    {
-        GameObject insta = Instantiate(unit, parent);
-        insta.GetComponent<Pawn>().target = target;
+    //public GameObject InstantiateUnit(GameObject unit, Transform parent, Transform target)
+    //{
+    //    GameObject insta = Instantiate(unit, parent);
+    //    insta.GetComponent<Pawn>().target = target;
 
-        return insta;
-    }
+    //    return insta;
+    //}
 
     public GameObject InstantiateUnit(GameObject unit, Unit.Side side, Vector2 pos)
     {
-        GameObject insta = Instantiate(unit, (side == Unit.Side.ALLY ? allyParent : enemyParent) );
+
+        GameObject insta = InstantiateUnit(unit, side, (side == Unit.Side.ALLY ? allyParent : enemyParent));
         insta.transform.position = pos;
-        //insta.layer = (side == Unit.Side.ALLY ? allyParent : enemyParent).gameObject.layer;
-        insta.transform.localEulerAngles = new Vector3(insta.transform.rotation.x, insta.transform.rotation.y + 180 * (side == Unit.Side.ALLY ? 0 : 1), insta.transform.rotation.z);
-        insta.GetComponent<Unit>().side = side;
-
-        if (insta.GetComponent<Unit>().type == Unit.Type.PAWN)
-            insta.GetComponent<Pawn>().target = (side == Unit.Side.ALLY ? enemyParent : allyParent);
-
-        if (side == Unit.Side.ALLY)
-            allies.Add(insta);
 
         return insta;
     }
@@ -199,11 +194,12 @@ public class GameManager : MonoBehaviour
     public void SpawnSplash(Vector2 pos, Color color)
     {
         GameObject insta = Instantiate(splash, pos, Quaternion.identity);
-        float size = UnityEngine.Random.Range(0.1f, 1);
-        insta.transform.localScale = new Vector3(size, size, 1);
+        //float size = UnityEngine.Random.Range(0.1f, 1);
+        insta.transform.localScale = new Vector3(0.2f, 0.2f, 1);
         insta.GetComponent<SpriteRenderer>().color = color;
-        GameObject insta2 = Instantiate(deathParticle, pos, deathParticle.transform.rotation);
-        insta2.GetComponent<ParticleSystem>().startColor = color;
+        insta.transform.parent = splashParent;
+        //GameObject insta2 = Instantiate(deathParticle, pos, deathParticle.transform.rotation);
+        //insta2.GetComponent<ParticleSystem>().startColor = color;
 
     }
 

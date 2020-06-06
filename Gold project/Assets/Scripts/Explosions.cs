@@ -14,8 +14,12 @@ public class Explosions : ScriptableObject
     public float stuntDuration;
 
     [Header("Poison")]
-    public int dot;
-    public float dotDuration;
+    [Range(0f, 1f)] public float poison;
+    public float poisonDuration;
+
+    [Header("Burn")]
+    public int burn;
+    public float burnDuration;
 
     [Header("Slow")]
     [Range(0.0f, 1.0f)] public float slow;

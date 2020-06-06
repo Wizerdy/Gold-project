@@ -30,14 +30,14 @@ public class EffectZone : MonoBehaviour
             useLayerMask = true
         };
 
-        if (zone.OverlapCollider(attackFilter, hit) > 0)
+        if (zone.OverlapCollider(attackFilter, hit) > 0) // Attack monkey
             for (int i = 0; i < hit.Count; i++)
                 if (hit[i].GetComponent<Unit>().side != side && hit[i].GetComponent<Unit>().type == Unit.Type.PAWN)
                 {
                     Attack(hit[i].GetComponent<Pawn>());
                 }
 
-        if (behaviour.number > 0)
+        if (behaviour.number > 0) // Spawn de capsules
             for (int i = 0; i < behaviour.number; i++)
             {
                 GameObject insta = Instantiate(behaviour.slimeCapsule, transform.position + Vector3.up, Quaternion.identity);
@@ -74,8 +74,11 @@ public class EffectZone : MonoBehaviour
             else
                 unit.AddSlow(behaviour.slow);
 
-        if (behaviour.dot > 0)
-            unit.AddDoT(behaviour.dot, behaviour.dotDuration);
+        if (behaviour.poison > 0)
+            unit.AddPoison(behaviour.poison, behaviour.poisonDuration);
+
+        if (behaviour.burn > 0)
+            unit.AddBurn(behaviour.burn, behaviour.burnDuration);
 
         if (behaviour.stunt)
             unit.Stunt(behaviour.stuntDuration);

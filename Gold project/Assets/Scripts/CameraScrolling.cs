@@ -36,9 +36,11 @@ public class CameraScrolling : MonoBehaviour
         gameCamera.orthographicSize = orthoSize;
 
         cameraSize = new Vector2(orthoSize / 0.5f * Screen.width / Screen.height, orthoSize);
-        Debug.Log(cameraSize);
 
         bounds = new Vector2(cameraBounds.transform.position.x - cameraBounds.bounds.size.x/2, cameraBounds.transform.position.x + cameraBounds.bounds.size.x/2);
+
+        if (CameraOutBounds(0))
+            gameCamera.transform.position = new Vector3(bounds.x + cameraSize.x / 2, basePos.y, basePos.z);
     }
 
     private void Update()

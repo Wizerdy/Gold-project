@@ -34,8 +34,11 @@ public abstract class Unit : MonoBehaviour
     protected Coroutine stunt;
     protected bool stunned;
 
-    protected Coroutine dot;
-    protected int dotDamage;
+    protected Coroutine poison;
+    protected float poisonDamage;
+
+    protected Coroutine burn;
+    protected int burnDamage;
 
     public Unit(Type type) { this.type = type; }
 
@@ -74,7 +77,7 @@ public abstract class Unit : MonoBehaviour
         canAttack = true;
     }
 
-    protected bool CheckAttackRange()
+    protected virtual bool CheckAttackRange()
     {
         if (attackRange.OverlapCollider(attackFilter, hit) > 0)
             for (int i = 0; i < hit.Count; i++)
@@ -95,7 +98,15 @@ public abstract class Unit : MonoBehaviour
     {
         curHealth -= amount;
         //if (sprRend != null)
-            //StartCoroutine(Coloration(Color.red, 0.05f));
+        //StartCoroutine(Coloration(Color.red, 0.05f));
+
+        if (curHealth < 0)
+            curHealth = 0;
+    }
+
+    public virtual void LoseHealth(float amount)
+    {
+        LoseHealth(maxHealth * amount);
     }
 
     protected IEnumerator Coloration(Color color, float time)
@@ -116,14 +127,6 @@ public abstract class Unit : MonoBehaviour
         
     }
 
-    public virtual void AddDoT(int damage, float duration)
-    {
-        StartCoroutine(IntensifyDoT(damage, duration));
-
-        if (dot == null)
-            dot = StartCoroutine("DOT");
-    }
-
     public virtual void Stunt(float duration)
     {
         if (stunt != null)
@@ -132,26 +135,88 @@ public abstract class Unit : MonoBehaviour
         stunt = StartCoroutine(Stunned(duration));
     }
 
-    protected IEnumerator IntensifyDoT(int damage, float duration)
-    {
-        dotDamage += damage;
-        yield return new WaitForSeconds(duration);
-        dotDamage -= damage;
-    }
-
-    protected IEnumerator DOT()
-    {
-        while(true)
-        {
-            yield return new WaitForSeconds(GameManager.instance.dotSpeed);
-            LoseHealth(dotDamage);
-        }
-    }
-
     protected IEnumerator Stunned(float duration)
     {
         stunned = true;
         yield return new WaitForSeconds(duration);
         stunned = false;
     }
+
+    #region DoTs
+
+    public virtual void AddPoison(float damage, float duration)
+    {
+        StartCoroutine(IntensifyPoison(damage, duration));
+
+        if (poison == null)
+            poison = StartCoroutine("Poison");
+    }
+
+    public virtual void AddBurn(int damage, float duration)
+    {
+        StartCoroutine(IntensifyBurn(damage, duration));
+
+        if (burn == null)
+            burn = StartCoroutine("Burn");
+    }
+
+    protected IEnumerator IntensifyDoT(float damage, float duration)
+    {
+        if (damage <= 1f && damage >= 0f)
+            poisonDamage += damage;
+        else
+            burnDamage += Mathf.FloorToInt(damage);
+        
+        yield return new WaitForSeconds(duration);
+
+        if (damage <= 1f && damage >= 0f)
+            poisonDamage -= damage;
+        else
+            burnDamage -= Mathf.FloorToInt(damage);
+
+        if (poisonDamage < 0)
+            poisonDamage = 0;
+        if (burnDamage < 0)
+            burnDamage = 0;
+    }
+
+    protected IEnumerator IntensifyPoison(float damage, float duration)
+    {
+        poisonDamage += damage;
+        yield return new WaitForSeconds(duration);
+        poisonDamage -= damage;
+
+        if (poisonDamage < 0)
+            poisonDamage = 0;
+    }
+
+    protected IEnumerator IntensifyBurn(int damage, float duration)
+    {
+        burnDamage += damage;
+        yield return new WaitForSeconds(duration);
+        burnDamage -= damage;
+
+        if (burnDamage < 0)
+            burnDamage = 0;
+    }
+
+    protected IEnumerator Poison()
+    {
+        while(true)
+        {
+            yield return new WaitForSeconds(GameManager.instance.dotSpeed);
+            LoseHealth(poisonDamage);
+        }
+    }
+
+    protected IEnumerator Burn()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(GameManager.instance.dotSpeed);
+            LoseHealth(burnDamage);
+        }
+    }
+
+    #endregion
 }

@@ -36,8 +36,11 @@ public class ArrowController : MonoBehaviour
                         else
                             unit.AddSlow(behaviour.slow);
 
-                    if (behaviour.dot > 0)
-                        unit.AddDoT(behaviour.dot, behaviour.dotDuration);
+                    if (behaviour.poison > 0)
+                        unit.AddPoison(behaviour.poison, behaviour.poisonDuration);
+
+                    if (behaviour.burn > 0)
+                        unit.AddBurn(behaviour.burn, behaviour.burnDuration);
                 }
             }
 
