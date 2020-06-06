@@ -9,6 +9,7 @@ public class Transition : MonoBehaviour
     public float time = 1f;
     [HideInInspector]public Material mat;
     private Image img;
+    public string SceneName;
 
     private void Start()
     {
@@ -21,7 +22,7 @@ public class Transition : MonoBehaviour
             mat.SetFloat("_Border", 10f);
         }
 
-        if (SceneManager.GetActiveScene().name == "Game")
+        if (SceneManager.GetActiveScene().name == SceneName)
         {
             mat.SetVector("_Wavy", new Vector4(-.01f, .003f));
             mat.SetFloat("_Border", -15f);
@@ -29,20 +30,22 @@ public class Transition : MonoBehaviour
         }
     }
 
-    public void CallTransition(string transition)
+    public void CallTransition()
     {
-        StartCoroutine("Transition"+transition);
+        StartCoroutine(TransitionStart());
     }
 
     public IEnumerator TransitionStart()
     {
         float elapsed = 0f;
         img.raycastTarget = true;
-        
+        mat.SetVector("_Wavy", new Vector4(.01f, .003f));
+        mat.SetFloat("_Border", 15f);
+
 
         while (elapsed < time)
         {
-            mat.SetFloat("_Border", Mathf.Lerp(10f, -10f, (elapsed/time)));
+            mat.SetFloat("_Border", Mathf.Lerp(15f, -15f, (elapsed/time)));
             elapsed += Time.deltaTime;
 
             yield return null;
@@ -50,7 +53,7 @@ public class Transition : MonoBehaviour
 
         yield return new WaitForSeconds(time);
         Debug.Log("Switch scene");
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene(SceneName);
     }
 
     public IEnumerator TransitionEnd()

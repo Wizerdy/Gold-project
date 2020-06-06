@@ -5615,6 +5615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   time: 1
   mat: {fileID: 0}
+  SceneName: 
 --- !u!114 &447385186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7158,7 +7159,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 447385185}
         m_MethodName: CallTransition
-        m_Mode: 5
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -8917,12 +8918,17 @@ MonoBehaviour:
   enemyColor: {r: 0, g: 0, b: 0, a: 0}
   allyParent: {fileID: 1473877195}
   enemyParent: {fileID: 1306213096}
+  splashParent: {fileID: 0}
   unitLayer:
     serializedVersion: 2
     m_Bits: 256
   floorLayer:
     serializedVersion: 2
     m_Bits: 512
+  splashLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  splashParticles: {fileID: 0}
   splash: {fileID: 5897656158704275477, guid: 262b9eb291a73654d9781f94b80b1658, type: 3}
   deathParticle: {fileID: 0}
   explosion: {fileID: 7979257505062667211, guid: 05b11472405937c4499a7d71915909e0,
