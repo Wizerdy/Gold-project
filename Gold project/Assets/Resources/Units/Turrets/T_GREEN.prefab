@@ -241,13 +241,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352e0691d3f6e3f448007f1e3c0005c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: Green Turret
-  description: The green turret turret do huge damages on enemies, regenerate your
-    castle' health and do the best coffee i ever drink.
+  surname: Nursery
+  description: Nursery does huge damages on enemies, regenerate your castle' health
+    and the best coffee you will ever drink.
   type: 1
   side: 0
   maxHealth: 0
-  damage: {x: 120, y: 120}
+  damage: {x: 300, y: 300}
   attackSpeed: 3
   color: 6
   attackRange: {fileID: 3017508311607322558}

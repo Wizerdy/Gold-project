@@ -241,13 +241,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352e0691d3f6e3f448007f1e3c0005c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: White Turret
-  description: The white turret shoot fast and it is the only thing it can do...
-    "shoot".
+  surname: Shotty
+  description: Shooty shoot fast and it is the only thing it can do... "shoot".
   type: 1
   side: 0
   maxHealth: 0
-  damage: {x: 4, y: 4}
+  damage: {x: 5, y: 5}
   attackSpeed: 0.25
   color: 0
   attackRange: {fileID: 3017508311607322558}

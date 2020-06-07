@@ -450,14 +450,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c4b1294ce621f46b4bbdf608bea717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: Red Slime
-  description: When the red slime feel the end aproaching, it blow up itself, don't
-    stay near when it happens
+  surname: Roger
+  description: When Roger feels the end aproaching, it blow up itself. Don't stay
+    near when it happens.
   type: 0
   side: 0
-  maxHealth: 160
-  damage: {x: 20, y: 40}
-  attackSpeed: 1
+  maxHealth: 140
+  damage: {x: 25, y: 45}
+  attackSpeed: 0.5
   color: 1
   attackRange: {fileID: 5278358871612878103}
   sprRend: {fileID: 0}
@@ -467,11 +467,16 @@ MonoBehaviour:
   cost: 30
   speed: 2
   curSpeed: 0
+  regen: 0
+  regenCd: 0
   immobilize: 0
+  atkPoison: 0
+  thornmail: 0
   imuExplosion: 0
   imuSlow: 0
   imuStunt: 0
   imuPoison: 0
+  imuBurn: 0
   target: {fileID: 0}
   explosion: {fileID: 11400000, guid: 77e77c2e5d511b149ab6353b42248d02, type: 2}
 --- !u!61 &634356893387697209
@@ -486,7 +491,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}

@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Transition
-  m_Shader: {fileID: -6465566751694194690, guid: 4fcbfa7980a43c94eacb09a440f5638a,
+  m_Shader: {fileID: -6465566751694194690, guid: ce7d9780d78f54b4bafc7fa03dc1373c,
     type: 3}
   m_ShaderKeywords: ETC1_EXTERNAL_ALPHA
   m_LightmapFlags: 4

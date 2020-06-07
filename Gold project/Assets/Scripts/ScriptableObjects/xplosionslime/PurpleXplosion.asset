@@ -15,14 +15,13 @@ MonoBehaviour:
   size: {x: 0, y: 0}
   damage: 0
   stunt: 1
-  stuntDuration: 2
-  dot: 0
-  damageSpeed: 0
-  lifetime: 0
-  dotDuration: 0
+  stuntDuration: 1
   poison: 0
+  poisonDuration: 0
+  burn: 0
+  burnDuration: 0
   slow: 0
   slowTime: 0
-  burn: 0
-  little: 0
-  littleslime: {fileID: 0}
+  number: 0
+  slimeCapsule: {fileID: 0}
+  force: 0

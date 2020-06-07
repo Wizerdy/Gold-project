@@ -546,13 +546,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c4b1294ce621f46b4bbdf608bea717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: White Slime
-  description: The courageous white slime will fight and die for you.
+  surname: Cannon Fodder
+  description: This courageous slime will fight and die for you.
   type: 0
   side: 0
   maxHealth: 80
-  damage: {x: 5, y: 15}
-  attackSpeed: 1
+  damage: {x: 7, y: 13}
+  attackSpeed: 0.5
   color: 0
   attackRange: {fileID: 5278358871612878103}
   sprRend: {fileID: 8544034278132751123}
@@ -562,11 +562,16 @@ MonoBehaviour:
   cost: 10
   speed: 3
   curSpeed: 0
+  regen: 0
+  regenCd: 0
   immobilize: 0
+  atkPoison: 0
+  thornmail: 0
   imuExplosion: 0
   imuSlow: 0
   imuStunt: 0
   imuPoison: 0
+  imuBurn: 0
   target: {fileID: 0}
   explosion: {fileID: 0}
 --- !u!61 &634356893387697209

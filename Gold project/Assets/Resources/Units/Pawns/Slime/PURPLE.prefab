@@ -297,7 +297,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3740516601931120440}
-  - component: {fileID: 8265437695161462440}
+  - component: {fileID: 3256665905133946132}
   - component: {fileID: 634356893387697209}
   - component: {fileID: 5954206991355625328}
   m_Layer: 8
@@ -323,7 +323,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8265437695161462440
+--- !u!114 &3256665905133946132
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -332,37 +332,38 @@ MonoBehaviour:
   m_GameObject: {fileID: 3740516601931120442}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c671728fb22e08a40b7d38470bba793b, type: 3}
+  m_Script: {fileID: 11500000, guid: a4c4b1294ce621f46b4bbdf608bea717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: Purple Slime
+  surname: La Mamma
   description: 'Fun Fact : The purple slime is the only one slime which has a pouch
     to hide their babies. '
   type: 0
   side: 0
-  maxHealth: 370
-  damage: {x: 20, y: 40}
+  maxHealth: 480
+  damage: {x: 35, y: 55}
   attackSpeed: 0.5
   color: 5
   attackRange: {fileID: 5278358871612878103}
-  sprRend: {fileID: 0}
+  sprRend: {fileID: 684749344635741837}
   canAttack: 0
   curHealth: 0
   hit: []
   cost: 90
   speed: 2
   curSpeed: 0
+  regen: 0
+  regenCd: 0
   immobilize: 0
+  atkPoison: 0
+  thornmail: 0
   imuExplosion: 0
-  imuSlow: 0
-  imuStunt: 0
+  imuSlow: 1
+  imuStunt: 1
   imuPoison: 0
+  imuBurn: 0
   target: {fileID: 0}
   explosion: {fileID: 11400000, guid: d50c408d6989cb44cb1b041ea3eba9d3, type: 2}
-  SlimeToSpawn: {fileID: 3740516601931120442, guid: bbc1acb5416737e408bfdcb903f07fef,
-    type: 3}
-  numberToSpawn: 0
-  spawnOffset: 0.3
 --- !u!61 &634356893387697209
 BoxCollider2D:
   m_ObjectHideFlags: 0

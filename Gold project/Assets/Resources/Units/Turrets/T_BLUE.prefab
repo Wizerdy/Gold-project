@@ -241,12 +241,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352e0691d3f6e3f448007f1e3c0005c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: Blue Turret
-  description: The blue turret his always the winner of the snowball battles.
+  surname: Bluedy
+  description: Bluedy is always the winner of the snowball battles.
   type: 1
   side: 0
   maxHealth: 0
-  damage: {x: 16, y: 16}
+  damage: {x: 30, y: 30}
   attackSpeed: 1
   color: 3
   attackRange: {fileID: 3017508311607322558}

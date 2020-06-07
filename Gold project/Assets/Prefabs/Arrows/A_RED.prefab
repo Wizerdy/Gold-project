@@ -236,7 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   side: 0
   damage: 0
-  explode: 0
+  explode: 1
   behaviour: {fileID: 11400000, guid: 66aafdd87b0073447a5f2001c2e3d489, type: 2}
 --- !u!50 &1704087636003480694
 Rigidbody2D:

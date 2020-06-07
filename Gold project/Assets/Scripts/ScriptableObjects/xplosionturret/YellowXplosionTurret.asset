@@ -16,8 +16,10 @@ MonoBehaviour:
   damage: 0
   stunt: 0
   stuntDuration: 0
-  dot: 1
-  dotDuration: 5
+  poison: 0.2
+  poisonDuration: 1
+  burn: 0
+  burnDuration: 0
   slow: 0
   slowTime: 0
   number: 0
