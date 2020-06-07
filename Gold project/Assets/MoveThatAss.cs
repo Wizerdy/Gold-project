@@ -4,11 +4,19 @@ using UnityEngine;
 
 public class MoveThatAss : MonoBehaviour
 {
-    public Transform target;
-    public float speed;
+    public SpriteRenderer bound;
+    /*[HideInInspector]*/public Bounds boundary;
+    public float speed = 1;
 
-    void Update()
+
+    protected void Start()
     {
-        transform.position = Vector2.Lerp(transform.position, target.position, speed*Time.deltaTime);
+        boundary = bound.bounds;
+
+        foreach (Transform child in transform)
+        {
+            child.gameObject.AddComponent<MoveThatCloud>();
+        }
     }
+
 }
