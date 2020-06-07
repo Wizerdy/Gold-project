@@ -16,7 +16,9 @@ public abstract class Pawn : Unit
     [HideInInspector] public bool immobilize;
 
     [Header("Attack")]
-    [SerializeField] private Explosions atkBehaviour;
+    //[SerializeField] private Explosions atkBehaviour;
+    [SerializeField, Range(0f, 1f)] private float atkPoison;
+    public int thornmail;
 
     [Header("Immunities")]
     public bool imuExplosion;
@@ -39,12 +41,12 @@ public abstract class Pawn : Unit
         curSpeed = speed;
         slows = new Dictionary<float, int>();
 
-        baseScale = transform.localScale;
-
         immobilize = false;
 
         if(sprRend != null)
             sprRend.transform.localScale = new Vector3(Mathf.Sqrt((float)maxHealth / 50f), Mathf.Sqrt((float)maxHealth / 50f), 1);
+
+        baseScale = transform.localScale;
 
         canAttack = false;
 
@@ -91,35 +93,21 @@ public abstract class Pawn : Unit
 
         Unit unit = target.GetComponent<Unit>();
 
-        if (atkBehaviour != null)
+        if (target.GetComponent<Pawn>() != null)
         {
+            Pawn pawn = target.GetComponent<Pawn>();
 
-            if (target.GetComponent<Pawn>() != null)
-            {
-                Pawn pawn = target.GetComponent<Pawn>();
+            if (!pawn.imuPoison && atkPoison > 0 && pawn.maxHealth * atkPoison > DealDamage())
+                pawn.LoseHealth(atkPoison);
+            else
+                pawn.LoseHealth(DealDamage());
 
-                if (!pawn.imuExplosion)
-                    unit.LoseHealth(atkBehaviour.damage);
-
-                if (atkBehaviour.slow > 0)
-                    if (atkBehaviour.slowTime > 0)
-                        pawn.AddSlow(atkBehaviour.slow, atkBehaviour.slowTime);
-                    else
-                        pawn.AddSlow(atkBehaviour.slow);
-
-                if (atkBehaviour.stunt)
-                    unit.Stunt(atkBehaviour.stuntDuration);
-            }
-
-            if (atkBehaviour.poison > 0)
-                unit.AddPoison(atkBehaviour.poison, atkBehaviour.poisonDuration);
-
-            if (atkBehaviour.burn > 0)
-                unit.AddBurn(atkBehaviour.burn, atkBehaviour.burnDuration);
-
+            if (!imuBurn && pawn.thornmail > 0)
+                LoseHealth(pawn.thornmail);
+        } else
+        {
+            unit.LoseHealth(DealDamage());
         }
-
-        unit.LoseHealth(DealDamage());
 
         if (target.GetComponent<Tower>() != null)
             target.GetComponent<Tower>().lastDamageSide = side;
@@ -130,6 +118,8 @@ public abstract class Pawn : Unit
         base.LoseHealth(amount);
 
         transform.localScale = Tools.Map(curHealth, 0, maxHealth, baseScale * GameManager.instance.slimeMinSize, baseScale);
+
+        GameManager.instance.SpawnDamageParticles(amount, GameManager.instance.differentsColors[(int)color], transform.position, side);
     }
 
     public override void AddPoison(float damage, float duration)

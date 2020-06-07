@@ -29,6 +29,7 @@ public abstract class Unit : MonoBehaviour
     [HideInInspector] public List<Collider2D> hit;
     public int cost;
     protected int hitIndex;
+    protected GameObject hitTarget;
     protected ContactFilter2D attackFilter;
 
     protected Coroutine stunt;
@@ -80,12 +81,22 @@ public abstract class Unit : MonoBehaviour
     protected virtual bool CheckAttackRange()
     {
         if (attackRange.OverlapCollider(attackFilter, hit) > 0)
+        {
             for (int i = 0; i < hit.Count; i++)
-                if (hit[i] != null && hit[i].GetComponent<Unit>().side != side)
+                if (hit[i] != null && hit[i].gameObject == hitTarget)
                 {
                     hitIndex = i;
                     return true;
                 }
+
+            for (int i = 0; i < hit.Count; i++)
+                if (hit[i] != null && hit[i].GetComponent<Unit>().side != side)
+                {
+                    hitIndex = i;
+                    hitTarget = hit[i].gameObject;
+                    return true;
+                }
+        }
         return false;
     }
 

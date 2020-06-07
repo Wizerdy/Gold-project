@@ -200,7 +200,24 @@ public class GameManager : MonoBehaviour
         insta.transform.parent = splashParent;
         //GameObject insta2 = Instantiate(deathParticle, pos, deathParticle.transform.rotation);
         //insta2.GetComponent<ParticleSystem>().startColor = color;
+    }
 
+    public void SpawnDamageParticles(int damage, Color color, Vector3 position, Vector3 angle)
+    {
+        GameObject insta = Instantiate(splashParticles, position, Quaternion.identity);
+        insta.transform.eulerAngles = angle;
+        int maxDamage = 500;
+        insta.GetComponent<SplashManagerInside>().SetParticleSystem(
+           damage / 20 * maxDamage, damage / 20 * maxDamage,
+           damage / 40 * maxDamage, damage / 50 * maxDamage,
+           damage / 0.5f * maxDamage, damage / 0.6f * maxDamage,
+           color
+        );
+    }
+
+    public void SpawnDamageParticles(int damage, Color color, Vector3 position, Unit.Side side)
+    {
+        SpawnDamageParticles(damage, color, position, (side == Unit.Side.ALLY ? new Vector3(-45, -90, 90) : new Vector3(-135, -90, 90)));
     }
 
     public static bool InsideLayer(int layer, LayerMask mask)
