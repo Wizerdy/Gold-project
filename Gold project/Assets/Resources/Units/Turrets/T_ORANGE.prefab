@@ -241,14 +241,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352e0691d3f6e3f448007f1e3c0005c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: Orange Turret
-  description: The orange turret eat a lot of hot chillies and his spit can blast
-    a wall.
+  surname: Bursty
+  description: Bursty eats a lot of hot chillies and his spit can blast a wall.
   type: 1
   side: 0
   maxHealth: 0
-  damage: {x: 14, y: 14}
-  attackSpeed: 1
+  damage: {x: 40, y: 40}
+  attackSpeed: 2
   color: 4
   attackRange: {fileID: 3017508311607322558}
   sprRend: {fileID: 0}

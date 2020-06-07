@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: RedXplosionTurret
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
-  damage: 8
+  damage: 20
   stunt: 0
   stuntDuration: 0
-  dot: 0
-  dotDuration: 0
+  poison: 0
+  poisonDuration: 0
+  burn: 0
+  burnDuration: 0
   slow: 0
   slowTime: 0
   number: 0

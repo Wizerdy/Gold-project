@@ -141,14 +141,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c4b1294ce621f46b4bbdf608bea717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: Blue Slime
-  description: The blue slime live in Antarctica, they are very cold. Don't touch
-    it, your hand could be stucks on him.
+  surname: Snowall
+  description: Snowall lives in Antarctica, he is very cold. Don't touch it, your
+    hand could be stucks on him.
   type: 0
   side: 0
-  maxHealth: 350
-  damage: {x: 40, y: 50}
-  attackSpeed: 1
+  maxHealth: 500
+  damage: {x: 50, y: 65}
+  attackSpeed: 2
   color: 3
   attackRange: {fileID: 5278358871612878103}
   sprRend: {fileID: 0}
@@ -158,11 +158,16 @@ MonoBehaviour:
   cost: 30
   speed: 1.5
   curSpeed: 0
+  regen: 0
+  regenCd: 0
   immobilize: 0
+  atkPoison: 0
+  thornmail: 0
   imuExplosion: 0
-  imuSlow: 0
+  imuSlow: 1
   imuStunt: 0
   imuPoison: 0
+  imuBurn: 0
   target: {fileID: 0}
   explosion: {fileID: 11400000, guid: f86aa2e83e9d86a449be619fea00030e, type: 2}
 --- !u!61 &634356893387697209

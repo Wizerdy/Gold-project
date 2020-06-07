@@ -20096,7 +20096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slimeMinSize: 0.7
   slimeRefund: 0
-  dotSpeed: 0
+  dotSpeed: 1
   passivePump: 2
   pumpTime: 1
   pumpCost: 500

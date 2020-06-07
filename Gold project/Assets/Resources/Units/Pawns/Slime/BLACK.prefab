@@ -272,13 +272,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c4b1294ce621f46b4bbdf608bea717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: Black Slime
-  description: 'The black slime''s skin is waterfireacidcoldnuclaeroproof. Only 10000
-    paint liter on SuperSlimeBlackMarket.com '
+  surname: Proof
+  description: 'The black slime''s skin is waterfireacidcoldstunuclaeroproof. Only
+    10000 liters of paint on SuperSlimeBlackMarket.com '
   type: 0
   side: 0
-  maxHealth: 600
-  damage: {x: 80, y: 100}
+  maxHealth: 2000
+  damage: {x: 200, y: 240}
   attackSpeed: 0.5
   color: 7
   attackRange: {fileID: 5278358871612878103}
@@ -289,13 +289,18 @@ MonoBehaviour:
   cost: 270
   speed: 1.5
   curSpeed: 0
+  regen: 50
+  regenCd: 1
   immobilize: 0
-  imuExplosion: 0
+  atkPoison: 0
+  thornmail: 0
+  imuExplosion: 1
   imuSlow: 1
   imuStunt: 1
   imuPoison: 1
+  imuBurn: 1
   target: {fileID: 0}
-  explosion: {fileID: 0}
+  explosion: {fileID: 11400000, guid: 64811f14f7771a041b627ac2278c24f0, type: 2}
 --- !u!61 &6288297414747995768
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -308,7 +313,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_UsedByComposite: 1
+  m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}

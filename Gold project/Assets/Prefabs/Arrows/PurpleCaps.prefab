@@ -238,7 +238,7 @@ MonoBehaviour:
   damage: 0
   explode: 0
   behaviour: {fileID: 0}
-  lilPurp: {fileID: 3740516601931120442, guid: bbc1acb5416737e408bfdcb903f07fef, type: 3}
+  lilPurp: {fileID: 3740516601931120442, guid: 8d33c8c6eceaf5443b5f563b49c389b7, type: 3}
 --- !u!50 &1704087636003480694
 Rigidbody2D:
   serializedVersion: 4

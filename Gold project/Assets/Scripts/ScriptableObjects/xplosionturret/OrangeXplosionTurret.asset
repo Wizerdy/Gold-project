@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: OrangeXplosionTurret
   m_EditorClassIdentifier: 
   size: {x: 0, y: 0}
-  damage: 14
+  damage: 40
   stunt: 0
   stuntDuration: 0
-  dot: 2
-  dotDuration: 5
+  poison: 0
+  poisonDuration: 0
+  burn: 15
+  burnDuration: 5
   slow: 0
   slowTime: 0
   number: 0

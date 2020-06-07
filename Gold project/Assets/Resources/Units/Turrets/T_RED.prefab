@@ -241,12 +241,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352e0691d3f6e3f448007f1e3c0005c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: Red Turret
-  description: The red turret have area damage bullets because he can't shoot straight.
+  surname: Ready
+  description: Ready have area damage bullets because he can't shoot straight. "Ready
+    ? We're ready !"
   type: 1
   side: 0
   maxHealth: 0
-  damage: {x: 8, y: 8}
+  damage: {x: 20, y: 20}
   attackSpeed: 1
   color: 1
   attackRange: {fileID: 3017508311607322558}

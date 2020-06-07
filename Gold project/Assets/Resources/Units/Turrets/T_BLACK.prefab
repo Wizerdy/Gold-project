@@ -241,14 +241,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352e0691d3f6e3f448007f1e3c0005c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: Black Turret
-  description: '"One skill, one shot, one kill, nothing more ..." Black turret copyright
+  surname: Skilly
+  description: '"Only one skill : one shot, one kill, nothing more ..." Skilly copyright
     quotes.'
   type: 1
   side: 0
   maxHealth: 0
-  damage: {x: 1000, y: 1000}
-  attackSpeed: 2
+  damage: {x: 3000, y: 3000}
+  attackSpeed: 3
   color: 7
   attackRange: {fileID: 3017508311607322558}
   sprRend: {fileID: 0}

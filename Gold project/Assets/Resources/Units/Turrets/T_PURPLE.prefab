@@ -241,13 +241,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 352e0691d3f6e3f448007f1e3c0005c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: Purple Turret
-  description: 'Child exploitation is prohibited you know ? Purple turret: no way,
-    are you kidding me ?!!!'
+  surname: Childy
+  description: 'Child exploitation is prohibited you know ? '
   type: 1
-  side: 1
+  side: 0
   maxHealth: 0
-  damage: {x: 10, y: 10}
+  damage: {x: 0, y: 0}
   attackSpeed: 1
   color: 5
   attackRange: {fileID: 3017508311607322558}

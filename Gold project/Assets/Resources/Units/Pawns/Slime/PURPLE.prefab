@@ -335,13 +335,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4c4b1294ce621f46b4bbdf608bea717, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  surname: Purple Slime
+  surname: La Mamma
   description: 'Fun Fact : The purple slime is the only one slime which has a pouch
     to hide their babies. '
   type: 0
   side: 0
-  maxHealth: 370
-  damage: {x: 20, y: 40}
+  maxHealth: 480
+  damage: {x: 35, y: 55}
   attackSpeed: 0.5
   color: 5
   attackRange: {fileID: 5278358871612878103}
@@ -355,10 +355,11 @@ MonoBehaviour:
   regen: 0
   regenCd: 0
   immobilize: 0
-  atkBehaviour: {fileID: 0}
+  atkPoison: 0
+  thornmail: 0
   imuExplosion: 0
-  imuSlow: 0
-  imuStunt: 0
+  imuSlow: 1
+  imuStunt: 1
   imuPoison: 0
   imuBurn: 0
   target: {fileID: 0}

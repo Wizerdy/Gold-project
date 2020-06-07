@@ -359,8 +359,8 @@ MonoBehaviour:
   description: 
   type: 0
   side: 0
-  maxHealth: 40
-  damage: {x: 4, y: 10}
+  maxHealth: 45
+  damage: {x: 4, y: 12}
   attackSpeed: 0.2
   color: 5
   attackRange: {fileID: 5278358871612878103}
@@ -371,13 +371,18 @@ MonoBehaviour:
   cost: 0
   speed: 4
   curSpeed: 0
+  regen: 0
+  regenCd: 0
   immobilize: 0
+  atkPoison: 0
+  thornmail: 0
   imuExplosion: 0
   imuSlow: 0
   imuStunt: 0
   imuPoison: 0
+  imuBurn: 0
   target: {fileID: 0}
-  lifeTime: 5
+  lifeTime: 1000
 --- !u!61 &634356893387697209
 BoxCollider2D:
   m_ObjectHideFlags: 0
