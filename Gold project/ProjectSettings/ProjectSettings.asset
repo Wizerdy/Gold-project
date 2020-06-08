@@ -163,7 +163,7 @@ PlayerSettings:
   androidSupportedAspectRatio: 1
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
-    Android: com.Team3.GoldProject
+    Android: com.DefaultCompany.Goldproject
   buildNumber: {}
   AndroidBundleVersionCode: 1
   AndroidMinSdkVersion: 19
@@ -258,8 +258,8 @@ PlayerSettings:
   AndroidTargetArchitectures: 3
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: L:/AndroidKey/user.keystore
-  AndroidKeyaliasName: wiredii
+  AndroidKeystoreName: C:/Users/Adrien/Documents/GitHub/Gold-project/GoldProject.keystore
+  AndroidKeyaliasName: t3gp
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
   AndroidIsGame: 1

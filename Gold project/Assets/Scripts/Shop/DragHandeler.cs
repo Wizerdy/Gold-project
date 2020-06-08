@@ -40,7 +40,9 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
     Transform startParent;
 
-    public Text text;
+    public Text costText;
+    public Text descText;
+    public Text NameText;
 
     public bool barren = false;
 
@@ -248,7 +250,9 @@ public class DragHandeler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEnd
 
         bernard.GetComponent<DragHandeler>().cost = GameManager.instance.units[name].GetComponent<Unit>().cost;
 
-        bernard.GetComponent<DragHandeler>().text.text = GameManager.instance.units[name].GetComponent<Unit>().cost.ToString();
+        bernard.GetComponent<DragHandeler>().descText.text = GameManager.instance.units[name].GetComponent<Unit>().description;
+        bernard.GetComponent<DragHandeler>().NameText.text = GameManager.instance.units[name].GetComponent<Unit>().surname;
+        bernard.GetComponent<DragHandeler>().costText.text = GameManager.instance.units[name].GetComponent<Unit>().cost.ToString();
         Destroy(this.gameObject);
     }
 }
