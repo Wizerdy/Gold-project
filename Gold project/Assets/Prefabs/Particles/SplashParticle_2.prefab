@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4175366988707214454}
   - component: {fileID: 4175366988707214443}
   m_Layer: 11
-  m_Name: SplashParticle 1
+  m_Name: SplashParticle_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4175366988707214452}
   m_LocalRotation: {x: -0.6987952, y: -0.1080985, z: 0.10809833, w: 0.69879526}
-  m_LocalPosition: {x: 7.04, y: 0.95, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4831,3 +4831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   triggerChance: 0.2
+  number: {x: 0, y: 0}
+  speed: {x: 0, y: 0}
+  size: {x: 0, y: 0}
+  color: {r: 0, g: 0, b: 0, a: 0}

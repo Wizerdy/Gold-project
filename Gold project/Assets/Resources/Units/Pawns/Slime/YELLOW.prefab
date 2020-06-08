@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &195390887445447443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3182330919762664466}
+  m_Layer: 0
+  m_Name: Size
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3182330919762664466
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 195390887445447443}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1259115985294208138}
+  m_Father: {fileID: 3740516601931120440}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1373920770657356386
 GameObject:
   m_ObjectHideFlags: 0
@@ -257,7 +288,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9065462687598279394}
-  - {fileID: 1259115985294208138}
+  - {fileID: 3182330919762664466}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -283,7 +314,7 @@ MonoBehaviour:
   attackSpeed: 1
   color: 2
   attackRange: {fileID: 5278358871612878103}
-  sprRend: {fileID: 0}
+  sprRend: {fileID: 3182330919762664466}
   canAttack: 0
   curHealth: 0
   hit: []
@@ -301,6 +332,8 @@ MonoBehaviour:
   imuPoison: 1
   imuBurn: 0
   target: {fileID: 0}
+  slimeSprite: {fileID: 1281315935731144385}
+  slimpSprite: {fileID: 749623751770035469}
   explosion: {fileID: 11400000, guid: 5fdae8f5bc61399459cbae9f7edb9c7d, type: 2}
 --- !u!61 &634356893387697209
 BoxCollider2D:
@@ -715,8 +748,8 @@ Transform:
   m_Children:
   - {fileID: 1281315935731144385}
   - {fileID: 749623751770035469}
-  m_Father: {fileID: 3740516601931120440}
-  m_RootOrder: 1
+  m_Father: {fileID: 3182330919762664466}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &7614133136612027512
 GameObject:

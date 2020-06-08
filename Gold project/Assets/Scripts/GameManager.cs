@@ -167,15 +167,6 @@ public class GameManager : MonoBehaviour
     //    return insta;
     //}
 
-    public GameObject InstantiateUnit(GameObject unit, Unit.Side side, Vector2 pos)
-    {
-
-        GameObject insta = InstantiateUnit(unit, side, (side == Unit.Side.ALLY ? allyParent : enemyParent));
-        insta.transform.position = pos;
-
-        return insta;
-    }
-
     public GameObject InstantiateUnit(GameObject unit, Unit.Side side, Transform parent)
     {
         GameObject insta = Instantiate(unit, parent);
@@ -185,10 +176,21 @@ public class GameManager : MonoBehaviour
         insta.GetComponent<Unit>().side = side;
 
         if (insta.GetComponent<Unit>().type == Unit.Type.PAWN)
+        {
             insta.GetComponent<Pawn>().target = (side == Unit.Side.ALLY ? enemyParent : allyParent);
+        }
 
         if (side == Unit.Side.ALLY)
             allies.Add(insta);
+
+        return insta;
+    }
+
+    public GameObject InstantiateUnit(GameObject unit, Unit.Side side, Vector2 pos)
+    {
+
+        GameObject insta = InstantiateUnit(unit, side, (side == Unit.Side.ALLY ? allyParent : enemyParent));
+        insta.transform.position = pos;
 
         return insta;
     }

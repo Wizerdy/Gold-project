@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.Events;
 
 public class Tower : Structure
@@ -13,6 +14,7 @@ public class Tower : Structure
 
     [Header("Sprites")]
     [SerializeField] private List<SpriteRenderer> toColor;
+    [SerializeField] private Image lifebar;
 
     [Header("OnDead")]
     [SerializeField] private UnityEvent action;
@@ -31,6 +33,7 @@ public class Tower : Structure
     public override void LoseHealth(int amount)
     {
         base.LoseHealth(amount);
+        UpdateHealth();
         ShopManager.instance.RefreshHUD();
     }
 
@@ -91,11 +94,19 @@ public class Tower : Structure
         {
             action.Invoke();
         }
+
+        UpdateHealth();
     }
 
     private void ChangeColor(Color color)
     {
         for (int i = 0; i < toColor.Count; i++)
             toColor[i].color = color;
+    }
+
+    private void UpdateHealth()
+    {
+        if(lifebar != null)
+            lifebar.fillAmount = Tools.Map((float)curHealth, 0f, (float)maxHealth, 0f, 1f);
     }
 }

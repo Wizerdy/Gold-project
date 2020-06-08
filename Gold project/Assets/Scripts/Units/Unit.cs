@@ -22,7 +22,7 @@ public abstract class Unit : MonoBehaviour
     public float attackSpeed;
     public Colors color;
     [SerializeField] private Collider2D attackRange = null;
-    [SerializeField] protected SpriteRenderer sprRend = null;
+    [SerializeField] protected Transform sprRend;
 
     [HideInInspector] public bool canAttack;
     [HideInInspector] public int curHealth;
@@ -58,9 +58,6 @@ public abstract class Unit : MonoBehaviour
             layerMask = GameManager.instance.unitLayer,
             useLayerMask = true
         };
-
-        if (sprRend == null)
-            sprRend = GetComponent<SpriteRenderer>();
     }
 
     protected void LateUpdate()
@@ -111,8 +108,6 @@ public abstract class Unit : MonoBehaviour
     public virtual void LoseHealth(int amount)
     {
         curHealth -= amount;
-        //if (sprRend != null)
-        //StartCoroutine(Coloration(Color.red, 0.05f));
 
         if (curHealth < 0)
             curHealth = 0;
@@ -121,14 +116,6 @@ public abstract class Unit : MonoBehaviour
     public virtual void LoseHealth(float amount)
     {
         LoseHealth(maxHealth * amount);
-    }
-
-    protected IEnumerator Coloration(Color color, float time)
-    {
-        Color baseColor = sprRend.color;
-        sprRend.color = color;
-        yield return new WaitForSeconds(time);
-        sprRend.color = baseColor;
     }
 
     public int DealDamage()

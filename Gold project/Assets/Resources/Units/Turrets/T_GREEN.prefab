@@ -257,7 +257,7 @@ MonoBehaviour:
   hit: []
   cost: 800
   ammo: {fileID: 3975769326864515960, guid: 3f0a9949e8a8a174eac03e736b3f47a0, type: 3}
-  ammoSpeed: 300
+  ammoSpeed: 1500
   offSet: 1
   sprite: {fileID: 546008598194761017}
 --- !u!1 &4978383070831852508

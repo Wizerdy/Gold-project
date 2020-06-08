@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NeutralSpawner : MonoBehaviour
 {
-    public bool towerIsTaken = false;
+    [HideInInspector] public bool towerIsTaken = false;
     private NeutralSpawner isLinkedTo;
 
     [Space]
@@ -12,6 +12,7 @@ public class NeutralSpawner : MonoBehaviour
     public float cdBetweenSlime = .5f;
     public float cdBetweenWave = 5;
     private bool waitingBetweenWave = false;
+    [SerializeField] private float waitForIt;
 
     [Space]
     public GameObject target;
@@ -21,8 +22,11 @@ public class NeutralSpawner : MonoBehaviour
     public NeutralSpawner[] lookOut;
     private List<GameObject> isTaken = new List<GameObject>();
 
+    private bool wait;
+
     void Start()
     {
+        wait = false;
         towerInstance = GetComponent<Tower>();
 
         if(lookOut.Length > 0)
@@ -33,6 +37,7 @@ public class NeutralSpawner : MonoBehaviour
             }
         }
 
+        StartCoroutine("Wait", waitForIt);
     }
 
     void Update()
@@ -47,7 +52,6 @@ public class NeutralSpawner : MonoBehaviour
 
         if(lookOut.Length == 0 && towerInstance.side == Unit.Side.NEUTRAL)
         {
-
             StartCoroutine(SpawnNeutralForce(target));
         }
 
@@ -61,10 +65,13 @@ public class NeutralSpawner : MonoBehaviour
 
     IEnumerator SpawnNeutralForce(GameObject target)
     {
+        while(!wait)
+            yield return new WaitForSeconds(1f);
+
         if(waitingBetweenWave == false)
         {
             waitingBetweenWave = true;
-
+            yield return new WaitForSeconds(cdBetweenWave);
 
             for(int i = 0; i < nbOfSlime; i++)
             {
@@ -85,9 +92,14 @@ public class NeutralSpawner : MonoBehaviour
                 yield return new WaitForSeconds(cdBetweenSlime);
             }
 
-            yield return new WaitForSeconds(cdBetweenWave);
             waitingBetweenWave = false;
         }
     }
 
+
+    IEnumerator Wait(float time)
+    {
+        yield return new WaitForSeconds(time);
+        wait = true;
+    }
 }

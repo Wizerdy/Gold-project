@@ -60,8 +60,8 @@ Transform:
   m_Children:
   - {fileID: 1989998184775644518}
   - {fileID: 321371254027649049}
-  m_Father: {fileID: 3740516601931120440}
-  m_RootOrder: 1
+  m_Father: {fileID: 501775384024358412}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3252299583092006303
 GameObject:
@@ -227,6 +227,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3378634521824388219
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 501775384024358412}
+  m_Layer: 0
+  m_Name: Size
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &501775384024358412
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3378634521824388219}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 7822304002253684429}
+  m_Father: {fileID: 3740516601931120440}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3427312299072077821
 GameObject:
   m_ObjectHideFlags: 0
@@ -339,7 +370,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 9065462687598279394}
-  - {fileID: 7822304002253684429}
+  - {fileID: 501775384024358412}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -364,7 +395,7 @@ MonoBehaviour:
   attackSpeed: 0.2
   color: 5
   attackRange: {fileID: 5278358871612878103}
-  sprRend: {fileID: 0}
+  sprRend: {fileID: 501775384024358412}
   canAttack: 0
   curHealth: 0
   hit: []
@@ -382,7 +413,9 @@ MonoBehaviour:
   imuPoison: 0
   imuBurn: 0
   target: {fileID: 0}
-  lifeTime: 1000
+  slimeSprite: {fileID: 1989998184775644518}
+  slimpSprite: {fileID: 321371254027649049}
+  lifeTime: 0
 --- !u!61 &634356893387697209
 BoxCollider2D:
   m_ObjectHideFlags: 0

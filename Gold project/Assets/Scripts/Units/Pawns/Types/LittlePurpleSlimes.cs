@@ -9,7 +9,8 @@ public class LittlePurpleSlimes : Pawn
     protected override void Start()
     {
         base.Start();
-        StartCoroutine("Live", lifeTime);
+        if(lifeTime > 0)
+            StartCoroutine("Live", lifeTime);
     }
 
     protected void OnCollisionEnter2D(Collision2D collision)
