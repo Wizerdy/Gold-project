@@ -19,7 +19,7 @@ public class NeutralSpawner : MonoBehaviour
 
     [Space]
     public NeutralSpawner[] lookOut;
-    private List<GameObject> isTaken;
+    private List<GameObject> isTaken = new List<GameObject>();
 
     void Start()
     {
@@ -32,6 +32,7 @@ public class NeutralSpawner : MonoBehaviour
                 lookFor.isLinkedTo = GetComponent<NeutralSpawner>();
             }
         }
+
     }
 
     void Update()
@@ -44,7 +45,7 @@ public class NeutralSpawner : MonoBehaviour
             }
         }
 
-        if(lookOut.Length == 0 && towerInstance.side != Unit.Side.NEUTRAL)
+        if(lookOut.Length == 0 && towerInstance.side == Unit.Side.NEUTRAL)
         {
 
             StartCoroutine(SpawnNeutralForce(target));
