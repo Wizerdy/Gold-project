@@ -24,7 +24,8 @@ public class Tower : Structure
         if (side == Side.ALLY && touch != null)
             touch.active = true;
 
-        ChangeColor(GameManager.instance.neutralColor);
+        if(side != Side.NEUTRAL)
+            ChangeColor(GameManager.instance.neutralColor);
     }
 
     public override void LoseHealth(int amount)

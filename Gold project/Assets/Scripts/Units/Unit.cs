@@ -41,6 +41,9 @@ public abstract class Unit : MonoBehaviour
     protected Coroutine burn;
     protected int burnDamage;
 
+    protected GameObject burnParticle;
+    protected GameObject regenParticle;
+
     public Unit(Type type) { this.type = type; }
 
     protected virtual void Start()
@@ -83,7 +86,7 @@ public abstract class Unit : MonoBehaviour
         if (attackRange.OverlapCollider(attackFilter, hit) > 0)
         {
             for (int i = 0; i < hit.Count; i++)
-                if (hit[i] != null && hit[i].gameObject == hitTarget)
+                if (hit[i] != null && hit[i].gameObject == hitTarget && hitTarget.GetComponent<Unit>().side != side)
                 {
                     hitIndex = i;
                     return true;
@@ -171,26 +174,6 @@ public abstract class Unit : MonoBehaviour
             burn = StartCoroutine("Burn");
     }
 
-    protected IEnumerator IntensifyDoT(float damage, float duration)
-    {
-        if (damage <= 1f && damage >= 0f)
-            poisonDamage += damage;
-        else
-            burnDamage += Mathf.FloorToInt(damage);
-        
-        yield return new WaitForSeconds(duration);
-
-        if (damage <= 1f && damage >= 0f)
-            poisonDamage -= damage;
-        else
-            burnDamage -= Mathf.FloorToInt(damage);
-
-        if (poisonDamage < 0)
-            poisonDamage = 0;
-        if (burnDamage < 0)
-            burnDamage = 0;
-    }
-
     protected IEnumerator IntensifyPoison(float damage, float duration)
     {
         poisonDamage += damage;
@@ -207,6 +190,7 @@ public abstract class Unit : MonoBehaviour
         yield return new WaitForSeconds(duration);
         burnDamage -= damage;
 
+
         if (burnDamage < 0)
             burnDamage = 0;
     }
@@ -222,10 +206,23 @@ public abstract class Unit : MonoBehaviour
 
     protected IEnumerator Burn()
     {
+        if (burnParticle == null)
+            burnParticle = Instantiate(GameManager.instance.burnParticles, transform);
+
         while (true)
         {
-            yield return new WaitForSeconds(GameManager.instance.dotSpeed);
-            LoseHealth(burnDamage);
+            if (burnDamage > 0)
+            {
+                if (!burnParticle.activeSelf)
+                    burnParticle.SetActive(true);
+
+                yield return new WaitForSeconds(GameManager.instance.dotSpeed);
+                LoseHealth(burnDamage);
+            } else
+            {
+                if (burnParticle.activeSelf)
+                    burnParticle.SetActive(false);
+            }
         }
     }
 

@@ -41,6 +41,8 @@ public class GameManager : MonoBehaviour
 
     [Header("GameObject")]
     public GameObject splashParticles;
+    public GameObject burnParticles;
+    public GameObject regenParticles;
     public GameObject splash;
     public GameObject deathParticle;
     public GameObject explosion;
@@ -206,13 +208,15 @@ public class GameManager : MonoBehaviour
     {
         GameObject insta = Instantiate(splashParticles, position, Quaternion.identity);
         insta.transform.eulerAngles = angle;
-        int maxDamage = 500;
+        int maxDamage = 20;
         insta.GetComponent<SplashManagerInside>().SetParticleSystem(
            damage / 20 * maxDamage, damage / 20 * maxDamage,
            damage / 40 * maxDamage, damage / 50 * maxDamage,
            damage / 0.5f * maxDamage, damage / 0.6f * maxDamage,
            color
         );
+
+        insta.SetActive(true);
     }
 
     public void SpawnDamageParticles(int damage, Color color, Vector3 position, Unit.Side side)

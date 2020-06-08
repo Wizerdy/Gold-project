@@ -23,10 +23,13 @@ public class SplashManagerInside : MonoBehaviour
 
     public void SetParticleSystem(int numberMin, int numberMax, int speedMin, int speedMax, float sizeMin, float sizeMax, Color color)
     {
+        if (ps == null)
+            ps = GetComponent<ParticleSystem>();
+
         ParticleSystem.MainModule main = ps.main;
-        ps.emission.SetBurst(0, new ParticleSystem.Burst(0f, (short)numberMin, (short)numberMax));
-        main.startSpeed = new ParticleSystem.MinMaxCurve(speedMin, speedMax);
-        main.startSize = new ParticleSystem.MinMaxCurve(sizeMin, sizeMax);
+        //ps.emission.SetBurst(0, new ParticleSystem.Burst(0f, (short)numberMin, (short)numberMax));
+        //main.startSpeed = new ParticleSystem.MinMaxCurve(speedMin, speedMax);
+        //main.startSize = new ParticleSystem.MinMaxCurve(sizeMin, sizeMax);
         main.startColor = color;
     }
 

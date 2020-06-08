@@ -29,8 +29,12 @@ public abstract class Pawn : Unit
 
     [Header("Other")]
     public Transform target;
+    public Transform slimeSprite;
+    public Transform slimpSprite;
 
     private Coroutine atkPrep;
+
+    private Animator animator;
 
     public Pawn() : base(Type.PAWN) { }
 
@@ -52,6 +56,21 @@ public abstract class Pawn : Unit
 
         if (regen > 0)
             StartCoroutine("Regen");
+
+        animator = GetComponent<Animator>();
+
+        if (side == Side.ALLY)
+        {
+            animator.SetBool("isAlly", true);
+            slimeSprite.gameObject.SetActive(true);
+            slimpSprite.gameObject.SetActive(false);
+        }
+        else
+        {
+            animator.SetBool("isAlly", false);
+            slimpSprite.gameObject.SetActive(true);
+            slimeSprite.gameObject.SetActive(false);
+        }
     }
 
     private void Update()
@@ -69,6 +88,7 @@ public abstract class Pawn : Unit
             Attack(hit[hitIndex].gameObject);
             immobilize = true;
             canAttack = false;
+            animator.SetTrigger("Attack");
         }
         else if (atkPrep == null)
         {
@@ -172,6 +192,10 @@ public abstract class Pawn : Unit
                 curHealth += regen;
             else
                 curHealth = maxHealth;
+
+            if (regenParticle == null)
+                regenParticle = Instantiate(GameManager.instance.regenParticles, transform);
+
             yield return new WaitForSeconds(regenCd);
         }
     }
