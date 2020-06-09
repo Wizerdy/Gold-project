@@ -215,7 +215,7 @@ public class GameManager : MonoBehaviour
     public GameObject SpawnSplash(Vector2 pos, Colors color)
     {
         GameObject insta = SpawnSplash(pos, differentsColors[(int)color]);
-        insta.GetComponent<SpriteRenderer>().sortingOrder = (-50 + (int)color);
+        insta.GetComponent<SpriteRenderer>().sortingOrder = (-170 + (int)color);
         return insta;
     }
 

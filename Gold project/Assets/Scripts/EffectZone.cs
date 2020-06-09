@@ -83,6 +83,8 @@ public class EffectZone : MonoBehaviour
         if (behaviour.stunt)
             unit.Stunt(behaviour.stuntDuration);
 
+        unit.lastDamageSide = side;
+
         //if (behaviour.burn)
         //    unit.StartCoroutine(unit.DOT(behaviour.dot, behaviour.dotDuration, behaviour.damageSpeed));
     }

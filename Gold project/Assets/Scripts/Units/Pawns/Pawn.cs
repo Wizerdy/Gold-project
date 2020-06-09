@@ -47,8 +47,13 @@ public abstract class Pawn : Unit
 
         immobilize = false;
 
-        if(sprRend != null)
-            sprRend.localScale = new Vector3(Mathf.Pow((float)maxHealth / 400f, 1f/3f), Mathf.Pow((float)maxHealth / 400f, 1f/3f), 1);
+        if (sprRend != null)
+        {
+            float scale = Mathf.Pow((float)maxHealth / 400f, 1f / 3f);
+            sprRend.localScale = new Vector3(scale, scale, 1);
+            sprRend.localPosition = new Vector3(sprRend.localPosition.x, sprRend.localPosition.y + (scale - 1f) * 0.35f, sprRend.localPosition.z);
+            Debug.Log((scale - 1f) * 0.35f);
+        }
 
         baseScale = transform.localScale;
 
@@ -129,8 +134,7 @@ public abstract class Pawn : Unit
             unit.LoseHealth(DealDamage());
         }
 
-        if (target.GetComponent<Tower>() != null)
-            target.GetComponent<Tower>().lastDamageSide = side;
+        target.GetComponent<Unit>().lastDamageSide = side;
     }
 
     public override void LoseHealth(int amount)
@@ -170,12 +174,12 @@ public abstract class Pawn : Unit
     {
         GameManager.instance.SpawnSplash(transform.position, GameManager.instance.differentsColors[(int)color]);
 
-        switch(side) {
+        switch(lastDamageSide) {
             case Side.ALLY:
-                GameManager.instance.iA.Gain(Mathf.FloorToInt(cost * GameManager.instance.slimeRefund));
+                ShopManager.instance.Gain(Mathf.FloorToInt(cost * GameManager.instance.slimeRefund));
                 break;
             case Side.ENEMY:
-                ShopManager.instance.Gain(Mathf.FloorToInt(cost * GameManager.instance.slimeRefund));
+                GameManager.instance.iA.Gain(Mathf.FloorToInt(cost * GameManager.instance.slimeRefund));
                 break;
         }
 

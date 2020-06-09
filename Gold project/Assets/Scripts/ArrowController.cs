@@ -25,6 +25,8 @@ public class ArrowController : MonoBehaviour
             else
                 unit.LoseHealth(damage);
 
+            unit.lastDamageSide = side;
+
             if (behaviour != null)
             {
                 if (explode)

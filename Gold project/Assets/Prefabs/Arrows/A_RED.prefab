@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4757890053573898254}
   - component: {fileID: 7712790869122441118}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: Trail
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -150,7 +150,7 @@ GameObject:
   - component: {fileID: 6651696666255563055}
   - component: {fileID: 1704087636003480694}
   - component: {fileID: 5014050078513790311}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: A_RED
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -256,6 +256,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 500
+  atkPoison: 0
   ammo: {fileID: 3975769326864515960, guid: fa03eafc9abc7d94b947d83bd2cc428c, type: 3}
   ammoSpeed: 1500
   offSet: 1
@@ -385,7 +386,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 26.030361, y: -11.487207}
+  m_Offset: {x: 26.030361, y: -17.361712}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -396,7 +397,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 47.317055, y: 23.974415}
+  m_Size: {x: 47.317055, y: 35.723423}
   m_EdgeRadius: 0
 --- !u!1 &7350487598542794659
 GameObject:

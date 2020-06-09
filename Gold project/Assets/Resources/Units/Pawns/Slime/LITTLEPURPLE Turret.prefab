@@ -369,6 +369,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 0
+  lastDamageSide: 0
   speed: 4
   curSpeed: 0
   regen: 0

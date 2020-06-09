@@ -19,7 +19,7 @@ public class IAController : MonoBehaviour
     public float defActionTime;
 
     [Range(0, 100)] public int defChance = 100;
-    [Range(0f, 1f)] private float defReduction = 0.94f;
+    [SerializeField, Range(0f, 1f)] private float defReduction = 0.94f;
     private int atkReduction = 0;
 
     [HideInInspector] public int pumpCount = 0;

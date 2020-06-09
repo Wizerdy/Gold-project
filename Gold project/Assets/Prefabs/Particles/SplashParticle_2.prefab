@@ -4794,7 +4794,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 700
   m_RenderMode: 0
   m_SortMode: 0
   m_MinParticleSize: 0
@@ -4834,4 +4834,4 @@ MonoBehaviour:
   number: {x: 0, y: 0}
   speed: {x: 0, y: 0}
   size: {x: 0, y: 0}
-  color: {r: 0, g: 0, b: 0, a: 0}
+  color: 0

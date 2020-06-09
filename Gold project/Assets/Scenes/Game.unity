@@ -1222,7 +1222,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 757456567}
         m_MethodName: SetHudId
         m_Mode: 3
         m_Arguments:
@@ -2580,7 +2580,7 @@ MonoBehaviour:
   isLinkedTo: {fileID: 0}
   nbOfSlime: 3
   cdBetweenSlime: 0.5
-  cdBetweenWave: 5
+  cdBetweenWave: 10
   waitForIt: 20
   target: {fileID: 524513729}
   lookOut: []
@@ -3248,7 +3248,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: The courageous white slime will fight and die for you.
+  m_Text: This courageous white slime will fight and die for you.
 --- !u!222 &74173330
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -4418,7 +4418,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 757456567}
         m_MethodName: SetHudId
         m_Mode: 3
         m_Arguments:
@@ -6052,7 +6052,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: WHITE
+  m_Text: Cannon Fodder
 --- !u!222 &132933984
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -8595,7 +8595,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 757456567}
         m_MethodName: SetHudId
         m_Mode: 3
         m_Arguments:
@@ -9221,7 +9221,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -152
+  m_SortingOrder: -177
   m_Sprite: {fileID: 21300000, guid: b78c56e228f09cf4d80fa75574daa306, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -10869,7 +10869,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -150
+  m_SortingOrder: -175
   m_Sprite: {fileID: 21300000, guid: f2110a6f7e0ff494bb89f8e8f83c72d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -11672,7 +11672,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -148
+  m_SortingOrder: -172
   m_Sprite: {fileID: 21300000, guid: 27982ab379d4bff47b071d24de549533, type: 3}
   m_Color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
   m_FlipX: 0
@@ -12322,7 +12322,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 757456567}
         m_MethodName: SetHudId
         m_Mode: 3
         m_Arguments:
@@ -15822,6 +15822,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 0
+  lastDamageSide: 0
 --- !u!1 &328370105
 GameObject:
   m_ObjectHideFlags: 0
@@ -16367,8 +16368,8 @@ Transform:
   - {fileID: 196145921}
   - {fileID: 1712462945}
   - {fileID: 1966486237}
-  - {fileID: 1076976692}
   - {fileID: 417013090}
+  - {fileID: 1076976692}
   m_Father: {fileID: 57788051}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -19223,7 +19224,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Description : Turret''s Description'
+  m_Text: Shooty shoot fast and it is the only thing it can do... "shoot".
 --- !u!222 &402792727
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19382,7 +19383,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -150
+  m_SortingOrder: -175
   m_Sprite: {fileID: 21300000, guid: f2110a6f7e0ff494bb89f8e8f83c72d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -19732,7 +19733,7 @@ Transform:
   m_LocalScale: {x: 0.76163, y: 0.76163, z: 0.76163}
   m_Children: []
   m_Father: {fileID: 336136743}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &417013091
 SpriteRenderer:
@@ -19772,7 +19773,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -151
+  m_SortingOrder: -176
   m_Sprite: {fileID: 21300000, guid: 2865fc1cb5f78074ba3a25f201d4ef9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -27323,7 +27324,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: T_WHITE
+  m_Text: Shotty
 --- !u!222 &586670605
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28877,7 +28878,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: The courageous white slime will fight and die for you.
+  m_Text: This courageous slime will fight and die for you.
 --- !u!222 &623015420
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -29264,7 +29265,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 757456567}
         m_MethodName: SetHudId
         m_Mode: 3
         m_Arguments:
@@ -29870,6 +29871,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 0
+  lastDamageSide: 0
 --- !u!1 &659127626
 GameObject:
   m_ObjectHideFlags: 0
@@ -33035,6 +33037,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 0
+  lastDamageSide: 0
 --- !u!1 &727376217
 GameObject:
   m_ObjectHideFlags: 0
@@ -34226,7 +34229,7 @@ MonoBehaviour:
   isLinkedTo: {fileID: 0}
   nbOfSlime: 3
   cdBetweenSlime: 0.5
-  cdBetweenWave: 5
+  cdBetweenWave: 10
   waitForIt: 20
   target: {fileID: 1095048867}
   lookOut: []
@@ -34616,7 +34619,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: T_WHITE
+  m_Text: Shotty
 --- !u!222 &753365255
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34827,9 +34830,9 @@ MonoBehaviour:
   - {fileID: 2827377913258644291}
   - {fileID: 1099739234614383178}
   - {fileID: 7968277629152129898}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 328016179}
+  - {fileID: 725567453}
+  - {fileID: 925517613}
   moneyText: {fileID: 1515821259}
   healthText: {fileID: 857302723}
   spawnList:
@@ -34865,7 +34868,8 @@ MonoBehaviour:
   actionTime: 7
   spawnOffset: 0.2
   defActionTime: 1
-  defChance: 70
+  defChance: 50
+  defReduction: 0.8
   pumpCount: 0
   turretCount: 0
 --- !u!114 &757456569
@@ -36055,6 +36059,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 0
+  lastDamageSide: 0
 --- !u!1 &785563041
 GameObject:
   m_ObjectHideFlags: 0
@@ -40713,7 +40718,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: The courageous white slime will fight and die for you.
+  m_Text: This courageous white slime will fight and die for you.
 --- !u!222 &912381650
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -41493,6 +41498,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 0
+  lastDamageSide: 0
 --- !u!1 &928219132
 GameObject:
   m_ObjectHideFlags: 0
@@ -41689,7 +41695,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 757456567}
         m_MethodName: SetHudId
         m_Mode: 3
         m_Arguments:
@@ -42291,6 +42297,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 950394737}
   m_CullTransparentMesh: 0
+--- !u!1 &951708827
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 951708828}
+  - component: {fileID: 951708830}
+  - component: {fileID: 951708829}
+  m_Layer: 12
+  m_Name: Touched
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &951708828
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951708827}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 3819758360932899713}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &951708829
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951708827}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.8743341, y: 3.33665}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 5.092386, y: 10.532915}
+  m_EdgeRadius: 0
+--- !u!114 &951708830
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 951708827}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4f3f58a27951ed4ab3ba3e8916ee03c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  hudId: 0
+  active: 1
 --- !u!1 &952904717
 GameObject:
   m_ObjectHideFlags: 0
@@ -43248,7 +43326,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 757456567}
         m_MethodName: SetHudId
         m_Mode: 3
         m_Arguments:
@@ -43853,7 +43931,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: T_WHITE
+  m_Text: Shotty
 --- !u!222 &982142011
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45732,7 +45810,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 757456567}
         m_MethodName: SetHudId
         m_Mode: 3
         m_Arguments:
@@ -47803,7 +47881,7 @@ PrefabInstance:
     - target: {fileID: 4173569297816276658, guid: cf59bc2597b52784186f8e916881267f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4173569297816276658, guid: cf59bc2597b52784186f8e916881267f,
         type: 3}
@@ -53030,6 +53108,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 0
+  lastDamageSide: 0
 --- !u!1 &1191890214
 GameObject:
   m_ObjectHideFlags: 0
@@ -54088,7 +54167,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: T_WHITE
+  m_Text: Shotty
 --- !u!222 &1222238327
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54508,8 +54587,8 @@ Transform:
   - {fileID: 1743220971}
   - {fileID: 1124758245}
   - {fileID: 1505905895}
-  - {fileID: 1504559144}
   - {fileID: 1938508210}
+  - {fileID: 1504559144}
   m_Father: {fileID: 1725072347}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -62363,7 +62442,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -150
+  m_SortingOrder: -175
   m_Sprite: {fileID: 21300000, guid: f2110a6f7e0ff494bb89f8e8f83c72d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -69167,7 +69246,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Description : Turret''s Description'
+  m_Text: Shooty shoot fast and it is the only thing it can do... "shoot".
 --- !u!222 &1496081412
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -69393,7 +69472,7 @@ PrefabInstance:
     - target: {fileID: 4173569297816276658, guid: cf59bc2597b52784186f8e916881267f,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4173569297816276658, guid: cf59bc2597b52784186f8e916881267f,
         type: 3}
@@ -69537,7 +69616,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -148
+  m_SortingOrder: -172
   m_Sprite: {fileID: 21300000, guid: 27982ab379d4bff47b071d24de549533, type: 3}
   m_Color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
   m_FlipX: 0
@@ -72011,7 +72090,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: The courageous white slime will fight and die for you.
+  m_Text: This courageous white slime will fight and die for you.
 --- !u!222 &1562166816
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -73084,7 +73163,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Description : Turret''s Description'
+  m_Text: Shooty shoot fast and it is the only thing it can do... "shoot".
 --- !u!222 &1604553775
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -74349,7 +74428,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Description : Turret''s Description'
+  m_Text: Shooty shoot fast and it is the only thing it can do... "shoot".
 --- !u!222 &1623596069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -76664,7 +76743,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 757456567}
         m_MethodName: SetHudId
         m_Mode: 3
         m_Arguments:
@@ -76781,7 +76860,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: WHITE
+  m_Text: Cannon Fodder
 --- !u!222 &1662082766
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -80604,7 +80683,7 @@ MonoBehaviour:
   isLinkedTo: {fileID: 0}
   nbOfSlime: 3
   cdBetweenSlime: 0.5
-  cdBetweenWave: 5
+  cdBetweenWave: 10
   waitForIt: 20
   target: {fileID: 0}
   lookOut:
@@ -81208,7 +81287,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -152
+  m_SortingOrder: -177
   m_Sprite: {fileID: 21300000, guid: b78c56e228f09cf4d80fa75574daa306, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -81931,7 +82010,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -152
+  m_SortingOrder: -177
   m_Sprite: {fileID: 21300000, guid: b78c56e228f09cf4d80fa75574daa306, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -83402,7 +83481,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: WHITE
+  m_Text: Cannon Fodder
 --- !u!222 &1782557559
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -86326,7 +86405,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 757456567}
         m_MethodName: SetHudId
         m_Mode: 3
         m_Arguments:
@@ -86692,6 +86771,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 0
+  lastDamageSide: 0
 --- !u!1 &1857243927
 GameObject:
   m_ObjectHideFlags: 0
@@ -88380,7 +88460,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: WHITE
+  m_Text: Cannon Fodder
 --- !u!222 &1896388395
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -90345,7 +90425,7 @@ Transform:
   m_LocalScale: {x: 0.76163, y: 0.76163, z: 0.76163}
   m_Children: []
   m_Father: {fileID: 1237497990}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1938508211
 SpriteRenderer:
@@ -90385,7 +90465,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -151
+  m_SortingOrder: -176
   m_Sprite: {fileID: 21300000, guid: 2865fc1cb5f78074ba3a25f201d4ef9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -91542,7 +91622,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -148
+  m_SortingOrder: -172
   m_Sprite: {fileID: 21300000, guid: 27982ab379d4bff47b071d24de549533, type: 3}
   m_Color: {r: 0.7830189, g: 0.7830189, b: 0.7830189, a: 1}
   m_FlipX: 0
@@ -93103,7 +93183,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -151
+  m_SortingOrder: -176
   m_Sprite: {fileID: 21300000, guid: 2865fc1cb5f78074ba3a25f201d4ef9f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -105401,6 +105481,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 3
+  lastDamageSide: 0
 --- !u!1 &1678291736268440369
 GameObject:
   m_ObjectHideFlags: 0
@@ -105676,6 +105757,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 2
+  lastDamageSide: 0
 --- !u!1 &3819758359775694593
 GameObject:
   m_ObjectHideFlags: 0
@@ -106199,6 +106281,7 @@ Transform:
   m_Children:
   - {fileID: 2148818187418667926}
   - {fileID: 474097917}
+  - {fileID: 951708828}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -106243,7 +106326,7 @@ MonoBehaviour:
   hit: []
   cost: 0
   lastDamageSide: 0
-  spawnPoint: {fileID: 0}
+  spawnPoint: {fileID: 1095048868}
   turrets:
   - {fileID: 887992988}
   - {fileID: 1181356552}
@@ -106277,7 +106360,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3819758360932899712}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -106897,6 +106980,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 1
+  lastDamageSide: 0
 --- !u!1001 &7968277629152129897
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -107268,6 +107352,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 865543
+  lastDamageSide: 0
 --- !u!1001 &8043062715544918409
 PrefabInstance:
   m_ObjectHideFlags: 0

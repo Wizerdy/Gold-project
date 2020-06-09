@@ -22,7 +22,7 @@ public abstract class Unit : MonoBehaviour
     public float attackSpeed;
     public Colors color;
     [SerializeField] private Collider2D attackRange = null;
-    [SerializeField] protected Transform sprRend;
+    [SerializeField] public Transform sprRend;
 
     [HideInInspector] public bool canAttack;
     [HideInInspector] public int curHealth;
@@ -43,6 +43,8 @@ public abstract class Unit : MonoBehaviour
 
     protected GameObject burnParticle;
     protected GameObject regenParticle;
+
+    [HideInInspector] public Side lastDamageSide;
 
     public Unit(Type type) { this.type = type; }
 

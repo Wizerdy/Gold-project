@@ -6,8 +6,6 @@ using UnityEngine.Events;
 
 public class Tower : Structure
 {
-    [HideInInspector] public Side lastDamageSide;
-
     public Transform spawnPoint;
     public List<Transform> turrets;
     public List<Transform> pumps;
