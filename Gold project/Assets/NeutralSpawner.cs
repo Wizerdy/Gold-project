@@ -5,7 +5,7 @@ using UnityEngine;
 public class NeutralSpawner : MonoBehaviour
 {
     [HideInInspector] public bool towerIsTaken = false;
-    private NeutralSpawner isLinkedTo;
+    [SerializeField]private NeutralSpawner isLinkedTo;
 
     [Space]
     public int nbOfSlime = 3;
@@ -42,7 +42,7 @@ public class NeutralSpawner : MonoBehaviour
 
     void Update()
     {
-        if(lookOut.Length > 0 && isTaken.Count > 0)
+        if(lookOut.Length > 0 && isTaken.Count > 0 && towerInstance.side == Unit.Side.NEUTRAL)
         {
             foreach (GameObject tower in isTaken)
             {
@@ -50,7 +50,7 @@ public class NeutralSpawner : MonoBehaviour
             }
         }
 
-        if(lookOut.Length == 0 && towerInstance.side == Unit.Side.NEUTRAL)
+        if(lookOut.Length == 0 && towerInstance.side == Unit.Side.NEUTRAL && wait)
         {
             StartCoroutine(SpawnNeutralForce(target));
         }
@@ -58,16 +58,14 @@ public class NeutralSpawner : MonoBehaviour
         //Je veux pas rajouter deux ligne dans le script de Flo, j'ai peur de me faire tapper :'(
         if(towerInstance.side != Unit.Side.NEUTRAL && towerIsTaken == false)
         {
-            isLinkedTo.isTaken.Add(gameObject);
+            if(lookOut.Length == 0)
+                isLinkedTo.isTaken.Add(gameObject);
             towerIsTaken = true;
         }
     }
 
     IEnumerator SpawnNeutralForce(GameObject target)
-    {
-        while(!wait)
-            yield return new WaitForSeconds(1f);
-
+    {       
         if(waitingBetweenWave == false)
         {
             waitingBetweenWave = true;
@@ -92,6 +90,7 @@ public class NeutralSpawner : MonoBehaviour
                 yield return new WaitForSeconds(cdBetweenSlime);
             }
 
+            yield return new WaitForSeconds(1f);
             waitingBetweenWave = false;
         }
     }
