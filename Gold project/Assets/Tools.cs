@@ -13,4 +13,11 @@ public static class Tools
     {
         return new Vector2(min2.x + (value - min1) * (max2.x - min2.x) / (max1 - min1), min2.y + (value - min1) * (max2.y - min2.y) / (max1 - min1));
     }
+
+    public static void AddOiL(GameObject obj, int add)
+    {
+        SpriteRenderer[] sprRenders = obj.GetComponentsInChildren<SpriteRenderer>();
+        for (int i = 0; i < sprRenders.Length; i++)
+            sprRenders[i].sortingOrder += add;
+    }
 }

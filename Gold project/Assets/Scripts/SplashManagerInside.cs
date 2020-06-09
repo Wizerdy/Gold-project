@@ -9,7 +9,7 @@ public class SplashManagerInside : MonoBehaviour
     public Vector2Int number;
     public Vector2Int speed;
     public Vector2 size;
-    public Color color;
+    public Colors color;
 
     ParticleSystem ps;
 
@@ -21,16 +21,17 @@ public class SplashManagerInside : MonoBehaviour
         ps = GetComponent<ParticleSystem>();
     }
 
-    public void SetParticleSystem(int numberMin, int numberMax, int speedMin, int speedMax, float sizeMin, float sizeMax, Color color)
+    public void SetParticleSystem(int numberMin, int numberMax, int speedMin, int speedMax, float sizeMin, float sizeMax, Colors color)
     {
         if (ps == null)
             ps = GetComponent<ParticleSystem>();
 
         ParticleSystem.MainModule main = ps.main;
-        //ps.emission.SetBurst(0, new ParticleSystem.Burst(0f, (short)numberMin, (short)numberMax));
-        //main.startSpeed = new ParticleSystem.MinMaxCurve(speedMin, speedMax);
-        //main.startSize = new ParticleSystem.MinMaxCurve(sizeMin, sizeMax);
-        main.startColor = color;
+        ps.emission.SetBurst(0, new ParticleSystem.Burst(0f, (short)numberMin, (short)numberMax));
+        main.startSpeed = new ParticleSystem.MinMaxCurve(speedMin, speedMax);
+        main.startSize = new ParticleSystem.MinMaxCurve(sizeMin, sizeMax);
+        main.startColor = GameManager.instance.differentsColors[(int)color];
+        this.color = color;
     }
 
     void OnParticleTrigger()
@@ -56,7 +57,8 @@ public class SplashManagerInside : MonoBehaviour
     {
         //p.startColor = new Color32(255, 0, 0, 255);
         //p.startColor = new Color32((byte)Random.Range(0, 255), (byte)Random.Range(0, 255), (byte)Random.Range(0, 255), 255);
-        GameManager.instance.SpawnSplash(transform.TransformPoint(p.position), p.startColor);
+        //GameManager.instance.SpawnSplash(transform.TransformPoint(p.position), p.startColor);
+        GameManager.instance.SpawnSplash(transform.TransformPoint(p.position), color);
         p.remainingLifetime = 0;
         return p;
     }

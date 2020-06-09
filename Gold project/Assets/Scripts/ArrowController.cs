@@ -6,6 +6,7 @@ public class ArrowController : MonoBehaviour
 {
     [HideInInspector] public Unit.Side side;
     [HideInInspector] public int damage;
+    [HideInInspector] public float atkPoison;
 
     public bool explode;
     public Explosions behaviour;
@@ -19,7 +20,10 @@ public class ArrowController : MonoBehaviour
         {
             Pawn unit = go.GetComponent<Pawn>();
 
-            go.GetComponent<Pawn>().LoseHealth(damage);
+            if (!unit.imuPoison && atkPoison > 0 && unit.maxHealth * atkPoison > damage)
+                unit.LoseHealth(atkPoison);
+            else
+                unit.LoseHealth(damage);
 
             if (behaviour != null)
             {

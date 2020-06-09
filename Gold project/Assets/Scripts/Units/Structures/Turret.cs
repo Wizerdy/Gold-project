@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Turret : Structure
 {
+    [SerializeField, Range(0f, 1f)] private float atkPoison;
+
     public GameObject ammo;
     public float ammoSpeed;
     [Range(0f, 1f)] public float offSet = 1f;
@@ -39,6 +41,7 @@ public class Turret : Structure
             {
                 insta.GetComponent<ArrowController>().damage = DealDamage();
                 insta.GetComponent<ArrowController>().side = side;
+                insta.GetComponent<ArrowController>().atkPoison = atkPoison;
             }
         } else
         {

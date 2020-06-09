@@ -22,11 +22,12 @@ public class TurretButton : MonoBehaviour
                 {
                     int add = ShopManager.instance.spawnList[ShopManager.instance.currentHudId].GetComponent<OrderInLayer>().orderInLayer;
 
-                    SpriteRenderer[] sprRenders = insta.GetComponentsInChildren<SpriteRenderer>();
-                    for (int i = 0; i < sprRenders.Length; i++)
-                    {
-                        sprRenders[i].sortingOrder += add;
-                    }
+                    //SpriteRenderer[] sprRenders = insta.GetComponentsInChildren<SpriteRenderer>();
+                    //for (int i = 0; i < sprRenders.Length; i++)
+                    //{
+                    //    sprRenders[i].sortingOrder += add;
+                    //}
+                    Tools.AddOiL(insta, add);
                 }
             }
         }

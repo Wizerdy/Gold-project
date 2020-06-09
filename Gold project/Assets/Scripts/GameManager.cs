@@ -61,6 +61,8 @@ public class GameManager : MonoBehaviour
     [HideInInspector] public List<GameObject> allies;
     private RaycastHit2D[] mnpHits;
 
+    private int slimeOiL;
+
     private void Awake()
     {
         if (instance == null)
@@ -79,6 +81,7 @@ public class GameManager : MonoBehaviour
         }
 
         Time.timeScale = 1;
+        slimeOiL = 0;
     }
 
     private void Start()
@@ -178,6 +181,8 @@ public class GameManager : MonoBehaviour
         if (insta.GetComponent<Unit>().type == Unit.Type.PAWN)
         {
             insta.GetComponent<Pawn>().target = (side == Unit.Side.ALLY ? enemyParent : allyParent);
+            Tools.AddOiL(insta, slimeOiL);
+            slimeOiL = (slimeOiL + 5) % 100;
         }
 
         if (side == Unit.Side.ALLY)
@@ -195,7 +200,7 @@ public class GameManager : MonoBehaviour
         return insta;
     }
 
-    public void SpawnSplash(Vector2 pos, Color color)
+    public GameObject SpawnSplash(Vector2 pos, Color color)
     {
         GameObject insta = Instantiate(splash, pos, Quaternion.identity);
         //float size = UnityEngine.Random.Range(0.1f, 1);
@@ -204,24 +209,77 @@ public class GameManager : MonoBehaviour
         insta.transform.parent = splashParent;
         //GameObject insta2 = Instantiate(deathParticle, pos, deathParticle.transform.rotation);
         //insta2.GetComponent<ParticleSystem>().startColor = color;
+        return insta;
     }
 
-    public void SpawnDamageParticles(int damage, Color color, Vector3 position, Vector3 angle)
+    public GameObject SpawnSplash(Vector2 pos, Colors color)
+    {
+        GameObject insta = SpawnSplash(pos, differentsColors[(int)color]);
+        insta.GetComponent<SpriteRenderer>().sortingOrder = (-50 + (int)color);
+        return insta;
+    }
+
+    public void SpawnDamageParticles(int damage, Colors color, Vector3 position, Vector3 angle)
     {
         GameObject insta = Instantiate(splashParticles, position, Quaternion.identity);
         insta.transform.eulerAngles = angle;
-        int maxDamage = 20;
+        //int maxDamage = 20;
+        //insta.GetComponent<SplashManagerInside>().SetParticleSystem(
+        //   damage / 20 * maxDamage, damage / 20 * maxDamage,
+        //   damage / 40 * maxDamage, damage / 50 * maxDamage,
+        //   damage / 0.5f * maxDamage, damage / 0.6f * maxDamage,
+        //   color
+        //);
+        int numMin = 0, numMax = 0, speedMin = 0, speedMax = 0;
+        float sizeMin = 0f, sizeMax = 0f;
+
+        #region Vodka
+        if (damage < 20)
+        {
+            numMin = 2;
+            numMax = 3;
+            speedMin = 5;
+            speedMax = 10;
+            sizeMin = 0.2f;
+            sizeMax = 0.3f;
+        } else if(damage < 50)
+        {
+            numMin = 4;
+            numMax = 5;
+            speedMin = 7;
+            speedMax = 15;
+            sizeMin = 0.2f;
+            sizeMax = 0.3f;
+        } else if(damage < 100)
+        {
+            numMin = 6;
+            numMax = 7;
+            speedMin = 10;
+            speedMax = 20;
+            sizeMin = 0.2f;
+            sizeMax = 0.3f;
+        } else
+        {
+            numMin = 8;
+            numMax = 10;
+            speedMin = 15;
+            speedMax = 35;
+            sizeMin = 0.3f;
+            sizeMax = 0.4f;
+        }
+        #endregion
+
         insta.GetComponent<SplashManagerInside>().SetParticleSystem(
-           damage / 20 * maxDamage, damage / 20 * maxDamage,
-           damage / 40 * maxDamage, damage / 50 * maxDamage,
-           damage / 0.5f * maxDamage, damage / 0.6f * maxDamage,
+           numMin, numMax,
+           speedMin, speedMax,
+           sizeMin, sizeMax,
            color
         );
 
         insta.SetActive(true);
     }
 
-    public void SpawnDamageParticles(int damage, Color color, Vector3 position, Unit.Side side)
+    public void SpawnDamageParticles(int damage, Colors color, Vector3 position, Unit.Side side)
     {
         SpawnDamageParticles(damage, color, position, (side == Unit.Side.ALLY ? new Vector3(-45, -90, 90) : new Vector3(-135, -90, 90)));
     }

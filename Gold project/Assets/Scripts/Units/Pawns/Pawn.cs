@@ -24,7 +24,7 @@ public abstract class Pawn : Unit
     public bool imuExplosion;
     [SerializeField] private bool imuSlow;
     [SerializeField] private bool imuStunt;
-    [SerializeField] private bool imuPoison;
+    public bool imuPoison;
     [SerializeField] private bool imuBurn;
 
     [Header("Other")]
@@ -139,7 +139,7 @@ public abstract class Pawn : Unit
 
         transform.localScale = Tools.Map(curHealth, 0, maxHealth, baseScale * GameManager.instance.slimeMinSize, baseScale);
 
-        GameManager.instance.SpawnDamageParticles(amount, GameManager.instance.differentsColors[(int)color], transform.position, side);
+        GameManager.instance.SpawnDamageParticles(amount, color, transform.position, side);
     }
 
     public override void AddPoison(float damage, float duration)

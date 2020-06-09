@@ -148,9 +148,7 @@ public class IAController : MonoBehaviour
                     {
                         int add = parent.GetComponent<OrderInLayer>().orderInLayer;
 
-                        SpriteRenderer[] sprRenders = insta.GetComponentsInChildren<SpriteRenderer>();
-                        for (int i = 0; i < sprRenders.Length; i++)
-                            sprRenders[i].sortingOrder += add;
+                        Tools.AddOiL(insta, add);
                     }
 
                     turretCount++;
