@@ -1,13 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using GooglePlayGames;
 using GooglePlayGames.BasicApi;
 using UnityEngine.SocialPlatforms;
+using UnityEngine.UI;
 
 public class GPGSAuthentification : MonoBehaviour
 {
     public static PlayGamesPlatform platform;
+    public Text text;
 
     void Start()
     {
@@ -24,11 +24,13 @@ public class GPGSAuthentification : MonoBehaviour
         {
             if (success)
             {
-                Debug.Log("Looged in successfully !");
+                Debug.Log("Logged in successfully !");
+                text.text = success.ToString();
             }
             else
             {
                 Debug.Log("Failed ! :(");
+                text.text = success.ToString();
             }
         });
     }

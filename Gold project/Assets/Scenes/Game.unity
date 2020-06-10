@@ -1732,7 +1732,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   michel: {fileID: 566348324082799459, guid: 905eb646f97fb6f4798814ed80485bc9, type: 3}
-  cost: 5
+  cost: 10
   colorState: 0
   structType: 0
   costText: {fileID: 227988073}
@@ -10556,7 +10556,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Paint/s : \t   Value"
+  m_Text: More Pumps, more paint. More paint, more slime. More slime, more fun. More
+    fun... More Fun !
 --- !u!222 &217572422
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -11158,7 +11159,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 10
 --- !u!222 &227988074
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16476,7 +16477,7 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 0
+  cost: 200
   lastDamageSide: 0
 --- !u!1 &328370105
 GameObject:
@@ -18605,7 +18606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &383477523
 RectTransform:
   m_ObjectHideFlags: 0
@@ -24183,7 +24184,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 300
 --- !u!222 &504793071
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24659,7 +24660,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Pump's name
+  m_Text: Pump
 --- !u!222 &516104017
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -25651,7 +25652,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 10
 --- !u!222 &539877470
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32423,7 +32424,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Pump's name
+  m_Text: Pump
 --- !u!222 &694531161
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34306,7 +34307,7 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 0
+  cost: 200
   lastDamageSide: 0
 --- !u!1 &727376217
 GameObject:
@@ -34752,7 +34753,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   michel: {fileID: 4426236122652340427, guid: 2f78c9309cd28a04b887b8f4fea6f7a3, type: 3}
-  cost: 0
+  cost: 300
   colorState: 0
   structType: 1
   costText: {fileID: 958174808}
@@ -37668,7 +37669,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Pump's name
+  m_Text: Pump
 --- !u!222 &800776780
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -37884,7 +37885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   michel: {fileID: 4426236122652340427, guid: 2f78c9309cd28a04b887b8f4fea6f7a3, type: 3}
-  cost: 0
+  cost: 300
   colorState: 0
   structType: 1
   costText: {fileID: 1508583520}
@@ -42849,7 +42850,7 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 0
+  cost: 200
   lastDamageSide: 0
 --- !u!1 &928219132
 GameObject:
@@ -43909,7 +43910,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 300
 --- !u!222 &958174809
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44006,7 +44007,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Pump's name
+  m_Text: Pump
 --- !u!222 &960662938
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -51586,7 +51587,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 500
+  m_Text: 200
 --- !u!222 &1122165179
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54730,7 +54731,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 300
 --- !u!222 &1189641435
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54946,7 +54947,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 757456567}
         m_MethodName: SetHudId
         m_Mode: 3
         m_Arguments:
@@ -55150,7 +55151,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 10
 --- !u!222 &1201010600
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60562,7 +60563,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Paint/s : \t   Value"
+  m_Text: More Pumps, more paint. More paint, more slime. More slime, more fun. More
+    fun... More Fun !
 --- !u!222 &1309191925
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61772,7 +61774,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   michel: {fileID: 4426236122652340427, guid: 2f78c9309cd28a04b887b8f4fea6f7a3, type: 3}
-  cost: 0
+  cost: 300
   colorState: 0
   structType: 1
   costText: {fileID: 1189641434}
@@ -61904,7 +61906,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Paint/s : \t   Value"
+  m_Text: More Pumps, more paint. More paint, more slime. More slime, more fun. More
+    fun... More Fun !
 --- !u!222 &1341654382
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -62537,7 +62540,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   michel: {fileID: 566348324082799459, guid: 905eb646f97fb6f4798814ed80485bc9, type: 3}
-  cost: 5
+  cost: 10
   colorState: 0
   structType: 0
   costText: {fileID: 1201010599}
@@ -63975,7 +63978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   michel: {fileID: 4426236122652340427, guid: 2f78c9309cd28a04b887b8f4fea6f7a3, type: 3}
-  cost: 0
+  cost: 300
   colorState: 0
   structType: 1
   costText: {fileID: 504793070}
@@ -65374,7 +65377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   michel: {fileID: 566348324082799459, guid: 905eb646f97fb6f4798814ed80485bc9, type: 3}
-  cost: 0
+  cost: 10
   colorState: 0
   structType: 0
   costText: {fileID: 539877469}
@@ -72093,7 +72096,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 100
+  m_Text: 300
 --- !u!222 &1508583521
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -77290,7 +77293,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 500
+  m_Text: 200
 --- !u!222 &1636124443
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -81406,7 +81409,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 500
+  m_Text: 200
 --- !u!222 &1699227622
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -84367,7 +84370,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 5
+  m_Text: 10
 --- !u!222 &1753730258
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -91389,7 +91392,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "Paint/s : \t   Value"
+  m_Text: More Pumps, more paint. More paint, more slime. More slime, more fun. More
+    fun... More Fun !
 --- !u!222 &1908237655
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -91618,7 +91622,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 500
+  m_Text: 200
 --- !u!222 &1912441413
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -95063,7 +95067,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   michel: {fileID: 566348324082799459, guid: 905eb646f97fb6f4798814ed80485bc9, type: 3}
-  cost: 0
+  cost: 10
   colorState: 0
   structType: 0
   costText: {fileID: 1753730257}
@@ -101099,7 +101103,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2093840527
 RectTransform:
   m_ObjectHideFlags: 0
@@ -108338,7 +108342,7 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 3
+  cost: 600
   lastDamageSide: 0
 --- !u!1 &1678291736268440369
 GameObject:
@@ -108614,7 +108618,7 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 2
+  cost: 400
   lastDamageSide: 0
 --- !u!1 &3819758359775694593
 GameObject:
@@ -109837,7 +109841,7 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 1
+  cost: 200
   lastDamageSide: 0
 --- !u!1001 &7968277629152129897
 PrefabInstance:
@@ -110209,7 +110213,7 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 865543
+  cost: 800
   lastDamageSide: 0
 --- !u!1001 &8043062715544918409
 PrefabInstance:
