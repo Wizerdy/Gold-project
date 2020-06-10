@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour
 
     [HideInInspector] public Dictionary<string, GameObject> units;
     [HideInInspector] public List<GameObject> allies;
+
+    public bool particleEnabled;
     private RaycastHit2D[] mnpHits;
 
     private int slimeOiL;
@@ -211,6 +213,7 @@ public class GameManager : MonoBehaviour
         insta.transform.localScale = new Vector3(0.2f, 0.2f, 1);
         insta.GetComponent<SpriteRenderer>().color = color;
         insta.transform.parent = splashParent;
+        insta.transform.localEulerAngles = new Vector3(0, 0, UnityEngine.Random.Range(0, 360));
         //GameObject insta2 = Instantiate(deathParticle, pos, deathParticle.transform.rotation);
         //insta2.GetComponent<ParticleSystem>().startColor = color;
         return insta;
@@ -225,62 +228,68 @@ public class GameManager : MonoBehaviour
 
     public void SpawnDamageParticles(int damage, Colors color, Vector3 position, Vector3 angle)
     {
-        GameObject insta = Instantiate(splashParticles, position, Quaternion.identity);
-        insta.transform.eulerAngles = angle;
-        //int maxDamage = 20;
-        //insta.GetComponent<SplashManagerInside>().SetParticleSystem(
-        //   damage / 20 * maxDamage, damage / 20 * maxDamage,
-        //   damage / 40 * maxDamage, damage / 50 * maxDamage,
-        //   damage / 0.5f * maxDamage, damage / 0.6f * maxDamage,
-        //   color
-        //);
-        int numMin = 0, numMax = 0, speedMin = 0, speedMax = 0;
-        float sizeMin = 0f, sizeMax = 0f;
+        if (particleEnabled)
+        {
+            GameObject insta = Instantiate(splashParticles, position, Quaternion.identity);
+            insta.transform.eulerAngles = angle;
+            //int maxDamage = 20;
+            //insta.GetComponent<SplashManagerInside>().SetParticleSystem(
+            //   damage / 20 * maxDamage, damage / 20 * maxDamage,
+            //   damage / 40 * maxDamage, damage / 50 * maxDamage,
+            //   damage / 0.5f * maxDamage, damage / 0.6f * maxDamage,
+            //   color
+            //);
+            int numMin = 0, numMax = 0, speedMin = 0, speedMax = 0;
+            float sizeMin = 0f, sizeMax = 0f;
 
-        #region Vodka
-        if (damage < 50)
-        {
-            numMin = 1;
-            numMax = 1;
-            speedMin = 5;
-            speedMax = 10;
-            sizeMin = 0.2f;
-            sizeMax = 0.3f;
-        } else if(damage < 100)
-        {
-            numMin = 2;
-            numMax = 3;
-            speedMin = 7;
-            speedMax = 15;
-            sizeMin = 0.2f;
-            sizeMax = 0.3f;
-        } else if(damage < 200)
-        {
-            numMin = 4;
-            numMax = 5;
-            speedMin = 10;
-            speedMax = 20;
-            sizeMin = 0.2f;
-            sizeMax = 0.3f;
-        } else
-        {
-            numMin = 6;
-            numMax = 10;
-            speedMin = 15;
-            speedMax = 35;
-            sizeMin = 0.3f;
-            sizeMax = 0.4f;
+            #region Vodka
+            if (damage < 50)
+            {
+                numMin = 1;
+                numMax = 1;
+                speedMin = 5;
+                speedMax = 10;
+                sizeMin = 0.2f;
+                sizeMax = 0.3f;
+            }
+            else if (damage < 100)
+            {
+                numMin = 2;
+                numMax = 3;
+                speedMin = 7;
+                speedMax = 15;
+                sizeMin = 0.2f;
+                sizeMax = 0.3f;
+            }
+            else if (damage < 200)
+            {
+                numMin = 4;
+                numMax = 5;
+                speedMin = 10;
+                speedMax = 20;
+                sizeMin = 0.2f;
+                sizeMax = 0.3f;
+            }
+            else
+            {
+                numMin = 6;
+                numMax = 10;
+                speedMin = 15;
+                speedMax = 35;
+                sizeMin = 0.3f;
+                sizeMax = 0.4f;
+            }
+            #endregion
+
+            insta.GetComponent<SplashManagerInside>().SetParticleSystem(
+               numMin, numMax,
+               speedMin, speedMax,
+               sizeMin, sizeMax,
+               color
+            );
+
+            insta.SetActive(true);
         }
-        #endregion
-
-        insta.GetComponent<SplashManagerInside>().SetParticleSystem(
-           numMin, numMax,
-           speedMin, speedMax,
-           sizeMin, sizeMax,
-           color
-        );
-
-        insta.SetActive(true);
     }
 
     public void SpawnDamageParticles(int damage, Colors color, Vector3 position, Unit.Side side)
@@ -403,5 +412,10 @@ public class GameManager : MonoBehaviour
     public void ToggleGO(GameObject taureau)
     {
         taureau.SetActive(!taureau.activeSelf);
+    }
+
+    public void ToggleParticleEnabled()
+    {
+        particleEnabled = !particleEnabled;
     }
 }
