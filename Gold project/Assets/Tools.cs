@@ -16,7 +16,7 @@ public static class Tools
 
     public static void AddOiL(GameObject obj, int add)
     {
-        SpriteRenderer[] sprRenders = obj.GetComponentsInChildren<SpriteRenderer>();
+        SpriteRenderer[] sprRenders = obj.GetComponentsInChildren<SpriteRenderer>(true);
         for (int i = 0; i < sprRenders.Length; i++)
             sprRenders[i].sortingOrder += add;
     }

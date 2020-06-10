@@ -27,7 +27,7 @@ public class IAController : MonoBehaviour
 
     private int moneyToUse;
     private int unitToSpawn;
-    private bool attacked;
+    public bool attacked;
 
     private Coroutine action;
 

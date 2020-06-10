@@ -89,11 +89,15 @@ public class GameManager : MonoBehaviour
         allies = new List<GameObject>();
         Collider2D[] hits = Physics2D.OverlapBoxAll(Vector2.zero, new Vector2(300, 50), 0, unitLayer);
 
-        for (int i = 0; i < hits.Length; i++)
-            if(hits[i].GetComponent<Unit>().side == Unit.Side.ALLY)
-                allies.Add(hits[i].gameObject);
+        if (hits != null)
+            for (int i = 0; i < hits.Length; i++)
+            {
+                Debug.Log(" ----- " + hits[i].name);
+                if (hits[i].GetComponent<Unit>().side == Unit.Side.ALLY)
+                    allies.Add(hits[i].gameObject);
+            }
 
-        StartCoroutine("Gain");
+        StartCoroutine(Gain());
     }
 
     private void Update()
@@ -236,31 +240,31 @@ public class GameManager : MonoBehaviour
         #region Vodka
         if (damage < 50)
         {
-            numMin = 2;
-            numMax = 3;
+            numMin = 1;
+            numMax = 1;
             speedMin = 5;
             speedMax = 10;
             sizeMin = 0.2f;
             sizeMax = 0.3f;
         } else if(damage < 100)
         {
-            numMin = 4;
-            numMax = 5;
+            numMin = 2;
+            numMax = 3;
             speedMin = 7;
             speedMax = 15;
             sizeMin = 0.2f;
             sizeMax = 0.3f;
         } else if(damage < 200)
         {
-            numMin = 6;
-            numMax = 7;
+            numMin = 4;
+            numMax = 5;
             speedMin = 10;
             speedMax = 20;
             sizeMin = 0.2f;
             sizeMax = 0.3f;
         } else
         {
-            numMin = 8;
+            numMin = 6;
             numMax = 10;
             speedMin = 15;
             speedMax = 35;
@@ -371,6 +375,7 @@ public class GameManager : MonoBehaviour
 
     private IEnumerator Gain()
     {
+        Debug.Log("ouiiii");
         while(true)
         {
             yield return new WaitForSeconds(pumpTime);
