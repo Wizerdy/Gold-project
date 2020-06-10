@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -17276,7 +17276,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cdbb59cac2b88d479fda3cf5abd1072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hasTimeline: 1
   time: 1
   mat: {fileID: 0}
   SceneName: Game
@@ -33004,7 +33003,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 29.300049, y: 0}
+  m_AnchoredPosition: {x: 29.300781, y: 0}
   m_SizeDelta: {x: 250, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &706492338
@@ -36270,7 +36269,7 @@ MonoBehaviour:
   - {fileID: 1701472103}
   health: {fileID: 3819758360932899715}
   currentHudId: 0
-  money: 30
+  money: 200
   Pumps:
   - {fileID: 4681066913695463968}
   - {fileID: 2827377913258644291}
@@ -36305,7 +36304,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ecc1b5f815ae9142b088328d348248e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  money: 50
+  money: 250
   structures:
   - {fileID: 58217256}
   - {fileID: 57788049}
@@ -63216,7 +63215,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 340.3, y: 0}
+  m_AnchoredPosition: {x: 340.30078, y: 0}
   m_SizeDelta: {x: 250, y: 0}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!114 &1375754081
