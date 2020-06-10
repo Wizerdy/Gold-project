@@ -10,14 +10,15 @@ public class DestroyCoroutine : MonoBehaviour
 
     void Start()
     {
-        StartCoroutine("Life", lifeTime);
+        if(lifeTime > 0)
+            StartCoroutine("Life", lifeTime);
     }
 
     private IEnumerator Life(float time)
     {
         yield return new WaitForSeconds(time);
         if (fade)
-            StartCoroutine("fade");
+            StartCoroutine("Fade");
         else
             Destroy(gameObject);
     }

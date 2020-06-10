@@ -117,7 +117,7 @@ public abstract class Unit : MonoBehaviour
 
     public virtual void LoseHealth(float amount)
     {
-        LoseHealth(maxHealth * amount);
+        LoseHealth((int)(maxHealth * amount));
     }
 
     public int DealDamage()

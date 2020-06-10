@@ -94,6 +94,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8a188b5636f58046b9951e3b157f815, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 60
+  lifeTime: 0
   fade: 1
   sprRend: {fileID: 1993233013391694209}
