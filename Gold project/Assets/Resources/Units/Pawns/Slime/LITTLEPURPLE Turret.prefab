@@ -385,7 +385,7 @@ MonoBehaviour:
   target: {fileID: 0}
   slimeSprite: {fileID: 1989998184775644518}
   slimpSprite: {fileID: 321371254027649049}
-  lifeTime: 5
+  lifeTime: 4
 --- !u!61 &634356893387697209
 BoxCollider2D:
   m_ObjectHideFlags: 0

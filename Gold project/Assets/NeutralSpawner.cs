@@ -61,6 +61,7 @@ public class NeutralSpawner : MonoBehaviour
             if(lookOut.Length == 0)
                 isLinkedTo.isTaken.Add(gameObject);
             towerIsTaken = true;
+            StopAllCoroutines();
         }
     }
 

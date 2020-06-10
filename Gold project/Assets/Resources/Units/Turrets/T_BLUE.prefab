@@ -246,7 +246,7 @@ MonoBehaviour:
   type: 1
   side: 0
   maxHealth: 0
-  damage: {x: 30, y: 30}
+  damage: {x: 60, y: 60}
   attackSpeed: 1
   color: 3
   attackRange: {fileID: 3017508311607322558}
@@ -254,7 +254,8 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 500
+  cost: 400
+  lastDamageSide: 0
   atkPoison: 0
   ammo: {fileID: 3975769326864515960, guid: 5af46b1881372674281d02f53e8bc8d5, type: 3}
   ammoSpeed: 1500

@@ -52,7 +52,6 @@ public abstract class Pawn : Unit
             float scale = Mathf.Pow((float)maxHealth / 400f, 1f / 3f);
             sprRend.localScale = new Vector3(scale, scale, 1);
             sprRend.localPosition = new Vector3(sprRend.localPosition.x, sprRend.localPosition.y + (scale - 1f) * 0.35f, sprRend.localPosition.z);
-            Debug.Log((scale - 1f) * 0.35f);
         }
 
         baseScale = transform.localScale;
@@ -141,9 +140,7 @@ public abstract class Pawn : Unit
     {
         base.LoseHealth(amount);
 
-        transform.localScale = Tools.Map(curHealth, 0, maxHealth, baseScale * GameManager.instance.slimeMinSize, baseScale);
-
-        GameManager.instance.SpawnDamageParticles(amount, color, transform.position, side);
+        ChangeSize();
     }
 
     public override void AddPoison(float damage, float duration)
@@ -184,6 +181,7 @@ public abstract class Pawn : Unit
         }
 
         SoundManager.instance.PlaySound("Death_" + Random.Range(0, 4));
+        //GameManager.instance.SpawnDamageParticles(maxHealth, color, transform.position, side);
 
         base.Die();
     }
@@ -197,11 +195,18 @@ public abstract class Pawn : Unit
             else
                 curHealth = maxHealth;
 
+            ChangeSize();
+
             if (regenParticle == null)
                 regenParticle = Instantiate(GameManager.instance.regenParticles, transform);
 
             yield return new WaitForSeconds(regenCd);
         }
+    }
+
+    protected void ChangeSize()
+    {
+        sprRend.transform.localScale = Tools.Map(curHealth, 0, maxHealth, baseScale * GameManager.instance.slimeMinSize, baseScale);
     }
 
     #region Slow

@@ -319,6 +319,7 @@ MonoBehaviour:
   curHealth: 0
   hit: []
   cost: 30
+  lastDamageSide: 0
   speed: 2
   curSpeed: 0
   regen: 0
@@ -334,7 +335,7 @@ MonoBehaviour:
   target: {fileID: 0}
   slimeSprite: {fileID: 1281315935731144385}
   slimpSprite: {fileID: 749623751770035469}
-  explosion: {fileID: 11400000, guid: 5fdae8f5bc61399459cbae9f7edb9c7d, type: 2}
+  explosion: {fileID: 0}
 --- !u!61 &634356893387697209
 BoxCollider2D:
   m_ObjectHideFlags: 0

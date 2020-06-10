@@ -238,7 +238,7 @@ MonoBehaviour:
   damage: 0
   atkPoison: 0
   explode: 0
-  behaviour: {fileID: 11400000, guid: aad0a92b0eede5048aed364f6e55a366, type: 2}
+  behaviour: {fileID: 0}
 --- !u!50 &1704087636003480694
 Rigidbody2D:
   serializedVersion: 4

@@ -254,7 +254,8 @@ MonoBehaviour:
   canAttack: 0
   curHealth: 0
   hit: []
-  cost: 800
+  cost: 700
+  lastDamageSide: 0
   atkPoison: 0
   ammo: {fileID: 3975769326864515960, guid: e5713f796e995e8499f605da22be57d7, type: 3}
   ammoSpeed: 500

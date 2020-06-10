@@ -90,4 +90,9 @@ public class SoundManager : MonoBehaviour
 
         return null;
     }
+
+    public void ToggleMute()
+    {
+        AudioListener.volume = (AudioListener.volume + 1) % 2;
+    }
 }

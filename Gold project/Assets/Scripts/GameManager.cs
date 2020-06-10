@@ -93,7 +93,7 @@ public class GameManager : MonoBehaviour
             if(hits[i].GetComponent<Unit>().side == Unit.Side.ALLY)
                 allies.Add(hits[i].gameObject);
 
-        StartCoroutine(Gain());
+        StartCoroutine("Gain");
     }
 
     private void Update()
@@ -234,7 +234,7 @@ public class GameManager : MonoBehaviour
         float sizeMin = 0f, sizeMax = 0f;
 
         #region Vodka
-        if (damage < 20)
+        if (damage < 50)
         {
             numMin = 2;
             numMax = 3;
@@ -242,7 +242,7 @@ public class GameManager : MonoBehaviour
             speedMax = 10;
             sizeMin = 0.2f;
             sizeMax = 0.3f;
-        } else if(damage < 50)
+        } else if(damage < 100)
         {
             numMin = 4;
             numMax = 5;
@@ -250,7 +250,7 @@ public class GameManager : MonoBehaviour
             speedMax = 15;
             sizeMin = 0.2f;
             sizeMax = 0.3f;
-        } else if(damage < 100)
+        } else if(damage < 200)
         {
             numMin = 6;
             numMax = 7;
@@ -393,5 +393,10 @@ public class GameManager : MonoBehaviour
     public void LoadScene(string name)
     {
         SceneManager.LoadScene(name);
+    }
+
+    public void ToggleGO(GameObject taureau)
+    {
+        taureau.SetActive(!taureau.activeSelf);
     }
 }

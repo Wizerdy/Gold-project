@@ -27,6 +27,7 @@ public class IAController : MonoBehaviour
 
     private int moneyToUse;
     private int unitToSpawn;
+    private bool attacked;
 
     private Coroutine action;
 
@@ -35,6 +36,23 @@ public class IAController : MonoBehaviour
         StartCoroutine(Pump());
         StartCoroutine(Act());
         ChooseBehaviour();
+    }
+
+    private void Update()
+    {
+        float dist = GameManager.instance.allyParent.position.x - GameManager.instance.enemyParent.position.x;
+
+        RaycastHit2D hit = Physics2D.Raycast(
+            GameManager.instance.enemyParent.position,
+            GameManager.instance.allyParent.position - GameManager.instance.enemyParent.position,
+            dist,
+            GameManager.instance.unitLayer
+        );
+
+        if (hit.collider.GetComponent<Unit>().type == Unit.Type.PAWN)
+            attacked = true;
+        else
+            attacked = false;
     }
 
     private IEnumerator Act()
@@ -53,7 +71,11 @@ public class IAController : MonoBehaviour
     {
         int rand = Random.Range(0, 100);
 
-        if(rand < defChance + ((100 - defChance) * (atkReduction / 4)))
+        int def = defChance;
+        def += (100 - defChance) * (atkReduction / 4);
+        def -= (100 - defChance) * (attacked ? 1 : 0);
+
+        if (rand < def)
             ChangeBehaviour(Behaviour.DEFENSIVE);
         else
             ChangeBehaviour(Behaviour.AGRESSIVE);
