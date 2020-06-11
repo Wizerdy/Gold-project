@@ -4,18 +4,25 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using DG.Tweening;
+using UnityEngine.Playables;
 
 public class Transition : MonoBehaviour
 {
+    public bool hasTimeline = false;
     public float time = 1f;
     [HideInInspector]public Material mat;
     private Image img;
     public string SceneName = "Game";
 
+    private PlayableDirector timeline;
+
     private void Start()
     {
         img = GetComponent<Image>();
         mat = img.material;
+
+        if (hasTimeline)
+            timeline = GetComponent<PlayableDirector>();
 
         if (SceneManager.GetActiveScene().name == "MainMenu")
         {
@@ -52,12 +59,24 @@ public class Transition : MonoBehaviour
     {
         img.raycastTarget = true;
 
-        mat.DOFloat(15f, "_Border", 1f);
+        mat.DOFloat(15f, "_Border", 1f).OnComplete(PlayIntro);
 
 
-        yield return new WaitForSeconds(time);
+        yield return new WaitForSeconds(time + (float)timeline.duration);       
         img.raycastTarget = false;
 
+    }
+
+    void PlayIntro()
+    {
+        timeline.Play();
+    }
+
+    public void LerpCamera()
+    {
+        float horzExtent = Camera.main.orthographicSize * Screen.width / Screen.height;
+        float targetX = Camera.main.GetComponent<CameraScrolling>().cameraBounds.bounds.min.x + horzExtent;
+        Camera.main.transform.DOMoveX(targetX, 2f, false).OnComplete(timeline.Play);
     }
 
 }

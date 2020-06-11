@@ -9,6 +9,7 @@ public class CameraDisabler : MonoBehaviour, IDragHandler
     {
         Camera.main.GetComponent<CameraScrolling>().active = true;
         ShopManager.instance.ActiveCanvas(-1);
+        ShopManager.instance.palette.SetActive(false);
     }
 
     private void OnMouseDown()

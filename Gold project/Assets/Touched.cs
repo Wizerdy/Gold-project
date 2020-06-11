@@ -13,6 +13,7 @@ public class Touched : MonoBehaviour
         {
             ShopManager.instance.SetHudId(hudId);
             ShopManager.instance.ActiveCanvas(hudId == 0 ? 0 : hudId == 5 ? 1 : hudId == 7 ? 2 : hudId == 9 ? 3 : 0);
+            ShopManager.instance.palette.SetActive(true);
         }
     }
 }

@@ -23,6 +23,8 @@ public class ShopManager : MonoBehaviour
 
     public Transform[] spawnList;
 
+    public GameObject palette;
+
     public bool Pay(int cost)
     {
         if (money >= cost)

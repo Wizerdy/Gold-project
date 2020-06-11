@@ -5613,6 +5613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6cdbb59cac2b88d479fda3cf5abd1072, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasTimeline: 0
   time: 1
   mat: {fileID: 0}
   SceneName: Game
@@ -8890,6 +8891,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  palette: {fileID: 0}
 --- !u!114 &749164993
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8949,6 +8951,7 @@ MonoBehaviour:
   victoryScreen: {fileID: 0}
   defeatScreen: {fileID: 0}
   allies: []
+  particleEnabled: 0
 --- !u!4 &749164994
 Transform:
   m_ObjectHideFlags: 0
@@ -15802,6 +15805,11 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.39215687
       objectReference: {fileID: 0}
+    - target: {fileID: 1176524390570579701, guid: 407b4a452975b084a96140b8f070c58a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 97
+      objectReference: {fileID: 0}
     - target: {fileID: 1868158582618045133, guid: 407b4a452975b084a96140b8f070c58a,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15860,7 +15868,7 @@ PrefabInstance:
     - target: {fileID: 3872776497694471200, guid: 407b4a452975b084a96140b8f070c58a,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 5807319791836467534, guid: 407b4a452975b084a96140b8f070c58a,
         type: 3}
@@ -15880,7 +15888,7 @@ PrefabInstance:
     - target: {fileID: 5807319791836467534, guid: 407b4a452975b084a96140b8f070c58a,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 99
+      value: 98
       objectReference: {fileID: 0}
     - target: {fileID: 8519833105165293193, guid: 407b4a452975b084a96140b8f070c58a,
         type: 3}
@@ -18136,6 +18144,11 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.5882353
       objectReference: {fileID: 0}
+    - target: {fileID: 1176524390570579701, guid: 407b4a452975b084a96140b8f070c58a,
+        type: 3}
+      propertyPath: m_SortingOrder
+      value: 97
+      objectReference: {fileID: 0}
     - target: {fileID: 1631953879175593439, guid: 407b4a452975b084a96140b8f070c58a,
         type: 3}
       propertyPath: m_LocalScale.x
@@ -18204,12 +18217,12 @@ PrefabInstance:
     - target: {fileID: 3872776497694471200, guid: 407b4a452975b084a96140b8f070c58a,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 100
+      value: 99
       objectReference: {fileID: 0}
     - target: {fileID: 5807319791836467534, guid: 407b4a452975b084a96140b8f070c58a,
         type: 3}
       propertyPath: m_SortingOrder
-      value: 99
+      value: 98
       objectReference: {fileID: 0}
     - target: {fileID: 5807319791836467534, guid: 407b4a452975b084a96140b8f070c58a,
         type: 3}
